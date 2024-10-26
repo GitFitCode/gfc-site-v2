@@ -1,0 +1,1 @@
+export { IconJamIconsOutlineLogosMapMarker } from "./IconJamIconsOutlineLogosMapMarker";

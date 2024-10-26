@@ -136,6 +136,10 @@ function IconGroup2Line(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>
     </svg>
   );
 }
+
+
+
+
 export {
   IconGroup,
   IconHome,

@@ -30,7 +30,7 @@ interface MainNavProps {
 	setSelected: (itemName: string) => void;
 }
 
-export default function MainNav() {
+export default function MainNav({ showNav }: { showNav: boolean }) {
 	const [selected, setSelected] = useState(items[0].name);
 	const [isHovered, setIsHovered] = useState(false);
 	const { isDesktop } = useNavigationContext();
@@ -41,42 +41,49 @@ export default function MainNav() {
 	};
 
 	return (
-		<div
-			className={`transition-all duration-300
+		<>
+			{showNav ? (
+				<div
+					className={`transition-all duration-300
         ${isDesktop
-					? 'lg:flex lg:flex-row lg:space-x-4 lg:justify-end lg:items-center lg:p-4  lg:relative'
-					: `pt-18 fixed top-14 left-0 h-full bg-white md:flex md:flex-col w-16 z-50 ${isHovered && 'shadow-2xl p-3'}`}
+							? 'lg:flex lg:flex-row lg:space-x-4 lg:justify-end lg:items-center lg:p-4  lg:relative'
+							: `pt-18 fixed top-14 left-0 h-full bg-white md:flex md:flex-col w-16 z-50 ${isHovered && 'shadow-2xl p-3'}`}
         	${isHovered && !isDesktop ? 'w-48 rounded-2xl' : ''}
 				`}
-			onMouseEnter={() => setIsHovered(true)}
-			onMouseLeave={() => setIsHovered(false)}
-		>
-			<div className="flex lg:flex-row flex-col gap-1 ">
-				{items.map((item, index) => (
-					<button
-						key={index}
-						onClick={() => handleSelect(item.name)}
-						className={`flex py-3 lg:px-4 lg:py-2 rounded-lg transition-all duration-300 
+					onMouseEnter={() => setIsHovered(true)}
+					onMouseLeave={() => setIsHovered(false)}
+				>
+					<div className="flex lg:flex-row flex-col gap-1 ">
+						{items.map((item, index) => (
+							<button
+								key={index}
+								onClick={() => handleSelect(item.name)}
+								className={`flex py-3 lg:px-4 lg:py-2 rounded-lg transition-all duration-300 
 							${selected === item.name  // selected-item styles
-								? 'bg-[#00C3C7] text-white '
-								: 'bg-white text-black hover:bg-gray-100'}
+										? 'bg-[#00C3C7] text-white '
+										: 'bg-white text-black hover:bg-gray-100'}
 							${isHovered && !isDesktop ? // sidebar expanded styles
-								'content-start pl-4' : 'justify-center'}	
+										'content-start pl-4' : 'justify-center'}	
 							`}
-					>
-						{/* Icons */}
-						{!isDesktop && React.cloneElement(item.icon, {
-							fill: selected === item.name ? 'white' : 'black',
-							className: 'h-6 w-6',
-						})}
+							>
+								{/* Icons */}
+								{!isDesktop && React.cloneElement(item.icon, {
+									fill: selected === item.name ? 'white' : 'black',
+									className: 'h-6 w-6',
+								})}
 
-						{/* Conditionally render the label only if the sidebar is expanded and on desktop */}
-						{(isHovered || isDesktop) && (
-							<span className={` font-medium ${!isDesktop ? 'ml-3' : ''} ${selected === item.name ? 'text-white' : ''}`}>{item.content}</span>
-						)}
-					</button>
-				))}
-			</div>
-		</div>
+								{/* Conditionally render the label only if the sidebar is expanded and on desktop */}
+								{(isHovered || isDesktop) && (
+									<span className={` font-medium ${!isDesktop ? 'ml-3' : ''} ${selected === item.name ? 'text-white' : ''}`}>{item.content}</span>
+								)}
+							</button>
+						))}
+					</div>
+				</div>
+			) : (
+				<></>
+			)
+			}
+		</>
 	);
 }
