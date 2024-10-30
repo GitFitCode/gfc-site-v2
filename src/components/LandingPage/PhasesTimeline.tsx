@@ -69,7 +69,7 @@ const PhaseTimeline: React.FC = () => {
                 ))}
               </div>
               {/* Tools Section */}
-              <div className="mt-auto pt-24">
+              <div className="mt-auto pt-10 md:pt-24">
                 <div className="bg-gray-100 rounded-3xl mt-8 pt-6 p-8 md:p-8">
                   <div className="flex flex-col md:flex-row gap-4 items-center">
                     <h3 className="flex text-lg font-semibold">Tools Used:</h3>

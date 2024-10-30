@@ -143,43 +143,43 @@ export default function LandingPage() {
 				/>
 			</div> */}
 
-      {/* <div className="w-full flex flex-col items-center relative h-[861px] bg-defaultwhite">
-				<div className="w-full gap-12 top-[120px] flex flex-col items-start absolute left-20">
-					<div className="flex-col items-center gap-2 self-stretch w-full flex-[0_0_auto] flex relative">
-						<div className="relative self-stretch mt-[-1.00px] font-other-caption font-[number:var(--other-caption-font-weight)] text-[#00c2c6] text-[length:var(--other-caption-font-size)] text-center tracking-[var(--other-caption-letter-spacing)] leading-[var(--other-caption-line-height)] [font-style:var(--other-caption-font-style)]">
-							A HISTORY OF SUCCESS
-						</div>
+      <div className="w-full flex flex-col items-center relative h-[861px] bg-defaultwhite">
+        <div className="w-full gap-12 top-[120px] flex flex-col items-start absolute left-20">
+          <div className="flex-col items-center gap-2 self-stretch w-full flex-[0_0_auto] flex relative">
+            <div className="relative self-stretch mt-[-1.00px] font-other-caption font-[number:var(--other-caption-font-weight)] text-[#00c2c6] text-[length:var(--other-caption-font-size)] text-center tracking-[var(--other-caption-letter-spacing)] leading-[var(--other-caption-line-height)] [font-style:var(--other-caption-font-style)]">
+              A HISTORY OF SUCCESS
+            </div>
 
-						<div className="relative self-stretch  font-bold text-coolgray-90 text-[42px] text-center tracking-[0] leading-[46.2px]">
-							Stories of Our Success
-						</div>
-					</div>
-				</div>
+            <div className="relative self-stretch  font-bold text-coolgray-90 text-[42px] text-center tracking-[0] leading-[46.2px]">
+              Stories of Our Success
+            </div>
+          </div>
+        </div>
 
-				<div className="absolute w-[828px] h-[414px] top-[269px] left-[283px] bg-[url(https://c.animaapp.com/rDitUAdQ/img/your-paragraph-text-1.png)] bg-cover bg-[50%_50%]">
-					<div className="absolute top-[85px] left-[638px]  font-bold text-[#21272a] text-[22px] text-center tracking-[0] leading-[30.8px] whitespace-nowrap">
-						Foster Buddy
-					</div>
+        <div className="absolute w-[828px] h-[414px] top-[269px] left-[283px] bg-[url(https://c.animaapp.com/rDitUAdQ/img/your-paragraph-text-1.png)] bg-cover bg-[50%_50%]">
+          <div className="absolute top-[85px] left-[638px]  font-bold text-[#21272a] text-[22px] text-center tracking-[0] leading-[30.8px] whitespace-nowrap">
+            Foster Buddy
+          </div>
 
-					<p className="absolute w-[276px] top-40 left-[505px]  font-normal text-[#21272acc] text-base text-right tracking-[0] leading-[22.4px]">
-						Our web apps deliver seamless experiences across all devices. From
-						e-commerce to SaaS platforms, we focus on speed, security, and
-						scalability, ensuring your web app adapts as your business grows.
-					</p>
-				</div>
+          <p className="absolute w-[276px] top-40 left-[505px]  font-normal text-[#21272acc] text-base text-right tracking-[0] leading-[22.4px]">
+            Our web apps deliver seamless experiences across all devices. From
+            e-commerce to SaaS platforms, we focus on speed, security, and
+            scalability, ensuring your web app adapts as your business grows.
+          </p>
+        </div>
 
-				<img
-					className="left-[1134px] absolute w-[21px] h-[37px] top-[458px]"
-					alt="Arrow"
-					src="https://c.animaapp.com/rDitUAdQ/img/arrow-1.svg"
-				/>
+        <img
+          className="left-[1134px] absolute w-[21px] h-[37px] top-[458px]"
+          alt="Arrow"
+          src="https://c.animaapp.com/rDitUAdQ/img/arrow-1.svg"
+        />
 
-				<img
-					className="left-60 absolute w-[21px] h-[37px] top-[458px]"
-					alt="Arrow"
-					src="https://c.animaapp.com/rDitUAdQ/img/arrow-2.svg"
-				/>
-			</div> */}
+        <img
+          className="left-60 absolute w-[21px] h-[37px] top-[458px]"
+          alt="Arrow"
+          src="https://c.animaapp.com/rDitUAdQ/img/arrow-2.svg"
+        />
+      </div>
 
       {/* <div className="relative h-[364px] [background:linear-gradient(180deg,rgb(0,195,199)_0%,rgb(8.37,155.99,159.02)_19.45%,rgb(13.32,132.92,135.38)_34.95%,rgb(20.02,101.72,103.4)_48.95%,rgb(26.2,72.92,73.88)_60.95%,rgb(34.46,34.46,34.46)_75.95%)]">
 				<div className="w-[482px] h-[277px] gap-[35px] top-[41px] flex flex-col items-start absolute left-20">
