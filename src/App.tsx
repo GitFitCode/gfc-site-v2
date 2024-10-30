@@ -1,12 +1,19 @@
 import React, { useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
-import { NavigationProvider, useNavigationContext } from './contexts/navigation.context'
-import NavigationLoader from "./components/Pages/navigation-loader";
-import LandingPage from "./components/Pages/LandingPage";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
+import {
+  NavigationProvider,
+  useNavigationContext,
+} from "./contexts/navigation.context";
+import NavigationLoader from "./components/pages/navigation-loader";
+import LandingPage from "./components/pages/LandingPage";
 import MainNav from "./components/Header/main-nav";
-import './App.css';
+import "./App.css";
 import PageHeader from "./components/Header/page-header";
-
 
 const App = () => {
   return (
@@ -26,7 +33,9 @@ const App = () => {
 };
 
 // This component listens to route changes and manages navigation state
-const NavigationWrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+const NavigationWrapper: React.FC<{ children: React.ReactNode }> = ({
+  children,
+}) => {
   const location = useLocation();
   const { setIsNavigating } = useNavigationContext();
 
