@@ -9,8 +9,8 @@ import {
   NavigationProvider,
   useNavigationContext,
 } from "./contexts/navigation.context";
-import NavigationLoader from "./components/pages/navigation-loader";
-import LandingPage from "./components/pages/LandingPage";
+import NavigationLoader from "./components/Pages/navigation-loader";
+import LandingPage from "./components/Pages/LandingPage";
 import MainNav from "./components/Header/main-nav";
 import "./App.css";
 import PageHeader from "./components/Header/page-header";

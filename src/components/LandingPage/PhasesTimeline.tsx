@@ -16,7 +16,7 @@ const PhaseTimeline: React.FC = () => {
   };
 
   return (
-    <div className="max-w-7xl mx-auto p-6 w-full">
+    <div className="max-w-7xl mt-20  mx-auto p-6 w-full">
       <div className="flex flex-col items-center gap-2 self-stretch w-full text-center mb-20">
         <p className="font-other-caption font-semibold text-[#00c2c6] text-lg uppercase">
           from concept to creation
@@ -27,7 +27,7 @@ const PhaseTimeline: React.FC = () => {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 h-full">
         {/* Timeline */}
-        <div className="space-y-8 w-full">
+        <div className="space-y-8 w-full md:relative md:top-[-41px]">
           {phaseGroups.map((group, groupIndex) => (
             <div key={groupIndex} className="space-y-4">
               <h3 className="text-lg font-medium text-gray-500">

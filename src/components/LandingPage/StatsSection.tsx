@@ -5,7 +5,7 @@ export default function StatisticsSection() {
 		<div className="flex flex-col my-[10rem] items-center gap-[60px] bg-defaultwhite">
 			<div className="flex flex-col items-start gap-12 relative flex-[0_0_auto]">
 				<div className="flex flex-col items-center gap-2 relative self-stretch w-full flex-[0_0_auto]">
-					<p className="relative self-stretch mt-[-1.00px] font-other-caption font-[number:var(--other-caption-font-weight)] text-[#00c2c6] text-[length:var(--other-caption-font-size)] text-center tracking-[var(--other-caption-letter-spacing)] leading-[var(--other-caption-line-height)] [font-style:var(--other-caption-font-style)]">
+					<p className="font-other-caption font-semibold text-[#00c2c6] text-lg">
 						OUR INDUSTRY EXPERIENCE
 					</p>
 
@@ -15,7 +15,7 @@ export default function StatisticsSection() {
 				</div>
 			</div>
 
-			<div className="flex w-[80%] justify-around flex-col md:flex-row gap-10 md:gap-0">
+			<div className="flex w-[90%] md:w-[80%] justify-around flex-col md:flex-row gap-10 md:gap-0">
 				<div className="flex flex-col items-center">
 					<p className="font-black text-transparent text-[84.2px] tracking-[1.40px] leading-[normal]">
 						<span className="text-[#00c2c6] tracking-[1.18px]">150</span>

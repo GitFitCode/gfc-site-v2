@@ -44,3 +44,22 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+
+# Deployment to Google Cloud
+
+1. Make sure you are authenticated to Gcloud and have permissions
+
+	gcloud auth login
+
+2. Set target project as default
+
+	gcloud config set project gfc-website-313010
+
+3. Create a production build
+
+	npm run build
+
+4. Deploy
+
+	gcloud app deploy
