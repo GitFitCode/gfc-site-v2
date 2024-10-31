@@ -12,8 +12,9 @@ import HeroSection from "../LandingPage/HeroSection";
 import StatsSection from "../LandingPage/StatsSection";
 import SolutionsSection from "../LandingPage/SolutionsSection";
 import PhaseTimeline from "../LandingPage/PhasesTimeline";
-import SuccessStoriesSection from "../LandingPage/SuccessStoriesSection"
+import SuccessStoriesSection from "../LandingPage/SuccessStoriesSection";
 import Footer from "../Footer";
+import StartProject from "../LandingPage/StartProject";
 
 export default function LandingPage() {
   const { isDesktop } = useNavigationContext();
@@ -28,9 +29,8 @@ export default function LandingPage() {
       <SolutionsSection />
       <PhaseTimeline />
       <SuccessStoriesSection />
-			<Footer/>
-
-    
+      <StartProject />
+      {/* <Footer /> */}
 
       {/* <div className="flex items-center gap-3 px-20 py-4 absolute top-0 left-0 bg-defaultwhite">
 				<div className="flex flex-col items-start gap-2.5 relative flex-1 grow">
