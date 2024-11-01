@@ -4,23 +4,45 @@ import { NotificationWrapper } from "../NotificationWrapper";
 
 export default function HeroSection() {
 	return (
-		<div className="w-full my-10 flex flex-col items-center justify-center relative">
-			<div className="mr-20 lg:flex-row">
-				<div className="flex flex-col w-[80%] h-[371px] items-start justify-center gap-[19px] px-0 py-8 ">
-					<div className="flex flex-col items-start gap-4 relative self-stretch w-full flex-[0_0_auto]">
-						<div className="flex flex-col items-center gap-2 relative self-stretch w-full flex-[0_0_auto]">
-							<div className="relative self-stretch mt-[-1.00px] [font-family:'Inter',Helvetica] font-bold text-coolgray-90 text-[54px] tracking-[-1.62px] leading-[59.4px]">
-								Custom Enterprise Software Solutions.
-							</div>
-						</div>
-						<p className="relative w-[410px] [font-family:'Inter',Helvetica] font-normal text-[#21272ac9] text-lg tracking-[0] leading-[25.2px]">
-							Transforming ideas into digital reality with innovative software
-							development.
-						</p>
-					</div>
-				</div>
+		<div className="w-full my-10 flex flex-col items-center justify-center relative px-4 sm:px-6 md:px-8 lg:px-10">
+			<div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+			<div className="flex flex-col items-start justify-center gap-4">
+          <div className="flex flex-col w-full h-auto items-start justify-center gap-4">
+            <h1 className="text-4xl sm:text-4xl lg:text-5xl font-bold text-coolgray-90 leading-tight">
+              Custom Enterprise Software Solutions.
+            </h1>
+            <p className="text-lg text-[#21272ac9] leading-relaxed max-w-md">
+              Transforming ideas into digital reality with innovative software
+              development.
+            </p>
+          </div>
+        </div>
+				{/* What we do */}	
+        <div className="relative flex justify-center md:justify-end">
+          <div className="w-full sm:w-3/4 lg:w-2/3 h-[353px] relative">
+            <img
+              className="absolute w-[222px] h-[299px] top-0 left-16"
+              alt="Element"
+              src="https://c.animaapp.com/2fHzREgW/img/7e1bbb97-69a6-4a54-8a5a-7c3749c09731-jpg--1-.png"
+            />
 
-				<div className="inline-flex items-center gap-10 flex-wrap">
+            <img
+              className="absolute w-8 h-8 top-10 left-16"
+              alt="Thumbs up"
+              src="https://c.animaapp.com/2fHzREgW/img/thumbs-up.png"
+            />
+
+            <img
+              className="absolute w-[214px] h-[218px] top-[135px] left-0"
+              alt="Linkedin profile"
+              src="https://c.animaapp.com/2fHzREgW/img/linkedin-profile-picture-11-08-2022-1.png"
+            />
+
+            <NotificationWrapper className="!absolute !left-1 !top-[164px]" />
+          </div>
+        </div>
+				{/* We will need to bring  */}
+				{/* <div className="inline-flex items-center gap-10 flex-wrap">
 					<div className=" h-8 flex items-center justify-center gap-2 relative">
 						<img
 							className="w-[30.4px] relative h-8"
@@ -70,30 +92,7 @@ export default function HeroSection() {
 						</p>
 					</div>
 
-				</div>
-			</div>
-
-			<div className=" w-[40%] h-[353px] absolute right-[-5%] bottom-[2%]">
-				<img
-					className="absolute w-[222px] h-[299px] top-0 left-[91px] "
-					alt="Element"
-					src="https://c.animaapp.com/2fHzREgW/img/7e1bbb97-69a6-4a54-8a5a-7c3749c09731-jpg--1-.png"
-				/>
-
-				<img
-					className="absolute w-8 h-8 top-10 left-[91px]"
-					alt="Thumbs up"
-					src="https://c.animaapp.com/2fHzREgW/img/thumbs-up.png"
-				/>
-
-				{/* <EditWrapper /> */}
-				<img
-					className="absolute w-[214px] h-[218px] top-[135px] left-0 "
-					alt="Linkedin profile"
-					src="https://c.animaapp.com/2fHzREgW/img/linkedin-profile-picture-11-08-2022-1.png"
-				/>
-
-				<NotificationWrapper className="!absolute !left-1 !top-[164px]" />
+				</div> */}
 			</div>
 		</div>
 	)
