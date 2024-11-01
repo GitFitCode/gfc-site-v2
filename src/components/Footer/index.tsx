@@ -6,6 +6,7 @@ import {
   FaLinkedin,
 } from "react-icons/fa";
 import logo from "../../images/logo-long.png";
+import { Mail } from "lucide-react";
 
 const footerColumns = [
   {
@@ -91,14 +92,21 @@ const Footer = () => {
 
             <div className="w-full md:w-auto">
               <div className="flex items-center justify-end">
-                <button className="px-6 py-4 bg-[#00C3C7] text-white rounded-l-xl hover:bg-cyan-600 transition-colors whitespace-nowrap">
-                  Get Started
-                </button>
-                <input
-                  type="email"
-                  placeholder="Enter your email to get the latest news..."
-                  className="w-full md:w-80 px-4 py-4 border border-gray-300 rounded-r-lg focus:outline-none focus:ring-2 focus:ring-cyan-500"
-                />
+                <div className="flex items-center justify-end">
+                  <button className="px-6 py-4 bg-[#00C3C7] text-white rounded-l-xl hover:bg-cyan-600 transition-colors whitespace-nowrap">
+                    Get Started
+                  </button>
+                  <div className="relative flex-grow">
+                    <div className="absolute inset-y-0 left-3 flex items-center pointer-events-none">
+                      <Mail className="h-5 w-5 text-gray-400" />
+                    </div>
+                    <input
+                      type="email"
+                      placeholder="Enter your email to get the latest news..."
+                      className="w-full md:w-[24rem] pl-10 pr-4 py-4 border border-gray-300 rounded-r outline-none "
+                    />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
