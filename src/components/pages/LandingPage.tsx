@@ -30,7 +30,7 @@ export default function LandingPage() {
       <PhaseTimeline />
       <SuccessStoriesSection />
       <StartProject />
-      {/* <Footer /> */}
+      <Footer />
 
       {/* <div className="flex items-center gap-3 px-20 py-4 absolute top-0 left-0 bg-defaultwhite">
 				<div className="flex flex-col items-start gap-2.5 relative flex-1 grow">

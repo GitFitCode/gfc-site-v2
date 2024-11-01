@@ -1,92 +1,111 @@
-import { IconJamIconsOutlineLogosFacebook } from "../../icons/IconJamIconsOutlineLogosFacebook";
-import { IconJamIconsOutlineLogosInstagram1 } from "../../icons/IconJamIconsOutlineLogosInstagram1";
-import { IconJamIconsOutlineLogosLinkedin1 } from "../../icons/IconJamIconsOutlineLogosLinkedin1";
-import { IconJamIconsOutlineLogosTwitter1 } from "../../icons/IconJamIconsOutlineLogosTwitter1";
-import { IconJamIconsOutlineLogosYoutube } from "../../icons/IconJamIconsOutlineLogosYoutube";
-import { IconJamIconsOutlineLogosEnvelope1 } from "../../icons/IconJamIconsOutlineLogosEnvelope1";
+import {
+  FaYoutube,
+  FaFacebook,
+  FaTwitter,
+  FaInstagram,
+  FaLinkedin,
+} from "react-icons/fa";
+import logo from "../../images/logo-long.png";
 
-export default function Footer() {
+const footerColumns = [
+  {
+    title: "Solutions",
+    links: ["Marketing", "Analytics", "Commerce", "Data,", "Cloud"],
+  },
+  {
+    title: "Support",
+    links: ["Pricing", "Documentation", "Guides", "API", "Status"],
+  },
+  {
+    title: "Company",
+    links: ["About", "Blog", "Jobs", "Partners", "Careers"],
+  },
+];
+
+const socialLinks = [
+  { icon: FaYoutube, href: "https://github.com/JoelAngels", label: "YouTube" },
+  { icon: FaFacebook, href: "#", label: "Facebook" },
+  { icon: FaTwitter, href: "#", label: "Twitter" },
+  { icon: FaInstagram, href: "#", label: "Instagram" },
+  { icon: FaLinkedin, href: "#", label: "LinkedIn" },
+];
+
+const Footer = () => {
   return (
-    <div className="flex flex-col gap-[34px] pt-[22px] pb-12 px-20 relative  bg-white">
-     
-      <div className="items-center gap-12  w-full flex-[0_0_auto] flex relative">
-        <div className="inline-flex flex-col items-start gap-2.5 relative flex-[0_0_auto]">
-          <div className="flex w-[134px] h-11 items-start gap-1 relative">
-            <div className="flex flex-col w-[134px] h-11 items-start justify-center relative">
-              <img
-                className="relative w-[145px] h-[65px] mt-[-12.75px] mb-[-12.75px] mr-[-11.00px] object-cover"
-                alt="Gitfitcode LOGO"
-                src="https://c.animaapp.com/rDitUAdQ/img/gitfitcode-logo-assets--llc-artboard-1-copy-13-2x-1-1@2x.png"
-              />
+    <footer className="bg-white  pt-16 pb-12 w-full">
+      <div className="px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 border-t-2 border-gray-200">
+          {footerColumns.map((column, index) => (
+            <div key={index} className="mt-10">
+              <h3 className="text-gray-900 font-semibold mb-4">
+                {column.title}
+              </h3>
+              <ul className="space-y-3">
+                {column.links.map((link, linkIndex) => (
+                  <li key={linkIndex}>
+                    <a
+                      href="/"
+                      className="text-gray-600 hover:text-green-500"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {link}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+
+          {/* Join Us */}
+          <div className="mt-10">
+            <h3 className="text-gray-900 font-semibold mb-4">Join Us</h3>
+            <div className="flex space-x-4">
+              {socialLinks.map((social, index) => {
+                const Icon = social.icon;
+                return (
+                  <a
+                    key={index}
+                    href={social.href}
+                    className="text-gray-400 hover:text-green-500 transition-colors"
+                    aria-label={social.label}
+                  >
+                    <Icon size={22} />
+                  </a>
+                );
+              })}
             </div>
           </div>
         </div>
 
-        <div className="flex flex-col items-end gap-6 relative ">
-          <div className="inline-flex flex-col items-start gap-2 relative flex-[0_0_auto]">
-            <div className="inline-flex items-center gap-2 px-0 py-3 relative flex-[0_0_auto]">
-              <div className="relative w-fit mt-[-1.00px] font-heading-6 font-[number:var(--heading-6-font-weight)] text-[#0000009e] text-[length:var(--heading-6-font-size)] tracking-[var(--heading-6-letter-spacing)] leading-[var(--heading-6-line-height)] whitespace-nowrap [font-style:var(--heading-6-font-style)]">
-                Join Us
+        <div className="mt-16 pt-8 border-t border-gray-200">
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <div className="flex flex-col items-start space-y-2">
+              <div className="flex items-center space-x-2 w-40">
+                <img src={logo} alt="logo" />
+              </div>
+              <div className="text-gray-500 text-sm ">
+                GitFitCode &copy; 2024. All rights reserved.
               </div>
             </div>
 
-            <div className="flex w-[426.67px] items-center gap-4 relative flex-[0_0_auto]">
-              <IconJamIconsOutlineLogosYoutube
-                className="!relative !w-6 !h-6"
-                color="black"
-                opacity="0.62"
-              />
-              <IconJamIconsOutlineLogosFacebook
-                className="!relative !w-6 !h-6"
-                color="black"
-                opacity="0.62"
-              />
-              <IconJamIconsOutlineLogosTwitter1
-                className="!relative !w-6 !h-6"
-                color="black"
-                opacity="0.62"
-              />
-              <IconJamIconsOutlineLogosInstagram1
-                className="!relative !w-6 !h-6"
-                color="black"
-                opacity="0.62"
-              />
-              <IconJamIconsOutlineLogosLinkedin1
-                className="!relative !w-6 !h-6"
-                color="black"
-                opacity="0.62"
-              />
-            </div>
-          </div>
-        </div>
-        <div className="flex-col items-end justify-center gap-4  flex relative">
-        <div className="inline-flex items-center relative flex-[0_0_auto]">
-          <button className="all-[unset] box-border flex w-[187px] h-14 items-center justify-center p-4 relative bg-[#00c2c6] text-white rounded-lg">
-            <div className="inline-flex items-center justify-center gap-2.5 px-4 py-0 relative flex-[0_0_auto]">
-              <div className="relative w-fit mt-[-1.00px] font-button-l font-[number:var(--button-l-font-weight)] text-defaultwhite text-[length:var(--button-l-font-size)] tracking-[var(--button-l-letter-spacing)] leading-[var(--button-l-line-height)] whitespace-nowrap [font-style:var(--button-l-font-style)]">
-                Get Started
+            <div className="w-full md:w-auto">
+              <div className="flex items-center justify-end">
+                <button className="px-6 py-4 bg-[#00C3C7] text-white rounded-l-xl hover:bg-cyan-600 transition-colors whitespace-nowrap">
+                  Get Started
+                </button>
+                <input
+                  type="email"
+                  placeholder="Enter your email to get the latest news..."
+                  className="w-full md:w-80 px-4 py-4 border border-gray-300 rounded-r-lg focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                />
               </div>
             </div>
-          </button>
-
-          <div className="flex w-[364px] h-14 items-center gap-2 pl-4 pr-[11px] py-3 relative -ml-3 bg-coolgray-10 border-b [border-bottom-style:solid] border-coolgray-30">
-            <IconJamIconsOutlineLogosEnvelope1
-              className="!relative !w-6 !h-6"
-              color="#697077"
-            />
-            <p className="relative w-fit font-body-m font-[number:var(--body-m-font-weight)] text-coolgray-60 text-[length:var(--body-m-font-size)] tracking-[var(--body-m-letter-spacing)] leading-[var(--body-m-line-height)] whitespace-nowrap [font-style:var(--body-m-font-style)]">
-              Enter your email to get the latest news...
-            </p>
           </div>
         </div>
       </div>
-      </div>
-    
-      <div className="flex items-start gap-12">
-        <p className="relative w-fit mt-[-1.00px] [font-family:'Roboto',Helvetica] font-bold text-[#656565] text-sm tracking-[0] leading-[19.6px] whitespace-nowrap">
-          GitFitCode @ 2024. All rights reserved.
-        </p>
-      </div>
-    </div>
-  )
-}
+    </footer>
+  );
+};
+
+export default Footer;
