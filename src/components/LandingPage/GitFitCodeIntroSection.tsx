@@ -2,10 +2,10 @@ import { NotificationWrapper } from "../NotificationWrapper";
 
 export default function GitFitCodeIntroSection() {
 	return (
-		<div id="gfc-intro-section" className="w-full my-10 flex flex-col items-center justify-center relative px-4 sm:px-6 md:px-8 lg:px-10">
-			<div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-			<div className="flex flex-col items-start justify-center gap-4">
-          <div className="flex flex-col w-full h-auto items-start justify-center gap-4">
+		<div id="gfc-intro-section" className="w-full my-5 flex flex-col items-center justify-center relative px-4 sm:px-6 md:px-8 lg:px-10 pt-24">
+			<div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-end">
+				<div className="flex flex-col items-end justify-center gap-4">
+          <div className="flex flex-col h-auto items-start justify-end gap-4 lg:w-[85%]">
             <h1 className="text-4xl sm:text-4xl lg:text-5xl font-bold text-coolgray-90 leading-tight">
               Custom Enterprise Software Solutions.
             </h1>
@@ -17,7 +17,7 @@ export default function GitFitCodeIntroSection() {
         </div>
 				{/* What we do */}	
         <div className="relative flex justify-center md:justify-end">
-          <div className="w-full sm:w-3/4 lg:w-2/3 h-[353px] relative">
+          <div className="w-full sm:w-2/3 lg:w-2/3 h-[353px] relative">
             <img
               className="absolute w-[222px] h-[299px] top-0 left-16"
               alt="Element"

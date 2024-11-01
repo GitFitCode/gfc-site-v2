@@ -1,20 +1,20 @@
 import React, { useState, useEffect } from 'react';
+import Logo from './logo';
+import { HomeIcon, UserGroupIcon, CogIcon, FolderIcon, PhoneIcon, ChatBubbleOvalLeftIcon } from '@heroicons/react/24/solid';
 import { IconChatQuote, IconCog, IconContact, IconFolderOpen, IconGroup, IconHome } from '../icons';
 import { useNavigationContext } from '../../contexts/navigation.context';
 import { useNavigate } from 'react-router-dom';
 
 const items = [
-	{ name: 'Home', icon: <IconHome />, route: '', sectionId: 'gfc-intro-section', content: 'Home' },
-	{ name: 'About', icon: <IconGroup />, route: '#about', sectionId: 'stats-section', content: 'About Us' },
-	{ name: 'Services', icon: <IconCog />, route: '#services', sectionId: 'solutions-section', content: 'Services' },
-	{ name: 'Portfolio', icon: <IconFolderOpen />, route: '#work', sectionId: 'success-stories-section', content: 'Portfolio' },
-	{ name: 'Testimonials', icon: <IconChatQuote />, route: '#testimonials', sectionId: 'success-stories-section', content: 'Testimonials' },
-	{ name: 'Contact', icon: <IconContact />, route: '#start', sectionId: 'start-project-section', content: 'Contact Us' },
+	{ name: 'Home', icon: <HomeIcon className="h-6 w-6" />, route: '', sectionId: 'gfc-intro-section', content: 'Home' },
+	{ name: 'About', icon: <UserGroupIcon className="h-6 w-6" />, route: '#about', sectionId: 'stats-section', content: 'About Us' },
+	{ name: 'Services', icon: <CogIcon className="h-6 w-6" />, route: '#services', sectionId: 'solutions-section', content: 'Services' },
+	// { name: 'Portfolio', icon: <FolderIcon className="h-6 w-6" />, route: '#work', sectionId: 'success-stories-section', content: 'Portfolio' },
+	{ name: 'Testimonials', icon: <ChatBubbleOvalLeftIcon className="h-6 w-6" />, route: '#testimonials', sectionId: 'success-stories-section', content: 'Testimonials' },
+	{ name: 'Contact', icon: <PhoneIcon className="h-6 w-6" />, route: '#start', sectionId: 'start-project-section', content: 'Contact Us' },
 ];
-
 export default function MainNav({ showNav }: { showNav: boolean }) {
 	const [selected, setSelected] = useState(items[0].name);
-	const [isHovered, setIsHovered] = useState(false);
 	const [scrolled, setScrolled] = useState(false); // Track scroll state for opacity change
 	const { isDesktop } = useNavigationContext();
 	const navigate = useNavigate();
@@ -43,30 +43,31 @@ export default function MainNav({ showNav }: { showNav: boolean }) {
 		<div
 			className={`fixed top-0 w-full z-50 transition-all duration-300 ${
 				scrolled ? 'bg-white bg-opacity-90 border-b-4 border-gfc-primary-100' : 'bg-white bg-opacity-100'
-			} ${isDesktop ? 'lg:flex lg:flex-row lg:space-x-4 lg:justify-end lg:items-center lg:p-4' : 
-				`pt-18 md:flex md:flex-col w-16 ${isHovered ? 'shadow-2xl p-3 w-48 rounded-2xl' : ''}`
-			}`}
-			onMouseEnter={() => setIsHovered(true)}
-			onMouseLeave={() => setIsHovered(false)}
+			} ${isDesktop ? 'lg:flex lg:flex-row lg:space-x-4 lg:justify-between lg:items-center lg:p-4' : 'flex flex-row items-center justify-between w-full p-2'}`}
 		>
-			<div className="flex lg:flex-row flex-col gap-1">
+			{/* Logo on the left */}
+			<div className="flex items-center">
+				<Logo setShowNav={() => {}} showNav={showNav} />
+			</div>
+
+			{/* Navigation items (icons-only on mobile) */}
+			<div className={`flex ${isDesktop ? 'flex-row space-x-4' : 'flex-row space-x-3 mt-2'}`}>
 				{items.map((item, index) => (
 					<button
 						key={index}
 						onClick={() => handleSelect(item.name, item.sectionId, item.route)}
-						className={`flex py-3 lg:px-4 lg:py-2 rounded-lg transition-all duration-300 ${
-							selected === item.name ? 'bg-gfc-accent text-white' : 'bg-white text-gray-700 hover:bg-gfc-primary-100 hover:text-gfc-accent'
-						} ${isHovered && !isDesktop ? 'content-start pl-4' : 'justify-center'}`}
+						className={`flex items-center p-2 rounded-lg transition-all duration-300 ${
+							selected === item.name ? 'bg-gfc-accent text-white' : 'bg-white text-gray-700'
+						} ${isDesktop ? 'hover:bg-gfc-primary-100 hover:text-gfc-accent' : 'hover:bg-gfc-primary-100'}`}
 					>
-						{/* Icon */}
-						{!isDesktop && React.cloneElement(item.icon, {
+						{/* Only show icons on mobile; icons with text on desktop */}
+						{React.cloneElement(item.icon, {
 							fill: selected === item.name ? 'white' : 'black',
 							className: 'h-6 w-6',
 						})}
 
-						{/* Conditionally render the label */}
-						{(isHovered || isDesktop) && (
-							<span className={`font-medium ${!isDesktop ? 'ml-3' : ''} ${selected === item.name ? 'text-white' : ''}`}>
+						{isDesktop && (
+							<span className={`ml-3 font-medium ${selected === item.name ? 'text-white' : 'text-gray-700'}`}>
 								{item.content}
 							</span>
 						)}
