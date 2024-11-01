@@ -2,7 +2,7 @@ import React from "react";
 
 export default function SolutionsSection() {
 	return (
-		<div className="flex flex-col w-full items-center gap-[60px] my-[5rem] bg-defaultwhite">
+		<div id="solutions-section" className="flex flex-col w-full items-center gap-[60px] my-[5rem] bg-defaultwhite">
 			<div className="flex flex-col items-center gap-2 self-stretch w-full text-center">
 				<p className="font-other-caption font-semibold text-[#00c2c6] text-lg">
 					THE RIGHT FIT FOR ANY SOFTWARE SOLUTION

@@ -22,12 +22,16 @@ module.exports = {
         'gfc-dark': '#231E21',
         'gfc-darker': '#181918',
         'gfc-light': '#E6F7F8', // new light color
+        'gfc-primary-100': 'rgba(0, 201, 205, 0.2)',
+        'gfc-primary': '#00C9CD',
       },
       backgroundColor: {
         'gfc-accent': '#00C9CD',
         'gfc-dark': '#231E21',
         'gfc-darker': '#181918',
         'gfc-teal': 'rgba(0,200,204,1) !important',
+        'gfc-primary-100': 'rgba(0, 201, 205, 0.2)',
+        'gfc-primary': '#00C9CD',
       },
       height: {
         '21': '21.5rem',

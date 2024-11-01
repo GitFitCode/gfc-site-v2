@@ -16,7 +16,7 @@ const PhaseTimeline: React.FC = () => {
   };
 
   return (
-    <div className="max-w-7xl mt-20  mx-auto p-6 w-full">
+    <div id="timeline-section" className="max-w-7xl mt-20  mx-auto p-6 w-full">
       <div className="flex flex-col items-center gap-2 self-stretch w-full text-center mb-20">
         <p className="font-other-caption font-semibold text-[#00c2c6] text-lg uppercase">
           from concept to creation

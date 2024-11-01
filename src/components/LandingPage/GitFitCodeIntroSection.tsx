@@ -1,10 +1,8 @@
-import React from "react";
-import { EditWrapper } from "../EditWrapper";
 import { NotificationWrapper } from "../NotificationWrapper";
 
-export default function HeroSection() {
+export default function GitFitCodeIntroSection() {
 	return (
-		<div className="w-full my-10 flex flex-col items-center justify-center relative px-4 sm:px-6 md:px-8 lg:px-10">
+		<div id="gfc-intro-section" className="w-full my-10 flex flex-col items-center justify-center relative px-4 sm:px-6 md:px-8 lg:px-10">
 			<div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
 			<div className="flex flex-col items-start justify-center gap-4">
           <div className="flex flex-col w-full h-auto items-start justify-center gap-4">
