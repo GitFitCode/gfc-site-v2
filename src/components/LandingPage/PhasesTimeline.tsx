@@ -39,11 +39,11 @@ const PhaseTimeline: React.FC = () => {
                   onClick={() => setSelectedPhase(phase)}
                   className={`flex items-center space-x-4 w-full p-4 rounded-xl transition-all ${
                     selectedPhase.title === phase.title
-                      ? "bg-[#0160ff] text-white shadow-lg"
+                      ? "bg-gfc-primary text-white shadow-lg"
                       : "bg-[#e6ecf8] hover:bg-gray-100"
                   }`}
                 >
-                  <div className="p-3 rounded-xl bg-white text-[#0160ff]">
+                  <div className="p-3 rounded-xl bg-white text-gfc-primary">
                     {renderIcon(phase.icon)}
                   </div>
                   <span className="font-medium">{phase.title}</span>
@@ -61,7 +61,7 @@ const PhaseTimeline: React.FC = () => {
               <div className="space-y-6">
                 {selectedPhase.content.steps.map((step, index) => (
                   <div key={index} className="flex items-start space-x-4">
-                    <div className="flex-shrink-0 w-6 h-6 rounded-full bg-[#0160ff] text-white flex items-center justify-center">
+                    <div className="flex-shrink-0 w-6 h-6 rounded-full bg-gfc-primary text-white flex items-center justify-center">
                       {index + 1}
                     </div>
                     <p className="text-gray-600 leading-relaxed">{step}</p>

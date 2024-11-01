@@ -56,7 +56,7 @@ export default function MainNav({ showNav }: { showNav: boolean }) {
 					<button
 						key={index}
 						onClick={() => handleSelect(item.name, item.sectionId, item.route)}
-						className={`flex items-center p-2 rounded-lg transition-all duration-300 ${
+						className={`flex items-center p-4 rounded-lg transition-all duration-300 ${
 							selected === item.name ? 'bg-gfc-accent text-white' : 'bg-white text-gray-700'
 						} ${isDesktop ? 'hover:bg-gfc-primary-100 hover:text-gfc-accent' : 'hover:bg-gfc-primary-100'}`}
 					>
