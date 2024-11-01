@@ -13,7 +13,7 @@ export default function Logo({ setShowNav, showNav }: LogoProps) {
 
 	useEffect(() => {
 		if (isDesktop) setShowNav(true);
-		else setShowNav(false);
+		else setShowNav(true);
 	}, [isDesktop]);
 
 	return (

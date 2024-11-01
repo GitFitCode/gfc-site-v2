@@ -2,7 +2,7 @@ import React from "react";
 
 export default function StatisticsSection() {
 	return (
-		<div className="flex flex-col my-[10rem] items-center gap-[60px] bg-defaultwhite">
+		<div id='stats-section' className="flex flex-col my-[10rem] items-center gap-[60px] bg-defaultwhite">
 			<div className="flex flex-col items-start gap-12 relative flex-[0_0_auto]">
 				<div className="flex flex-col items-center gap-2 relative self-stretch w-full flex-[0_0_auto]">
 					<p className="font-other-caption font-semibold text-[#00c2c6] text-lg">
@@ -23,7 +23,7 @@ export default function StatisticsSection() {
 						<span className="text-[#303030] tracking-[1.18px]">+</span>
 					</p>
 					<div className=" opacity-70 font-bold text-[#6a6a6a] text-[15.3px] tracking-[2.55px] leading-[26.6px] whitespace-nowrap">
-						PROJECTS LAUNCHED
+						COMMUNITY PROFESSIONALS
 					</div>
 				</div>
 
@@ -41,7 +41,7 @@ export default function StatisticsSection() {
 
 				<div className="flex flex-col items-center">
 					<p className="font-black text-transparent text-[84.2px] tracking-[1.40px] leading-[normal]">
-						<span className="text-[#00c2c6] tracking-[1.18px]">10</span>
+						<span className="text-[#00c2c6] tracking-[1.18px]">15</span>
 
 						<span className="text-[#303030] tracking-[1.18px]">+</span>
 					</p>
