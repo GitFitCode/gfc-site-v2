@@ -30,7 +30,7 @@ export default function LandingPage() {
       <PhaseTimeline />
       <SuccessStoriesSection />
       <StartProject />
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }
