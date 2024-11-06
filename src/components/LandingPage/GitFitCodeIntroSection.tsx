@@ -7,7 +7,7 @@ export default function GitFitCodeIntroSection() {
 				{/* Left Section */}
 				<div className="flex flex-col items-start justify-center gap-4 ">
 					<h1 className="text-4xl sm:text-4xl lg:text-5xl font-bold text-coolgray-90 leading-tight">
-						Custom Enterprise Software Solutions.
+						AI-Enhanced Custom Enterprise Software Solutions.
 					</h1>
 					<p className="text-lg text-[#21272ac9] leading-relaxed max-w-md">
 						Transforming ideas into digital reality with innovative software development.

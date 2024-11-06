@@ -9,7 +9,7 @@ export default function NavigationLoader() {
     <div>
       {isNavigating && (
         <div style={styles.overlay}>
-          <PuffLoader size={50} color={"#123abc"} loading={true} />
+          <PuffLoader size={150} color={"#00C9CD"} loading={true} />
           {/* <p>Loading...</p> */}
         </div>
       )}
