@@ -1,7 +1,14 @@
+import { useNavigate } from "react-router-dom";
 import EmpiricLanding from "../../images/Empiric-card-section.png";
 import EmpiricPhone from "../../images/Empiric-Phone.png";
 
 export default function StartProject() {
+  const navigate = useNavigate();
+
+	const handleButtonClick = () => {
+		navigate('/contact');
+	};
+  
   return (
     <div id="start-project-section" className="relative bg-gradient-to-r from-teal-500 to-gray-900 overflow-hidden w-full">
       <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -16,7 +23,7 @@ export default function StartProject() {
               Let's collaborate to bring your vision to life. Contact us today
               for a free consultation.
             </p>
-            <button className="mt-6 sm:mt-8 px-6 sm:px-8 py-3 sm:py-4 bg-black text-white rounded-lg font-semibold flex items-center gap-2 hover:bg-gray-900 transition-colors group mx-auto lg:mx-0">
+            <button onClick={handleButtonClick} className="mt-6 sm:mt-8 px-6 sm:px-8 py-3 sm:py-4 bg-black text-white rounded-lg font-semibold flex items-center gap-2 hover:bg-gray-900 transition-colors group mx-auto lg:mx-0">
               <span>Contact Us Now</span>
             </button>
           </div>
