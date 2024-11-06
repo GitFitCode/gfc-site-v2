@@ -35,7 +35,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "dotenv -e .env gcloud app deploy app.yaml --project gfc-website-313010"
+    "deploy": "dotenv -e .env gcloud -- app deploy app.yaml --project gfc-website-313010"
 
   },
   "eslintConfig": {
