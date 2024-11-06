@@ -11,9 +11,9 @@ import {
 } from "./contexts/navigation.context";
 import NavigationLoader from "./components/pages/navigation-loader";
 import LandingPage from "./components/pages/LandingPage";
-import MainNav from "./components/Header/main-nav";
 import "./App.css";
 import PageHeader from "./components/Header/page-header";
+import ContactSection from "./components/ContactSection";
 
 const App = () => {
   return (
@@ -24,7 +24,7 @@ const App = () => {
           <PageHeader />
           <Routes>
             <Route path="/" element={<LandingPage />} />
-            {/* <Route path="/about" element={<About />} /> */}
+            <Route path="/contact" element={<ContactSection />} />
           </Routes>
         </NavigationWrapper>
       </NavigationProvider>
@@ -56,3 +56,4 @@ const NavigationWrapper: React.FC<{ children: React.ReactNode }> = ({
 };
 
 export default App;
+
