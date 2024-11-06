@@ -22,17 +22,28 @@ export default function MainNav({ showNav, isDesktop }: MainNavProps) {
   const [scrolled, setScrolled] = useState(false);
   const navigate = useNavigate();
 
-  const handleScroll = useCallback(
-    debounce(() => {
-      setScrolled(window.scrollY > 50);
-    }, 500),
-    [window.scrollY]
-  );
+  const handleScroll = () => {
+    const sections = document.querySelectorAll('section');
+    for (let i = 0; i < sections.length; i++) {
+      const section = sections[i];
+      const rect = section.getBoundingClientRect();
+      if (rect.top >=0 && rect.bottom >= 0) { // Correct condition
+        const sectionId = section.id;
+        const matchingItem = items.find(item => item.sectionId === sectionId);
+        debugger
+        if (matchingItem) {
+          setSelected(matchingItem.name); // Update selected state
+          return; // Exit the loop once a match is found
+        }
+      }
+    }
+  };
+  
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [handleScroll]);
+  }, []); // Empty dependency array to run only once on mount
 
   const handleSelect = useCallback(
     (itemName: string, sectionId: string | null, route: string) => {
