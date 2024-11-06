@@ -1,5 +1,6 @@
-import React from "react";
 import foster_buddy from '../../images/client_success/foster_buddy.png'
+import empiric from '../../images/client_success/Empiric-card-section.png'
+import Carousel from "../ui/Carousel";
 
 export default function SuccessStoriesSection() {
 	return (
@@ -15,24 +16,8 @@ export default function SuccessStoriesSection() {
 					</div>
 				</div>
 			</div>
-
-			{/* <img className="w-[90%] h-[1px] bg-[#e6ecf8] mt-12" alt="Divider" /> */}
 			<div className="flex flex-row items-center gap-4 px-4">
-				{/* <img
-				className=" w-[21px] h-[37px]"
-				alt="Arrow"
-				src="https://c.animaapp.com/rDitUAdQ/img/arrow-2.svg"
-			/> */}
-				<img
-					className=""
-					alt="Divider"
-					src={foster_buddy}
-				/>
-				{/* <img
-				className=" w-[21px] h-[37px]"
-				alt="Arrow"
-				src="https://c.animaapp.com/rDitUAdQ/img/arrow-1.svg"
-			/> */}
+				<Carousel slides={[empiric, foster_buddy]} />
 			</div>
 
 		</div>
