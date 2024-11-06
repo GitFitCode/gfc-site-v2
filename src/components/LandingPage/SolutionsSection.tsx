@@ -1,6 +1,12 @@
-import React from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function SolutionsSection() {
+	const navigate = useNavigate();
+
+	const handleButtonClick = () => {
+		navigate('/contact');
+	};
+	
 	return (
 		<div id="solutions-section" className="flex flex-col w-full items-center gap-[60px] my-[5rem] bg-defaultwhite">
 			<div className="flex flex-col items-center gap-2 self-stretch w-full text-center">
@@ -8,11 +14,11 @@ export default function SolutionsSection() {
 					THE RIGHT FIT FOR ANY SOFTWARE SOLUTION
 				</p>
 				<p className="font-bold text-coolgray-90 text-4xl">
-					We Develop Solutions for Every Need
+					Designing and Building Platforms
 				</p>
 			</div>
 
-			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full px-4">
+			<div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-6 w-full px-16">
 				<div className="flex flex-col items-center gap-4 p-4 bg-[#f8f9fb] rounded-lg">
 					<img
 						className="h-[213px] object-cover"
@@ -71,7 +77,7 @@ export default function SolutionsSection() {
 				</div>
 			</div>
 
-			<button className="inline-flex items-center justify-center h-14 px-6 bg-[#00c2c6] text-white rounded-lg">
+			<button onClick={handleButtonClick}  className="inline-flex items-center justify-center h-14 px-6 bg-[#00c2c6] text-white rounded-lg">
 				<span className="font-semibold text-lg">Start Building</span>
 			</button>
 		</div>
