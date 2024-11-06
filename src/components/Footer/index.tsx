@@ -2,7 +2,7 @@ import {
   FaYoutube,
   FaFacebook,
   FaTwitter,
-  FaInstagram,
+  FaTiktok,
   FaLinkedin,
 } from "react-icons/fa";
 import logo from "../../images/logo-long.png";
@@ -24,11 +24,31 @@ const footerColumns = [
 ];
 
 const socialLinks = [
-  { icon: FaYoutube, href: "https://github.com/JoelAngels", label: "YouTube" },
-  { icon: FaFacebook, href: "#", label: "Facebook" },
-  { icon: FaTwitter, href: "#", label: "Twitter" },
-  { icon: FaInstagram, href: "#", label: "Instagram" },
-  { icon: FaLinkedin, href: "#", label: "LinkedIn" },
+  {
+    icon: FaYoutube,
+    href: "https://www.youtube.com/channel/UCUSEpzBu80ePCy-q9wpc9Ag",
+    label: "YouTube",
+  },
+  {
+    icon: FaFacebook,
+    href: "https://www.facebook.com/profile.php?id=61566150429103",
+    label: "Facebook",
+  },
+  {
+    icon: FaTwitter,
+    href: "https://x.com/GitFitCode",
+    label: "Twitter",
+  },
+  {
+    icon: FaLinkedin,
+    href: "https://www.linkedin.com/company/gitfitcode-llc/?viewAsMember=true",
+    label: "LinkedIn",
+  },
+  {
+    icon: FaTiktok,
+    href: "https://www.tiktok.com/@gitfitcode?lang=en",
+    label: "LinkedIn",
+  },
 ];
 
 const Footer = () => {
