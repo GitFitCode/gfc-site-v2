@@ -35,7 +35,12 @@ export default function MainNav({ showNav }: { showNav: boolean }) {
 			navigate(route);
 		}
 		if (section) {
-			section.scrollIntoView({ behavior: 'smooth' });
+			const offset = 90;
+			const sectionTop = section.getBoundingClientRect().top + window.scrollY;
+			window.scrollTo({
+				top: sectionTop - offset,
+				behavior: 'smooth',
+			});
 		}
 	};
 
