@@ -14,11 +14,11 @@ export default function SolutionsSection() {
 					THE RIGHT FIT FOR ANY SOFTWARE SOLUTION
 				</p>
 				<p className="font-bold text-coolgray-90 text-4xl">
-					We Develop Solutions for Every Need
+					Designing and Building Platforms
 				</p>
 			</div>
 
-			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full px-4">
+			<div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-6 w-full px-16">
 				<div className="flex flex-col items-center gap-4 p-4 bg-[#f8f9fb] rounded-lg">
 					<img
 						className="h-[213px] object-cover"
