@@ -7,7 +7,7 @@ export default function StatisticsSection() {
 		navigate('/contact');
 	};
 	return (
-		<div id='stats-section' className="flex flex-col my-[10rem] items-center gap-[60px] bg-defaultwhite">
+		<section id='stats-section' className="flex flex-col my-[10rem] items-center gap-[60px] bg-defaultwhite">
 			<div className="flex flex-col items-start gap-12 relative flex-[0_0_auto]">
 				<div className="flex flex-col items-center gap-2 relative self-stretch w-full flex-[0_0_auto]">
 					<p className="font-other-caption font-semibold text-[#00c2c6] text-lg">
@@ -78,6 +78,6 @@ export default function StatisticsSection() {
 					</div>
 				</div>
 			</button>
-		</div>
+		</section>
 	)
 }
