@@ -2,6 +2,8 @@ runtime: nodejs20
 env_variables:
   REACT_APP_SUPABASE_URL: ${REACT_APP_SUPABASE_URL}
   REACT_APP_SUPABASE_ANON_KEY: ${REACT_APP_SUPABASE_ANON_KEY}
+  REACT_APP_PUBLIC_POSTHOG_KEY: ${REACT_APP_PUBLIC_POSTHOG_KEY}
+  REACT_APP_PUBLIC_POSTHOG_HOST: ${REACT_APP_PUBLIC_POSTHOG_HOST}
 handlers:
 # Serve all static files with url ending with a file extension
 - url: /(.*\..+)$
