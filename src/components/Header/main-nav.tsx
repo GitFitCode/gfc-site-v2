@@ -23,14 +23,16 @@ export default function MainNav({ showNav, isDesktop }: MainNavProps) {
   const navigate = useNavigate();
 
   const handleScroll = () => {
+    // Update scrolled state for opcacity and shadow effect for nav
+    setScrolled(window.scrollY > 50);
+    // Find the section that is currently in view and update the selected state
     const sections = document.querySelectorAll('section');
     for (let i = 0; i < sections.length; i++) {
       const section = sections[i];
       const rect = section.getBoundingClientRect();
-      if (rect.top >=0 && rect.bottom >= 0) { // Correct condition
+      if (rect.top >= 0 && rect.bottom >= 0) { // Correct condition
         const sectionId = section.id;
         const matchingItem = items.find(item => item.sectionId === sectionId);
-        debugger
         if (matchingItem) {
           setSelected(matchingItem.name); // Update selected state
           return; // Exit the loop once a match is found
@@ -38,7 +40,7 @@ export default function MainNav({ showNav, isDesktop }: MainNavProps) {
       }
     }
   };
-  
+
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
@@ -79,12 +81,11 @@ export default function MainNav({ showNav, isDesktop }: MainNavProps) {
 
   return showNav ? (
     <div
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        scrolled ? 'bg-white bg-opacity-90 border-b-4 border-gfc-primary-100' : 'bg-white bg-opacity-100'
-      } ${isDesktop ? 'lg:flex lg:flex-row lg:space-x-4 lg:justify-between lg:items-center lg:p-4' : 'flex flex-row items-center justify-between w-full p-2'}`}
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white bg-opacity-90 border-b-4 border-gfc-primary-100' : 'bg-white bg-opacity-100'
+        } ${isDesktop ? 'lg:flex lg:flex-row lg:space-x-4 lg:justify-between lg:items-center lg:p-4' : 'flex flex-row items-center justify-between w-full p-2'}`}
     >
       <div className="flex items-center">
-        <Logo setShowNav={() => {}} showNav={showNav} />
+        <Logo setShowNav={() => { }} showNav={showNav} />
       </div>
 
       <div className={`flex ${isDesktop ? 'flex-row space-x-4' : 'flex-row space-x-3 mt-2'}`}>
@@ -94,9 +95,8 @@ export default function MainNav({ showNav, isDesktop }: MainNavProps) {
               key={index}
               to={item.route}
               onClick={() => setSelected(item.name)}
-              className={`flex items-center p-4 rounded-lg transition-all duration-300 ${
-                selected === item.name ? 'bg-gfc-accent text-white' : 'bg-white text-gray-700'
-              } ${isDesktop ? 'hover:bg-gfc-primary-100 hover:text-gfc-accent' : 'hover:bg-gfc-primary-100'}`}
+              className={`flex items-center p-4 rounded-lg transition-all duration-300 ${selected === item.name ? 'bg-gfc-accent text-white' : 'bg-white text-gray-700'
+                } ${isDesktop ? 'hover:bg-gfc-primary-100 hover:text-gfc-accent' : 'hover:bg-gfc-primary-100'}`}
             >
               {React.cloneElement(item.icon, {
                 fill: selected === item.name ? 'white' : 'black',
@@ -113,9 +113,8 @@ export default function MainNav({ showNav, isDesktop }: MainNavProps) {
             <button
               key={index}
               onClick={() => handleSelect(item.name, item.sectionId, item.route)}
-              className={`flex items-center p-4 rounded-lg transition-all duration-300 ${
-                selected === item.name ? 'bg-gfc-accent text-white' : 'bg-white text-gray-700'
-              } ${isDesktop ? 'hover:bg-gfc-primary-100 hover:text-gfc-accent' : 'hover:bg-gfc-primary-100'}`}
+              className={`flex items-center p-4 rounded-lg transition-all duration-300 ${selected === item.name ? 'bg-gfc-accent text-white' : 'bg-white text-gray-700'
+                } ${isDesktop ? 'hover:bg-gfc-primary-100 hover:text-gfc-accent' : 'hover:bg-gfc-primary-100'}`}
             >
               {React.cloneElement(item.icon, {
                 fill: selected === item.name ? 'white' : 'black',
