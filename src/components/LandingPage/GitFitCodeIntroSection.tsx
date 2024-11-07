@@ -1,4 +1,3 @@
-import { NotificationWrapper } from "../NotificationWrapper";
 
 export default function GitFitCodeIntroSection() {
 	return (
@@ -12,21 +11,21 @@ export default function GitFitCodeIntroSection() {
 					<p className="text-lg text-[#21272ac9] leading-relaxed max-w-md">
 						Transforming ideas into digital reality with innovative software development.
 					</p>
-					<a 
-            href="https://calendar.app.google/9RQZmAHjNjV51Jyz9" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="all-[unset] box-border inline-flex h-14 items-center justify-center bg-[#00c2c6] text-white rounded-lg hover:bg-gfc-primary-100 hover:text-black sm:w-[90%] lg:w-[60%]"
-          >
-					<button className="all-[unset] box-border inline-flex h-14 items-center justify-center p-4 ">
-						<div className="inline-flex items-center justify-center gap-2.5 px-4 flex-[0_0_auto] font-bold">
-							Start Building
-						</div>
-					</button>
+					<a
+						href="https://calendar.app.google/9RQZmAHjNjV51Jyz9"
+						target="_blank"
+						rel="noopener noreferrer"
+						className="all-[unset] box-border inline-flex h-14 items-center justify-center bg-[#00c2c6] text-white rounded-lg hover:bg-gfc-primary-100 hover:text-black sm:w-[90%] lg:w-[60%]"
+					>
+						<button className="all-[unset] box-border inline-flex h-14 items-center justify-center p-4 ">
+							<div className="inline-flex items-center justify-center gap-2.5 px-4 flex-[0_0_auto] font-bold">
+								Start Building
+							</div>
+						</button>
 					</a>
 
 				</div>
-				
+
 				{/* Right Section */}
 				<div className="relative flex justify-center md:justify-end items-center">
 					<div className="w-full sm:w-2/3 lg:w-2/3 h-[353px] relative flex items-center">
@@ -45,7 +44,10 @@ export default function GitFitCodeIntroSection() {
 							alt="Linkedin profile"
 							src="https://c.animaapp.com/2fHzREgW/img/linkedin-profile-picture-11-08-2022-1.png"
 						/>
-						<NotificationWrapper className="!absolute !left-1 !top-[164px]" />
+		
+						<div
+							className={`z-10 w-8 h-8 bg-[url(https://c.animaapp.com/2fHzREgW/img/notification-2.svg)] bg-[100%_100%] $!absolute !left-1 !top-[164px]`}
+						/>
 					</div>
 				</div>
 			</div>
