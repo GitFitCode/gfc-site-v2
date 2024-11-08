@@ -1,0 +1,23 @@
+.pixelBackground{
+	display: flex;
+	height: 100vh;
+	width: 99%;
+	overflow: hidden;
+	position: absolute;
+	z-index: 1;
+	pointer-events: none;
+	
+}
+.pixel-column{
+	width: 5vw;
+	height: 98%;
+	display: flex;
+	flex-direction: column;
+
+}
+
+.pixel-block{
+	width: 100%;
+	height: 5vw;
+	background-color: #00C9CD;
+}
