@@ -82,7 +82,7 @@ export default function MainNav({ showNav, isDesktop }: MainNavProps) {
   return showNav ? (
     <div
       className={`fixed top-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white bg-opacity-90 border-b-4 border-gfc-primary-100' : 'bg-white bg-opacity-100'
-        } ${isDesktop ? 'lg:flex lg:flex-row lg:space-x-4 lg:justify-between lg:items-center lg:p-4 w-full' : 'flex flex-row items-center justify-between p-2'}`}
+        } ${isDesktop ? 'lg:flex lg:flex-row lg:space-x-4 lg:justify-between lg:items-center lg:p-4 w-full' : 'flex flex-row items-center justify-between p-2 w-[97%]'}`}
     >
       <div className="flex items-center">
         <Logo setShowNav={() => { }} showNav={showNav} />
