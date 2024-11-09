@@ -10,18 +10,15 @@ const PageTransition: React.FC<{ children: React.ReactNode }> = ({ children }) =
   useEffect(() => {
     // Trigger the animation when `isNavigating` becomes `false`
     if (!isNavigating) {
-      const delayTimer = setTimeout(() => setShouldAnimate(true), 100); // Add a delay if needed
+      const delayTimer = setTimeout(() => setShouldAnimate(true), 200); // Add a delay if needed
       return () => clearTimeout(delayTimer);
     } else {
       setShouldAnimate(false); // Reset if navigating
     }
   }, [isNavigating]);
 
-  // const transitionVariants = {
-  //   hidden: { opacity: 0, scale: 1 },
-  //   visible: { opacity: 1, scale: 1 },
-  //   exit: { opacity: 0, scale: 0.9, transition: { duration: 0.5, delay: 1 }  },
-  // };
+
+
   const transitionVariants = {
     initial: { opacity: 1 },         // Component is fully visible on mount
     enter: { opacity: 1, scale: 1 }, // Animation on component entry
