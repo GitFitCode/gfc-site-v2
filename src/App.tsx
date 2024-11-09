@@ -12,20 +12,27 @@ import {
 import NavigationLoader from "./components/pages/navigation-loader";
 import LandingPage from "./components/pages/LandingPage";
 import "./App.css";
+import { AnimatePresence } from "framer-motion";
 import PageHeader from "./components/Header/page-header";
 import ContactSection from "./components/ContactSection";
+import PageTransition from "./components/pages/page-transition";
+
 
 const App = () => {
   return (
     <Router>
       <NavigationProvider>
         <NavigationWrapper>
+
           <NavigationLoader />
           <PageHeader />
-          <Routes>
+
+          {/* <Routes>
             <Route path="/" element={<LandingPage />} />
             <Route path="/contact" element={<ContactSection />} />
-          </Routes>
+          </Routes> */}
+          <AnimatedRoutes />
+
         </NavigationWrapper>
       </NavigationProvider>
     </Router>
@@ -44,7 +51,7 @@ const NavigationWrapper: React.FC<{ children: React.ReactNode }> = ({
 
     const timeoutId = setTimeout(() => {
       setIsNavigating(false); // Clear the navigation state after a brief delay
-    }, 500); // Simulate a delay; adjust this based on your actual loading logic
+    }, 400); // Simulate a delay; adjust this based on your actual loading logic
 
     return () => {
       clearTimeout(timeoutId);
@@ -53,6 +60,30 @@ const NavigationWrapper: React.FC<{ children: React.ReactNode }> = ({
   }, [location, setIsNavigating]);
 
   return <>{children}</>;
+};
+
+// AnimatedRoutes component to handle route transitions
+const AnimatedRoutes = () => {
+  const location = useLocation();
+
+  return (
+    <AnimatePresence mode="wait">
+      <Routes location={location} key={location.pathname}>
+        <Route
+          path="/"
+          element={
+            <PageTransition children={<LandingPage />} />
+          }
+        />
+        <Route
+          path="/contact"
+          element={
+            <PageTransition children={<ContactSection />} />
+          }
+        />
+      </Routes>
+    </AnimatePresence>
+  );
 };
 
 export default App;
