@@ -10,7 +10,7 @@ export default function StartProject() {
 	};
   
   return (
-    <div id="start-project-section" className="relative bg-gradient-to-r from-gfc-accent to-gray-900 overflow-hidden w-full">
+    <section id="start-project-section" className="relative bg-gradient-to-r from-gfc-accent to-gray-900 overflow-hidden w-full">
       <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative py-8 sm:py-12 lg:py-14 flex flex-col items-center">
           {/* Left Content */}
@@ -54,6 +54,6 @@ export default function StartProject() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
