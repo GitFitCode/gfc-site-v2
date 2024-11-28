@@ -1,17 +1,16 @@
-import { ReportHandler } from 'web-vitals';
+import { throttle } from "lodash";
+import { Metric, onCLS, onFCP, onINP, onLCP, onTTFB } from "web-vitals";
 
-import { throttle } from 'lodash';
+type ReportHandler = (metric: Metric) => void;
 
 const reportWebVitals = (onPerfEntry?: ReportHandler) => {
   if (onPerfEntry && onPerfEntry instanceof Function) {
-    import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-      const throttledOnPerfEntry = throttle(onPerfEntry, 500);
-      getCLS(throttledOnPerfEntry);
-      getFID(throttledOnPerfEntry);
-      getFCP(throttledOnPerfEntry);
-      getLCP(throttledOnPerfEntry);
-      getTTFB(throttledOnPerfEntry);
-    });
+    const throttledOnPerfEntry = throttle(onPerfEntry, 500);
+    onCLS(throttledOnPerfEntry);
+    onFCP(throttledOnPerfEntry);
+    onINP(throttledOnPerfEntry);
+    onLCP(throttledOnPerfEntry);
+    onTTFB(throttledOnPerfEntry);
   }
 };
 

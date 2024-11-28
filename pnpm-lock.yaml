@@ -72,8 +72,8 @@ importers:
         specifier: latest
         version: 1.0.7(tailwindcss@3.4.15)
       web-vitals:
-        specifier: ^2.1.4
-        version: 2.1.4
+        specifier: latest
+        version: 4.2.4
     devDependencies:
       '@commitlint/cli':
         specifier: latest
@@ -5645,9 +5645,6 @@ packages:
 
   wbuf@1.7.3:
     resolution: {integrity: sha512-O84QOnr0icsbFGLS0O3bI5FswxzRr8/gHwWkDlQFskhSPryQXvrTMxjxGP4+iWYoauLoBvfDpkrOauZ+0iZpDA==}
-
-  web-vitals@2.1.4:
-    resolution: {integrity: sha512-sVWcwhU5mX6crfI5Vd2dC4qchyTqxV8URinzt25XqVh+bHEPGH4C3NPrNionCP7Obx59wrYEbNlw4Z8sjALzZg==}
 
   web-vitals@4.2.4:
     resolution: {integrity: sha512-r4DIlprAGwJ7YM11VZp4R884m0Vmgr6EAKe3P+kO0PPj3Unqyvv59rczf6UiGcb9Z8QxZVcqKNwv/g0WNdWwsw==}
@@ -12479,8 +12476,6 @@ snapshots:
   wbuf@1.7.3:
     dependencies:
       minimalistic-assert: 1.0.1
-
-  web-vitals@2.1.4: {}
 
   web-vitals@4.2.4: {}
 
