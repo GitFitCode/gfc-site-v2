@@ -17,16 +17,14 @@
     "gsap": "latest",
     "jquery": "latest",
     "lodash": "latest",
-    "lucide-react": "^0.454.0",
+    "lucide-react": "latest",
     "posthog-js": "latest",
     "react": "latest",
     "react-dom": "latest",
     "react-router-dom": "^6.28.0",
-    "react-scripts": "latest",
     "react-spinners": "latest",
     "tailwind-merge": "latest",
     "tailwindcss-animate": "latest",
-    "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -66,7 +64,9 @@
     "@types/react-dom": "latest",
     "dotenv-cli": "latest",
     "husky": "latest",
-    "tailwindcss": "latest"
+    "react-scripts": "latest",
+    "tailwindcss": "latest",
+    "typescript": "latest"
   },
   "engines": {
     "node": "22.x",
