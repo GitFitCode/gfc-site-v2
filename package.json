@@ -66,8 +66,6 @@
     "@types/react-dom": "latest",
     "dotenv-cli": "latest",
     "husky": "latest",
-    "prettier": "latest",
-    "prettier-plugin-tailwindcss": "latest",
     "tailwindcss": "latest"
   },
   "engines": {
