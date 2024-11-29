@@ -16,7 +16,10 @@ const PhaseTimeline: React.FC = () => {
   };
 
   return (
-    <section id="timeline-section" className="max-w-7xl mt-20  mx-auto p-6 w-full">
+    <section
+      id="timeline-section"
+      className="max-w-7xl mt-20  mx-auto p-6 w-full"
+    >
       <div className="flex flex-col items-center gap-2 self-stretch w-full text-center mb-20">
         <p className="font-other-caption font-semibold text-[#00c2c6] text-lg uppercase">
           from concept to creation
@@ -75,13 +78,24 @@ const PhaseTimeline: React.FC = () => {
                     <h3 className="flex text-lg font-semibold">Tools Used:</h3>
                     <div className="flex flex-wrap gap-2 justify-center md:justify-start">
                       {selectedPhase.content.tools.map((tool, index) => (
-                        <div
-                          key={index}
-                          className="flex items-center space-x-2 bg-white rounded-full px-4 py-2"
+                        <a
+                          key={tool.name}
+                          href={tool.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
                         >
-                          <span>{tool.icon}</span>
-                          <span className="font-medium">{tool.name}</span>
-                        </div>
+                          <div
+                            key={index}
+                            className="flex items-center space-x-2 bg-white rounded-full px-4 py-2"
+                          >
+                            <img
+                              src={tool.images}
+                              className="w-6 h-6 cursor-pointer"
+                            />
+
+                            <span className="font-medium">{tool.name}</span>
+                          </div>
+                        </a>
                       ))}
                     </div>
                   </div>
