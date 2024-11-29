@@ -9,7 +9,8 @@ export interface Phase {
 
 export interface Tool {
   name: string;
-  icon: string;
+  images: string;
+  link: string;
 }
 
 export interface PhaseGroup {
