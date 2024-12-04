@@ -25,7 +25,7 @@ const PhaseTimeline: React.FC = () => {
           from concept to creation
         </p>
         <p className="font-bold text-coolgray-90 text-4xl">
-          We Develop the Perfect Solution
+          We Develop The Perfect Solution
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 h-full">
