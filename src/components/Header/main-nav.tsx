@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import Logo from './logo';
 import { HomeIcon, UserGroupIcon, CogIcon, ChatBubbleOvalLeftIcon, PhoneIcon } from '@heroicons/react/24/solid';
 import { Link, useNavigate } from 'react-router';
-import debounce from 'lodash.debounce';
+
 
 const items = [
   { name: 'Home', icon: <HomeIcon className="h-6 w-6" />, route: '/', sectionId: 'gfc-intro-section', content: 'Home' },

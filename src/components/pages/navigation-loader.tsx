@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react";
 import { useNavigationContext } from "../../contexts/navigation.context";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion} from "framer-motion";
 import "../../App.css";
 
 const anim = {
@@ -39,7 +38,7 @@ export default function NavigationLoader() {
   };
 
   const getBlocks = () => {
-    const { innerWidth, innerHeight, outerHeight } = window;
+    const { innerWidth, outerHeight } = window;
     const blockSize = innerWidth * 0.05;
     const nbOfBlocks = Math.ceil(outerHeight / blockSize);
     const shuffledIndexes = shuffle([...Array(nbOfBlocks)].map((_, i) => i))

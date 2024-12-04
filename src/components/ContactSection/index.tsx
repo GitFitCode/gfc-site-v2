@@ -55,7 +55,7 @@ export default function ContactSection() {
 
     try {
       // Insert form data into Supabase table
-      const { data, error } = await supabase
+      const { error } = await supabase
         .from('contact_form_submissions')
         .insert([
           {
