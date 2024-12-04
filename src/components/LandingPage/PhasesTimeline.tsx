@@ -16,13 +16,16 @@ const PhaseTimeline: React.FC = () => {
   };
 
   return (
-    <section id="timeline-section" className="max-w-7xl mt-20  mx-auto p-6 w-full">
+    <section
+      id="timeline-section"
+      className="max-w-7xl mt-20  mx-auto p-6 w-full"
+    >
       <div className="flex flex-col items-center gap-2 self-stretch w-full text-center mb-20">
         <p className="font-other-caption font-semibold text-[#00c2c6] text-lg uppercase">
           from concept to creation
         </p>
         <p className="font-bold text-coolgray-90 text-4xl">
-          We Develop the Perfect Solution
+          We Develop The Perfect Solution
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 h-full">
