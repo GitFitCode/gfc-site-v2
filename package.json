@@ -21,7 +21,7 @@
     "posthog-js": "latest",
     "react": "latest",
     "react-dom": "latest",
-    "react-router-dom": "^6.28.0",
+    "react-router": "^7.0.2",
     "react-spinners": "latest",
     "tailwind-merge": "latest",
     "tailwindcss-animate": "latest",
