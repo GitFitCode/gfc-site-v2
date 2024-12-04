@@ -1,6 +1,4 @@
 import { useNavigate } from "react-router";
-import EmpiricLanding from "../../images/Empiric-card-section.png";
-import EmpiricPhone from "../../images/Empiric-Phone.png";
 
 export default function StartProject() {
   const navigate = useNavigate();
