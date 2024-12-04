@@ -20,6 +20,7 @@
     "lucide-react": "latest",
     "posthog-js": "latest",
     "react": "latest",
+    "react-calendly": "^4.3.1",
     "react-dom": "latest",
     "react-router-dom": "^6.28.0",
     "react-spinners": "latest",
