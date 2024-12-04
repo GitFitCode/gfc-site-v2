@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import Logo from './logo';
 import { HomeIcon, UserGroupIcon, CogIcon, ChatBubbleOvalLeftIcon, PhoneIcon } from '@heroicons/react/24/solid';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router';
 import debounce from 'lodash.debounce';
 
 const items = [
