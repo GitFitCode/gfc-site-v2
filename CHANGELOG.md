@@ -1,3 +1,9 @@
+## 0.2.1 (2024-12-05)
+
+### Fix
+
+- Resolved eslint issues preventing lighthouseci from building
+
 ## 0.2.0 (2024-11-28)
 
 ### Feat

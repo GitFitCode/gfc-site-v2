@@ -1,6 +1,6 @@
 import { supabase } from '../../services/supabaseClient';
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router';
 
 export default function ContactSection() {
   const navigate = useNavigate();
@@ -55,7 +55,7 @@ export default function ContactSection() {
 
     try {
       // Insert form data into Supabase table
-      const { data, error } = await supabase
+      const { error } = await supabase
         .from('contact_form_submissions')
         .insert([
           {
