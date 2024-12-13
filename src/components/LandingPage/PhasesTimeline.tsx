@@ -90,6 +90,7 @@ const PhaseTimeline: React.FC = () => {
                           >
                             <img
                               src={tool.images}
+                              alt={tool.name}
                               className="w-6 h-6 cursor-pointer"
                             />
 
