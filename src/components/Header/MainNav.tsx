@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import Logo from './logo';
+import Logo from './Logo';
 import { HomeIcon, UserGroupIcon, CogIcon, ChatBubbleOvalLeftIcon, PhoneIcon } from '@heroicons/react/24/solid';
 import { Link, useNavigate } from 'react-router';
+import { FolderClosedIcon } from 'lucide-react';
 
 
 const items = [
@@ -9,6 +10,7 @@ const items = [
   { name: 'About', icon: <UserGroupIcon className="h-6 w-6" />, route: '#about', sectionId: 'stats-section', content: 'About Us' },
   { name: 'Services', icon: <CogIcon className="h-6 w-6" />, route: '#services', sectionId: 'solutions-section', content: 'Services' },
   { name: 'Testimonials', icon: <ChatBubbleOvalLeftIcon className="h-6 w-6" />, route: '#testimonials', sectionId: 'success-stories-section', content: 'Testimonials' },
+  { name: 'Portfolio', icon: <FolderClosedIcon className="h-6 w-6" />, route: '/portfolio', sectionId: null, content: 'Portfolio' },
   { name: 'Contact', icon: <PhoneIcon className="h-6 w-6" />, route: '/contact', sectionId: null, content: 'Contact Us' },
 ];
 

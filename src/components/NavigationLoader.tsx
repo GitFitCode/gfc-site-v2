@@ -1,6 +1,6 @@
-import { useNavigationContext } from "../../contexts/navigation.context";
+import { useNavigationContext } from "../contexts/navigation.context";
 import { motion} from "framer-motion";
-import "../../App.css";
+import "../App.css";
 
 const anim = {
   initial: {

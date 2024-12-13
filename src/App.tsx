@@ -9,13 +9,14 @@ import {
   NavigationProvider,
   useNavigationContext,
 } from "./contexts/navigation.context";
-import NavigationLoader from "./components/pages/navigation-loader";
-import LandingPage from "./components/pages/LandingPage";
+import NavigationLoader from "./components/NavigationLoader";
+import LandingPage from "./components/LandingPage/LandingPage";
 import "./App.css";
 import { AnimatePresence } from "framer-motion";
-import PageHeader from "./components/Header/page-header";
-import ContactSection from "./components/ContactSection";
-import PageTransition from "./components/pages/page-transition";
+import PageHeader from "./components/Header/PageHeader";
+import ContactPage from "./components/ContactPage";
+import PageTransition from "./components/PageTransition";
+import PortfolioPage from "./components/PortfolioPage";
 
 
 const App = () => {
@@ -26,10 +27,9 @@ const App = () => {
 
           <NavigationLoader />
           <PageHeader />
-
           {/* <Routes>
             <Route path="/" element={<LandingPage />} />
-            <Route path="/contact" element={<ContactSection />} />
+            <Route path="/contact" element={<ContactPage />} />
           </Routes> */}
           <AnimatedRoutes />
 
@@ -78,7 +78,13 @@ const AnimatedRoutes = () => {
         <Route
           path="/contact"
           element={
-            <PageTransition children={<ContactSection />} />
+            <PageTransition children={<ContactPage />} />
+          }
+        />
+        <Route
+          path="/portfolio"
+          element={
+            <PageTransition children={<PortfolioPage />} />
           }
         />
       </Routes>
