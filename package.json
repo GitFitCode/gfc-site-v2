@@ -1,7 +1,7 @@
 {
   "name": "gfc-site-v2",
   "license": "GPL-3.0-only",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "private": true,
   "dependencies": {
     "@heroicons/react": "latest",
