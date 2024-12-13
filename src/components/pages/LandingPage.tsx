@@ -3,7 +3,6 @@ import StatsSection from "../LandingPage/StatsSection";
 import SolutionsSection from "../LandingPage/SolutionsSection";
 import PhaseTimeline from "../LandingPage/PhasesTimeline";
 import SuccessStoriesSection from "../LandingPage/SuccessStoriesSection";
-import Footer from "../Footer";
 import StartProject from "../LandingPage/StartProject";
 import GitFitCodeIntroSection from "../LandingPage/GitFitCodeIntroSection";
 
@@ -21,7 +20,6 @@ export default function LandingPage() {
       <PhaseTimeline />
       <SuccessStoriesSection />
       <StartProject />
-      {/* <Footer /> */}
     </div>
   );
 }
