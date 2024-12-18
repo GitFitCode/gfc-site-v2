@@ -17,6 +17,9 @@ import PageHeader from "./components/Header/PageHeader";
 import ContactPage from "./components/ContactPage";
 import PageTransition from "./components/PageTransition";
 import PortfolioPage from "./components/PortfolioPage";
+import ModeEarnClub from "./components/PortfolioPage/Cases/ModeEarnClub";
+import ConnectworX from "./components/PortfolioPage/Cases/ConnectworX";
+import NaturaLabs from "./components/PortfolioPage/Cases/NaturaLabs";
 
 
 const App = () => {
@@ -71,22 +74,26 @@ const AnimatedRoutes = () => {
       <Routes location={location} key={location.pathname}>
         <Route
           path="/"
-          element={
-            <PageTransition children={<LandingPage />} />
-          }
-        />
+          element={<PageTransition children={<LandingPage />} />} />
         <Route
           path="/contact"
-          element={
-            <PageTransition children={<ContactPage />} />
-          }
-        />
+          element={<PageTransition children={<ContactPage />} />} />
         <Route
           path="/portfolio"
-          element={
-            <PageTransition children={<PortfolioPage />} />
-          }
-        />
+          element={<PageTransition children={<PortfolioPage />} />} />
+
+
+        {/* Portfoilio Routes */}
+        <Route
+          path="/portfolio/mode-earn-club"
+          element={<PageTransition children={<ModeEarnClub />} />} />
+        <Route
+          path="/portfolio/connectworx"
+          element={<PageTransition children={<ConnectworX />} />} />
+        <Route
+          path="/portfolio/natura-labs"
+          element={<PageTransition children={<NaturaLabs />} />} />
+
       </Routes>
     </AnimatePresence>
   );

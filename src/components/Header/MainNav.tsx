@@ -97,7 +97,7 @@ export default function MainNav({ showNav, isDesktop }: MainNavProps) {
               key={index}
               to={item.route}
               onClick={() => setSelected(item.name)}
-              className={`flex items-center p-4 rounded-lg transition-all duration-300 ${selected === item.name ? 'bg-gfc-accent text-white' : 'bg-white text-gray-700'
+              className={`flex items-center p-4 rounded-lg transition-all duration-300 ${selected === item.name ? 'bg-gfc-primary text-white' : 'bg-white text-gray-700'
                 } ${isDesktop ? 'hover:bg-gfc-primary-100 hover:text-gfc-accent' : 'hover:bg-gfc-primary-100'}`}
             >
               {React.cloneElement(item.icon, {

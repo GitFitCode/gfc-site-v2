@@ -9,7 +9,8 @@ module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
     "app/**/*.{ts,tsx}",
-    "components/**/*.{ts,tsx}"
+    "components/**/*.{ts,tsx}",
+    "images/**/*.{png,jpg,jpeg,gif,webp,avif,svg}"
   ],
   theme: {
     container: {
@@ -38,7 +39,8 @@ module.exports = {
         'gfc-darker': '#181918',
         'gfc-light': '#E6F7F8', // new light color
         'gfc-primary-100': 'rgba(0, 201, 205, 0.2)',
-        'gfc-primary': '#00C9CD',
+        'gfc-primary': '#048c8f',
+        'gfc-secondary': '#048c8f',
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
