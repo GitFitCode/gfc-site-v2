@@ -1,12 +1,6 @@
-import { useNavigate } from "react-router";
 
 export default function SolutionsSection() {
-	const navigate = useNavigate();
 
-	const handleButtonClick = () => {
-		navigate('/contact');
-	};
-	
 	return (
 		<section id="solutions-section" className="flex flex-col w-full items-center gap-[60px] my-[5rem] bg-defaultwhite">
 			<div className="flex flex-col items-center gap-2 self-stretch w-full text-center">
@@ -77,9 +71,18 @@ export default function SolutionsSection() {
 				</div>
 			</div>
 
-			<button onClick={handleButtonClick}  className="inline-flex items-center justify-center h-14 px-6 bg-[#00c2c6] text-white rounded-lg">
-				<span className="font-semibold text-lg">Start Building</span>
-			</button>
+			<a
+				href="https://calendar.app.google/9RQZmAHjNjV51Jyz9"
+				target="_blank"
+				rel="noopener noreferrer"
+				className="all-[unset] box-border inline-flex h-14 items-center justify-center bg-[#00c2c6] text-white rounded-lg hover:bg-gfc-primary-100 hover:text-black"
+			>
+				<button className="all-[unset] box-border inline-flex h-14 items-center justify-center p-4 ">
+					<div className="inline-flex items-center justify-center gap-2.5 px-4 flex-[0_0_auto] font-bold">
+						Start Building
+					</div>
+				</button>
+			</a>
 		</section>
 	);
 }

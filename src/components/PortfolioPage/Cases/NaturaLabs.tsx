@@ -133,7 +133,7 @@ export default function NaturaLabs() {
 						<div className='flex flex-col gap-6 '>
 							<h3 className="text-2xl md:text-3xl">Sections & Components</h3>
 							<div className="md:text-xl flex flex-col font-[300]">
-								My role for this website was to take the brand and site from ideation to first
+								Our role for this website was to take the brand and site from ideation to first
 								release, but also to set rules and educate the Natura team to take on future
 								iterations of their own website. Below is an example of various type
 								lockups, card alternates, and sections which could be used as a template
@@ -173,7 +173,7 @@ export default function NaturaLabs() {
 							<h3 className="text-2xl md:text-3xl">Designing For Responsive Desktop</h3>
 							<div className="md:text-xl flex flex-col font-[300]">
 								The desktop experience allowed for more creative flexibility. Given the
-								brand's liberal use of text, I oped for small animations within copy to
+								brand's liberal use of text, We opted for small animations within copy to
 								highlight important.
 								<br />
 								<br />
@@ -203,7 +203,7 @@ export default function NaturaLabs() {
 								with near-unlimited creative freedom.
 								<br />
 								<br />
-								The founders and I worked closely together on the research and branding
+								We worked closely with the founder on the research and branding
 								process and it created a stronger sense of identity and understanding for
 								them.
 								<br />

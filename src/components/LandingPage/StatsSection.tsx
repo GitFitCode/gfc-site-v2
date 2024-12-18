@@ -1,11 +1,6 @@
-import { useNavigate } from "react-router";
 
 export default function StatisticsSection() {
-	const navigate = useNavigate();
 
-	const handleButtonClick = () => {
-		navigate('/contact');
-	};
 	return (
 		<section id='stats-section' className="flex flex-col my-[10rem] items-center gap-[60px] bg-defaultwhite">
 			<div className="flex flex-col items-start gap-12 relative flex-[0_0_auto]">
@@ -71,13 +66,19 @@ export default function StatisticsSection() {
 				</div>
 			</div>
 
-			<button onClick={handleButtonClick} className="all-[unset] box-border inline-flex h-14 items-center justify-center p-4 relative mb-[-8.25px] bg-[#00c2c6] text-white rounded-lg hover:bg-black">
-				<div className="inline-flex items-center justify-center gap-2.5 px-4 py-0 relative flex-[0_0_auto]">
-					<div className="w-fit mt-[-1.00px] font-button-l text-defaultwhite text-[length:var(--button-l-font-size)] tracking-[var(--button-l-letter-spacing)] leading-[var(--button-l-line-height)] whitespace-nowrap [font-style:var(--button-l-font-style)] font-bold ">
+			<a
+				href="https://calendar.app.google/9RQZmAHjNjV51Jyz9"
+				target="_blank"
+				rel="noopener noreferrer"
+				className="all-[unset] box-border inline-flex h-14 items-center justify-center bg-[#00c2c6] text-white rounded-lg hover:bg-gfc-primary-100 hover:text-black "
+			>
+				<button className="all-[unset] box-border inline-flex h-14 items-center justify-center p-4 ">
+					<div className="inline-flex items-center justify-center gap-2.5 px-4 flex-[0_0_auto] font-bold">
 						Start Building
 					</div>
-				</div>
-			</button>
+				</button>
+			</a>
+
 		</section>
 	)
 }

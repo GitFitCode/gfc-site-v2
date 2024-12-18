@@ -39,7 +39,19 @@ export default function PortfolioPage() {
 	}, []);
 	return (
 		<div className={`flex flex-col items-center justify-between px-4 lg:px-20 gap-8 md:py-16 pt-16`}>
-			<section className="w-full rounded-sm max-w-7xl bg-none md:bg-cover mb-10" style={{backgroundImage: width > 900 ? `url(${samples})`: 'none', backgroundPosition: 'top'}}>
+			<section 
+			className="w-full rounded-sm max-w-7xl bg-none md:bg-cover mb-10" 
+			style={{
+				backgroundImage:
+					width > 900
+						?  `linear-gradient(to bottom, white 0%, rgba(255, 255, 255, 0) 8%, rgba(255, 255, 255, 0) 90%, white 100%),
+						linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 90%, white 100%),
+						url(${samples})`
+						: 'none',
+				backgroundPosition: 'center',
+				backgroundRepeat: 'no-repeat',
+				backgroundSize: 'cover',
+			}}>
 				<div className="flex flex-col md:flex-row justify-center items-center ">
 					<div className="flex-1 max-w-7xl relative mx-auto py-20 px-4 w-full left-0 top-0">
 						<h1 className="text-3xl md:text-7xl font-bold dark:text-white">
