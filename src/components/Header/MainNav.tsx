@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import Logo from './logo';
+import Logo from './Logo';
 import { HomeIcon, UserGroupIcon, CogIcon, ChatBubbleOvalLeftIcon, PhoneIcon } from '@heroicons/react/24/solid';
 import { Link, useNavigate } from 'react-router';
+import { FolderClosedIcon } from 'lucide-react';
 
 
 const items = [
@@ -9,6 +10,7 @@ const items = [
   { name: 'About', icon: <UserGroupIcon className="h-6 w-6" />, route: '#about', sectionId: 'stats-section', content: 'About Us' },
   { name: 'Services', icon: <CogIcon className="h-6 w-6" />, route: '#services', sectionId: 'solutions-section', content: 'Services' },
   { name: 'Testimonials', icon: <ChatBubbleOvalLeftIcon className="h-6 w-6" />, route: '#testimonials', sectionId: 'success-stories-section', content: 'Testimonials' },
+  { name: 'Portfolio', icon: <FolderClosedIcon className="h-6 w-6" />, route: '/portfolio', sectionId: null, content: 'Portfolio' },
   { name: 'Contact', icon: <PhoneIcon className="h-6 w-6" />, route: '/contact', sectionId: null, content: 'Contact Us' },
 ];
 
@@ -95,7 +97,7 @@ export default function MainNav({ showNav, isDesktop }: MainNavProps) {
               key={index}
               to={item.route}
               onClick={() => setSelected(item.name)}
-              className={`flex items-center p-4 rounded-lg transition-all duration-300 ${selected === item.name ? 'bg-gfc-accent text-white' : 'bg-white text-gray-700'
+              className={`flex items-center p-4 rounded-lg transition-all duration-300 ${selected === item.name ? 'bg-gfc-primary text-white' : 'bg-white text-gray-700'
                 } ${isDesktop ? 'hover:bg-gfc-primary-100 hover:text-gfc-accent' : 'hover:bg-gfc-primary-100'}`}
             >
               {React.cloneElement(item.icon, {
