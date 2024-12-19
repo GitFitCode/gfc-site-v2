@@ -143,7 +143,7 @@ export default function ModeEarnClub() {
 							</p>
 							<div className="flex flex-col w-full px-4 py-2 rounded-md  bg-[#5657971a]">
 								<div className="text-sm text-[#565797] leading-tight font-['Montserrat']">
-									<span className="text-[#565797] text-sm font-medium font-['Montserrat'] leading-tight">Work sample below:  </span> A selection of primary screens which we designed for the Earn Club experience, from onboarding to trial to full subscription.
+									<span className="text-[#565797] text-sm font-medium font-['Montserrat'] leading-tight">Work sample below:  </span> A selection of primary screens which we designed for theEarn Club experience, from onboarding to trial to full subscription.
 								</div>
 							</div>
 						</div>

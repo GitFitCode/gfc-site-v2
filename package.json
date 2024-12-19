@@ -34,7 +34,6 @@
     "build": "react-scripts build",
     "deploy": "dotenv -e .env gcloud -- app deploy app.yaml --project gfc-website-313010",
     "eject": "react-scripts eject",
-    "prepare": "husky",
     "start": "react-scripts start",
     "test": "react-scripts test"
   },
