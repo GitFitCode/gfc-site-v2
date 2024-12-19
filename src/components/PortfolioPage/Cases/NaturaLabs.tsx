@@ -29,7 +29,7 @@ export default function NaturaLabs() {
 
 						<div className='flex flex-col gap-6 '>
 							<h3 className="text-2xl md:text-3xl">Who Is It For?</h3>
-							<p className="md:text-xl flex flex-col font-[300]">
+							<p className="md:text-lg flex flex-col font-[300]">
 								The users of this site are likely to be affluent, organized, and have looked at
 								many websites in any given day. The purpose of this site is to give them a
 								moment of respite in a positive way. We want this website to be so cool
@@ -49,7 +49,7 @@ export default function NaturaLabs() {
 
 						<div className='flex flex-col gap-6'>
 							<h3 className="text-2xl md:text-3xl ">When & Where Is It Used?</h3>
-							<div className="md:text-xl flex flex-col font-[300]">
+							<div className="md:text-lg flex flex-col font-[300]">
 								Users of this site are likely using high-end devices, particularly on desktop.
 								Therefore, this site will be primarily focused on desktop users and built
 								using a responsive-desktop-first approach.
@@ -69,7 +69,7 @@ export default function NaturaLabs() {
 
 						<div className='flex flex-col gap-6 '>
 							<h3 className="text-2xl md:text-3xl">Influence and Inspiration</h3>
-							<p className="md:text-xl flex flex-col font-[300]">
+							<p className="md:text-lg flex flex-col font-[300]">
 								Bauhaus typography lockups, my recent trip to Japan, and Helvetica (the
 								coffee table-style publication) were all influences for Natura Labs'
 								branding.
@@ -91,7 +91,7 @@ export default function NaturaLabs() {
 					<div className='flex flex-col md:max-w-[60%] w-full text-start md:mx-auto gap-24'>
 						<div className='flex flex-col gap-6 '>
 							<h3 className="text-2xl md:text-3xl">Color and Type</h3>
-							<div className="md:text-xl flex flex-col font-[300]">
+							<div className="md:text-lg flex flex-col font-[300]">
 								Color/shade styles were selected for their utility. As demonstrated in the
 								"Color Usage Breakdown" chart below, the site would be primarily black
 								and white, using green/blue/pink for graphics or points of positive or
@@ -112,7 +112,7 @@ export default function NaturaLabs() {
 					<div className='flex flex-col md:max-w-[60%] w-full text-start md:mx-auto gap-24'>
 						<div className='flex flex-col gap-6 '>
 							<h3 className="text-2xl md:text-3xl">Graphics & Icons</h3>
-							<p className="md:text-xl flex flex-col font-[300]">
+							<p className="md:text-lg flex flex-col font-[300]">
 								Natura means "nature of things" in Latin. I wanted to include naturally-
 								occurring shapes within the brand to elude to this idea. Inversely, "Labs"
 								offered a very sterile, scientific meaning to me.
@@ -132,7 +132,7 @@ export default function NaturaLabs() {
 					<div className='flex flex-col md:max-w-[60%] w-full text-start md:mx-auto gap-24'>
 						<div className='flex flex-col gap-6 '>
 							<h3 className="text-2xl md:text-3xl">Sections & Components</h3>
-							<div className="md:text-xl flex flex-col font-[300]">
+							<div className="md:text-lg flex flex-col font-[300]">
 								Our role for this website was to take the brand and site from ideation to first
 								release, but also to set rules and educate the Natura team to take on future
 								iterations of their own website. Below is an example of various type
@@ -150,7 +150,7 @@ export default function NaturaLabs() {
 					<div className='flex flex-col md:max-w-[60%] w-full text-start md:mx-auto gap-24'>
 						<div className='flex flex-col gap-6 '>
 							<h3 className="text-2xl md:text-3xl">Designing for Mobile</h3>
-							<p className="md:text-xl flex flex-col font-[300]">
+							<p className="md:text-lg flex flex-col font-[300]">
 								The Natura founders were able to provide me with user data which
 								supported designing for a mobile-first experience. Many clients may
 								browse on their mobile devices, and it was important to have an equally
@@ -171,7 +171,7 @@ export default function NaturaLabs() {
 					<div className='flex flex-col md:max-w-[60%] w-full text-start md:mx-auto gap-24'>
 						<div className='flex flex-col gap-6 '>
 							<h3 className="text-2xl md:text-3xl">Designing For Responsive Desktop</h3>
-							<div className="md:text-xl flex flex-col font-[300]">
+							<div className="md:text-lg flex flex-col font-[300]">
 								The desktop experience allowed for more creative flexibility. Given the
 								brand's liberal use of text, We opted for small animations within copy to
 								highlight important.
@@ -191,13 +191,13 @@ export default function NaturaLabs() {
 				<div className="my-10 md:my-24 text-center justify-center items-center">
 					<h2 className="text-3xl md:text-4xl mb-18 md:mb-24 font-semibold ">Conclusion & Successes</h2>
 					<div className='flex flex-col md:max-w-[60%] w-full text-start md:mx-auto gap-24'>
-						<ul className='list-disc mx-10 md:mx-30 md:text-xl flex flex-col font-[300] gap-2'>
+						<ul className='list-disc mx-10 md:mx-30 md:text-lg flex flex-col font-[300] gap-2'>
 							<li>Brand developed, animations crafted, website built</li>
 							<li>0 - 1 project in just 2 months</li>
 						</ul>
 						<div className='flex flex-col gap-6 '>
 
-							<p className="md:text-xl flex flex-col font-[300]">
+							<p className="md:text-lg flex flex-col font-[300]">
 								The website and branding for Natura Labs was probably my favorite
 								project of 2023. It offered every designer's dream: A strong budget paired
 								with near-unlimited creative freedom.

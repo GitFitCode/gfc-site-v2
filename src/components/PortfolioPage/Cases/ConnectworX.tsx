@@ -379,7 +379,6 @@ export default function ConnectworX() {
 
 				<img src={studio_features} alt="full width" className="object-contain rounded-2xl" />
 
-
 				<div className="my-10 md:my-24 text-center justify-center items-center">
 					<h2 className="text-3xl md:text-4xl mb-18 md:mb-24 font-semibold ">Success & Top Wins</h2>
 					<div className='flex flex-col md:max-w-[60%] w-full text-start md:mx-auto gap-24'>
@@ -389,8 +388,7 @@ export default function ConnectworX() {
 							<li>Resulted in a 33% company-wide net revenue increase</li>
 							<li>Michelle Obama gave a keynote on our platform!</li>
 						</ul>
-						<div className='flex flex-col gap-6 '>
-
+						<div className='flex flex-col gap-6'>
 							<p className="md:text-lg flex flex-col font-[300]">
 								ConnectworX was an incredible race to create a product which could help
 								people stay connected digitally during The Pandemic era.

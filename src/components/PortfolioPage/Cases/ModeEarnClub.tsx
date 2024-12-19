@@ -17,7 +17,7 @@ export default function ModeEarnClub() {
 					Mode Earn Club
 				</h1>
 				<p className="text-xl md:text-2xl mt-2 text-[#757575] font-[300] leading-relaxed">Check out some of our latest product case studies.</p>
-				{/* <p className="text-lg md:text-xl mt-8 dark:text-neutral-800">
+				{/* <p className="text-lg md:text-lg mt-8 dark:text-neutral-800">
 							We have worked for startups, agencies, corporations, and government and have created products used by millions of people.
 						</p> */}
 			</div>
@@ -31,7 +31,7 @@ export default function ModeEarnClub() {
 
 						<div className='flex flex-col gap-6 '>
 							<h3 className="text-2xl md:text-3xl">Why Invest in This?</h3>
-							<p className="md:text-xl flex flex-col font-[300]">
+							<p className="md:text-lg flex flex-col font-[300]">
 								From a business standpoint, monthly recurring revenue (MRR) is viewed as
 								a golden ticket for technology businesses. It offers predictable, stable
 								relationships with customers. Paid subscriptions also allow the user a
@@ -47,7 +47,7 @@ export default function ModeEarnClub() {
 
 						<div className='flex flex-col gap-6'>
 							<h3 className="text-2xl md:text-3xl ">Who This Is For – Market Fit & Competition</h3>
-							<div className="md:text-xl flex flex-col font-[300]">
+							<div className="md:text-lg flex flex-col font-[300]">
 								Earn Club is marketed as a paid enhancement for existing users. The
 								subscription perks are meant to directly address existing user feedback,
 								interests, and pain points gathered by us over an 18 month period.
@@ -77,7 +77,7 @@ export default function ModeEarnClub() {
 
 						<div className='flex flex-col gap-6'>
 							<h3 className="text-2xl md:text-3xl ">How & Where The Feature Is Used</h3>
-							<div className="md:text-xl font-[300]">
+							<div className="md:text-lg font-[300]">
 								<b className='font-[600]'>New Users:</b> Earn Club is offered at the start of the new user journey as a
 								no-strings free trial to all users. Users can choose to subscribe and redeem
 								their points instantly with a 50% bonus, or downgrade and redeem at the
@@ -101,7 +101,7 @@ export default function ModeEarnClub() {
 					<div className='flex flex-col md:max-w-[60%] w-full text-start md:mx-auto gap-24'>
 						<div className='flex flex-col gap-6 '>
 							<h3 className="text-2xl md:text-3xl">Defining The User Journey</h3>
-							<div className="md:text-xl flex flex-col font-[300]">
+							<div className="md:text-lg flex flex-col font-[300]">
 								A successful user journey is defined as a new or existing user receiving the
 								Earn Club trial, accepting it, and redeeming their bonus points +
 								subscribing at or before the 7 day mark.
@@ -135,7 +135,7 @@ export default function ModeEarnClub() {
 					<div className='flex flex-col md:max-w-[60%] w-full text-start md:mx-auto gap-24'>
 						<div className='flex flex-col gap-6 '>
 							<h3 className="text-2xl md:text-3xl">High Fidelity Designs</h3>
-							<p className="md:text-xl flex flex-col font-[300]">
+							<p className="md:text-lg flex flex-col font-[300]">
 								The design for Earn Club is characterized by the dark red/purple gradient
 								used for backgrounds and headers to make clear the difference between
 								subscribers and free users and is found as a sub-library of our design
@@ -156,7 +156,7 @@ export default function ModeEarnClub() {
 					<div className='flex flex-col md:max-w-[60%] w-full text-start md:mx-auto gap-24'>
 						<div className='flex flex-col gap-6 '>
 							<h3 className="text-2xl md:text-3xl">Design Focus: Onboarding</h3>
-							<div className="md:text-xl flex flex-col font-[300]">
+							<div className="md:text-lg flex flex-col font-[300]">
 								The Earn Club trial is offered as part of the onboarding experience for new
 								users and fits between the new user tutorial and onboarding questions
 								used to personalize the experience.
@@ -181,7 +181,7 @@ export default function ModeEarnClub() {
 					<div className='flex flex-col md:max-w-[60%] w-full text-start md:mx-auto gap-24'>
 						<div className='flex flex-col gap-6 '>
 							<h3 className="text-2xl md:text-3xl">Design Focus: During Trial</h3>
-							<div className="md:text-xl flex flex-col font-[300]">
+							<div className="md:text-lg flex flex-col font-[300]">
 								The in-trial experience is also based around positive reinforcement
 								congratulate them and reinforce how much better that interaction was
 								with Earn Club.
@@ -209,7 +209,7 @@ export default function ModeEarnClub() {
 					<div className='flex flex-col md:max-w-[60%] w-full text-start md:mx-auto gap-24'>
 						<div className='flex flex-col gap-6 '>
 							<h3 className="text-2xl md:text-3xl">Design Focus: Redeem + Subscribe</h3>
-							<div className="md:text-xl flex flex-col font-[300]">
+							<div className="md:text-lg flex flex-col font-[300]">
 								Users can redeem their points for cash during or at the end of the 7 -day trial experience. When redeeming, the user also needs to subscribe in
 								order to claim any bonus points they've earned as well as keep any
 								premium perks.
@@ -240,7 +240,7 @@ export default function ModeEarnClub() {
 					<div className='flex flex-col md:max-w-[60%] w-full text-start md:mx-auto gap-24'>
 						<div className='flex flex-col gap-6 '>
 							<h3 className="text-2xl md:text-3xl">Design Focus: Subscriber</h3>
-							<div className="md:text-xl flex flex-col font-[300]">
+							<div className="md:text-lg flex flex-col font-[300]">
 								A subscribed user experience is functionally very similar to the trial
 								experience in that they are positively reinforced anytime they take
 								advantage of subscription benefits.
@@ -266,14 +266,14 @@ export default function ModeEarnClub() {
 				<div className="my-10 md:my-24 text-center justify-center items-center">
 					<h2 className="text-3xl md:text-4xl mb-18 md:mb-24 font-semibold ">Conclusion & Successes</h2>
 					<div className='flex flex-col md:max-w-[60%] w-full text-start md:mx-auto gap-24'>
-						<ul className='list-disc mx-10 md:mx-30 md:text-xl flex flex-col font-[300] gap-2'>
+						<ul className='list-disc mx-10 md:mx-30 md:text-lg flex flex-col font-[300] gap-2'>
 							<li>Created a totally new stream of recurring revenue</li>
 							<li>n.nn% (Major) increase in total topline business revenue</li>
 							<li>Desinged and implemented feature from 0 – 1</li>
 						</ul>
 						<div className='flex flex-col gap-6 '>
 
-							<p className="md:text-xl flex flex-col font-[300]">
+							<p className="md:text-lg flex flex-col font-[300]">
 								The full story on the success of Earn Club is still developing as it was
 								released in Q3/Q4 of 2023.
 								<br />
