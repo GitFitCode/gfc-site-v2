@@ -1,10 +1,10 @@
 import { useNavigationContext } from "../../contexts/navigation.context";
-import StatsSection from "../LandingPage/StatsSection";
-import SolutionsSection from "../LandingPage/SolutionsSection";
-import PhaseTimeline from "../LandingPage/PhasesTimeline";
-import SuccessStoriesSection from "../LandingPage/SuccessStoriesSection";
-import StartProject from "../LandingPage/StartProject";
-import GitFitCodeIntroSection from "../LandingPage/GitFitCodeIntroSection";
+import StatsSection from "./StatsSection";
+import SolutionsSection from "./SolutionsSection";
+import PhaseTimeline from "./PhasesTimeline";
+import SuccessStoriesSection from "./SuccessStoriesSection";
+import StartProject from "./StartProject";
+import GitFitCodeIntroSection from "./GitFitCodeIntroSection";
 
 export default function LandingPage() {
   const { isDesktop } = useNavigationContext();

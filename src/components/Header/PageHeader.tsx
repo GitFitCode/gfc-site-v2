@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from "react";
-import MainNav from "./main-nav";
-import Logo from "./logo";
+import MainNav from "./MainNav";
+import Logo from "./Logo";
 import { useNavigationContext } from "../../contexts/navigation.context";
 import classNames from "classnames"; // Install this with `npm install classnames`
 

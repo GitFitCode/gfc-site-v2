@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useNavigationContext } from '../../contexts/navigation.context';
-import '../../App.css';
+import { useNavigationContext } from '../contexts/navigation.context';
+import '../App.css';
 
 const PageTransition: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const { isNavigating } = useNavigationContext();
