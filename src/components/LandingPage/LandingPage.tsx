@@ -18,7 +18,7 @@ export default function LandingPage() {
       <StatsSection />
       <SolutionsSection />
       <PhaseTimeline />
-      <SuccessStoriesSection />
+      {/* <SuccessStoriesSection /> */}
       <StartProject />
     </div>
   );
