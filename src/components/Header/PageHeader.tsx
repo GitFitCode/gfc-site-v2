@@ -1,30 +1,31 @@
-import React, { useState, useCallback } from "react";
+import React, { useState, useCallback, useEffect } from "react";
 import MainNav from "./MainNav";
-import Logo from "./logo";
 import { useNavigationContext } from "../../contexts/navigation.context";
 import classNames from "classnames"; // Install this with `npm install classnames`
 
 export default function PageHeader() {
-	const [showNav, setShowNavState] = useState(false);
-	const { isDesktop } = useNavigationContext();
+  const [showNav, setShowNavState] = useState(false);
 
-	// Memoized callback to set the showNav state
-	const setShowNav = useCallback((show: boolean) => {
-		setShowNavState(show);
-	}, []);
+  const { isDesktop } = useNavigationContext();
 
-	return (
-		<header
-			className={classNames("flex", {
-				"flex-col justify-between items-center": isDesktop,
-				"flex-row": !isDesktop,
-			})}
-		>
-			{/* Pass `setShowNav` and `showNav` to the Logo component */}
-			<Logo setShowNav={setShowNav} showNav={showNav} />
-			
-			{/* Conditionally render MainNav based on `showNav` */}
-			{showNav && <MainNav showNav={showNav} isDesktop={isDesktop} />}
-		</header>
-	);
+  // Memoized callback to set the showNav state
+  const setShowNav = useCallback((show: boolean) => {
+    setShowNavState(show);
+  }, []);
+
+  useEffect(() => {
+    setShowNav(true); // Always set showNav to true on mount
+  }, [isDesktop, setShowNav]);
+
+  return (
+    <header
+      className={classNames("flex", {
+        "flex-col justify-between items-center": isDesktop,
+        "flex-row": !isDesktop,
+      })}
+    >
+      {/* Conditionally render MainNav based on `showNav` */}
+      {showNav && <MainNav showNav={showNav} isDesktop={isDesktop} />}
+    </header>
+  );
 }

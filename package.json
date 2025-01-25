@@ -16,8 +16,10 @@
     "clsx": "latest",
     "embla-carousel-react": "latest",
     "framer-motion": "latest",
-    "gsap": "latest",
+    "gsap": "^3.12.5",
     "jquery": "latest",
+    "lenis": "^1.1.20",
+    "locomotive-scroll": "^4.1.4",
     "lodash": "latest",
     "lucide-react": "latest",
     "posthog-js": "latest",
@@ -34,15 +36,11 @@
     "build": "react-scripts build",
     "deploy": "dotenv -e .env gcloud -- app deploy app.yaml --project gfc-website-313010",
     "eject": "react-scripts eject",
-    "prepare": "husky",
     "start": "react-scripts start",
     "test": "react-scripts test"
   },
   "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "extends": []
   },
   "browserslist": {
     "production": [
@@ -60,6 +58,7 @@
     "@commitlint/cli": "latest",
     "@commitlint/config-conventional": "latest",
     "@types/jquery": "latest",
+    "@types/locomotive-scroll": "^4.1.4",
     "@types/lodash": "latest",
     "@types/lodash.debounce": "latest",
     "@types/node": "latest",
