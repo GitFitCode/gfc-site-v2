@@ -67,6 +67,7 @@ export default function ContactPage() {
 
     try {
 <<<<<<< HEAD
+<<<<<<< HEAD
       if (supabase) {
         // Insert form data into Supabase table
         const { error } = await supabase
@@ -86,6 +87,8 @@ export default function ContactPage() {
           },
         ]);
 =======
+=======
+>>>>>>> 28c2d37 (chore: added sticky footer and initial site loader)
       // Insert form data into Supabase table
       const { error } = await supabase.from("contact_form_submissions").insert([
         {
@@ -101,7 +104,10 @@ export default function ContactPage() {
           code_base: formData.codeBase,
         },
       ]);
+<<<<<<< HEAD
 >>>>>>> 7580afc (chore: added sticky footer and initial site loader)
+=======
+>>>>>>> 28c2d37 (chore: added sticky footer and initial site loader)
 
         if (error) throw error;
 

@@ -1,13 +1,19 @@
+<<<<<<< HEAD
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { AnimatePresence } from "framer-motion";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import RoundedMagneticButton from "../ui/RoundedMagneticButton";
+=======
+import React, { useState, useCallback, useEffect } from "react";
+import MainNav from "./MainNav";
+>>>>>>> 28c2d37 (chore: added sticky footer and initial site loader)
 import { useNavigationContext } from "../../contexts/navigation.context";
 import MainNav from "./MainNav";
 import SlideNav from "./SlideNav";
 import { set } from "lodash";
 
+<<<<<<< HEAD
 export default function Index() {
   const header = useRef(null);
   const button = useRef(null);
@@ -76,5 +82,31 @@ export default function Index() {
       {/* Nav Menu */}
       <AnimatePresence mode="wait">{isSlideActive && <SlideNav setIsSlideActive={setIsSlideActive} />}</AnimatePresence>
     </>
+=======
+export default function PageHeader() {
+  const [showNav, setShowNavState] = useState(false);
+
+  const { isDesktop } = useNavigationContext();
+
+  // Memoized callback to set the showNav state
+  const setShowNav = useCallback((show: boolean) => {
+    setShowNavState(show);
+  }, []);
+
+  useEffect(() => {
+    setShowNav(true); // Always set showNav to true on mount
+  }, [isDesktop, setShowNav]);
+
+  return (
+    <header
+      className={classNames("flex", {
+        "flex-col justify-between items-center": isDesktop,
+        "flex-row": !isDesktop,
+      })}
+    >
+      {/* Conditionally render MainNav based on `showNav` */}
+      {showNav && <MainNav showNav={showNav} isDesktop={isDesktop} />}
+    </header>
+>>>>>>> 28c2d37 (chore: added sticky footer and initial site loader)
   );
 }

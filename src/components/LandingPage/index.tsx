@@ -14,6 +14,7 @@ import Lenis from "lenis";
 export default function LandingPage() {
   const { isDesktop } = useNavigationContext();
 
+<<<<<<< HEAD
   // useEffect(() => {
   //   const lenis = new Lenis();
 
@@ -24,10 +25,23 @@ export default function LandingPage() {
 
   //   requestAnimationFrame(raf);
   // }, []);
+=======
+  useEffect(() => {
+    const lenis = new Lenis();
+
+    function raf(time: number) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+  }, []);
+>>>>>>> 28c2d37 (chore: added sticky footer and initial site loader)
 
   return (
     <div>
       <motion.div className="flex flex-col items-center relative bg-neutral-50 z-[50] shadow-md">
+<<<<<<< HEAD
         <AnimatedSection className="w-full mb-[6em] md:mb-[4em]">
           <GitFitCodeIntroSection />
         </AnimatedSection>
@@ -41,13 +55,34 @@ export default function LandingPage() {
         </AnimatedSection>
 
         <AnimatedSection className="w-full mb-[6em] md:mb-[4em]">
+=======
+        <AnimatedSection>
+          <GitFitCodeIntroSection />
+        </AnimatedSection>
+
+        <AnimatedSection>
+          <StatsSection />
+        </AnimatedSection>
+
+        <AnimatedSection>
+          <SolutionsSection />
+        </AnimatedSection>
+
+        <AnimatedSection>
+>>>>>>> 28c2d37 (chore: added sticky footer and initial site loader)
           <PhaseTimeline />
         </AnimatedSection>
 
         {/* Uncomment when needed */}
+<<<<<<< HEAD
         <AnimatedSection className="w-full mb-[6em] md:mb-[4em]">
           <SuccessStoriesSection />
         </AnimatedSection>
+=======
+        <AnimatedSection>
+        <SuccessStoriesSection />
+      </AnimatedSection>
+>>>>>>> 28c2d37 (chore: added sticky footer and initial site loader)
 
         {/* <AnimatedSection>
           <StartProject />
