@@ -10,9 +10,9 @@ export default function StartProject() {
   return (
     <section
       id="start-project-section"
-      className="relative bg-gradient-to-r from-gfc-accent to-gray-900 overflow-hidden w-full"
+      className="flex flex-col items-center gap-[60px] my-[5rem] bg-gradient-to-r from-gfc-accent to-gray-900 overflow-hidden w-full"
     >
-      <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative py-8 sm:py-12 lg:py-14 flex flex-col items-center">
           {/* Left Content */}
           <div className="relative z-10 w-3/4 text-white text-center px-4 sm:px-6 space-y-10">

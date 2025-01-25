@@ -45,11 +45,17 @@ importers:
         specifier: latest
         version: 11.15.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       gsap:
-        specifier: latest
+        specifier: ^3.12.5
         version: 3.12.5
       jquery:
         specifier: latest
         version: 3.7.1
+      lenis:
+        specifier: ^1.1.20
+        version: 1.1.20(react@18.3.1)
+      locomotive-scroll:
+        specifier: ^4.1.4
+        version: 4.1.4
       lodash:
         specifier: latest
         version: 4.17.21
@@ -93,6 +99,9 @@ importers:
       '@types/jquery':
         specifier: latest
         version: 3.5.32
+      '@types/locomotive-scroll':
+        specifier: ^4.1.4
+        version: 4.1.4
       '@types/lodash':
         specifier: latest
         version: 4.17.13
@@ -1682,6 +1691,9 @@ packages:
   '@types/json5@0.0.29':
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
 
+  '@types/locomotive-scroll@4.1.4':
+    resolution: {integrity: sha512-G8GUr/ML/Ssxxl83VYbtFHMFoPNOQh/glzPWi5Z3Jk7Hng26Sl0ckAV11uq1AGKEq40jFMPhyAIuQ6fGPiBmHQ==}
+
   '@types/lodash.debounce@4.0.9':
     resolution: {integrity: sha512-Ma5JcgTREwpLRwMM+XwBR7DaWe96nC38uCBDFKZWbNKD+osjVzdpnUSwBcqCptrp16sSOLBAUb50Car5I0TCsQ==}
 
@@ -2165,6 +2177,9 @@ packages:
   batch@0.6.1:
     resolution: {integrity: sha512-x+VAiMRL6UPkx+kudNvxTl6hB2XNNCG2r+7wixVfIYwu/2HKRXimwQyaumLjMveWvT2Hkd/cAJw+QBMfJ/EKVw==}
 
+  bezier-easing@2.1.0:
+    resolution: {integrity: sha512-gbIqZ/eslnUFC1tjEvtz0sgx+xTK20wDnYMIA27VA04R7w6xxXQPZDbibjA9DTWZRA2CXtwHykkVzlCaAJAZig==}
+
   bfj@7.1.0:
     resolution: {integrity: sha512-I6MMLkn+anzNdCUp9hMRyui1HaNEUCco50lxbvNS4+EyXg8lN3nJ48PjPWtbH8UVS9CuMoaKE9U2V3l29DaRQw==}
     engines: {node: '>= 8.0.0'}
@@ -2175,6 +2190,9 @@ packages:
   binary-extensions@2.3.0:
     resolution: {integrity: sha512-Ceh+7ox5qe7LJuLHoY0feh3pHuUDHAcRUeyL2VYghZwfpkNIy/+8Ocg0a3UuSoYzavmylwuLWQOf3hl0jjMMIw==}
     engines: {node: '>=8'}
+
+  bindall-standalone@1.0.5:
+    resolution: {integrity: sha512-HDI7YBWXVJk/eoGz+e4lYQQJnYp1ZHcUvAY71lVptLMhQnDm86vD73AGPw2qIlgYR3P0bjmoAcXiA8qhFejBhA==}
 
   bluebird@3.7.2:
     resolution: {integrity: sha512-XpNj6GDQzdfW+r2Wnn7xiSAd7TM3jzkxGXBGTtWKuSXv1xUV+azxAm8jdWZN06QTQk+2N2XB9jRDkvbmQmcRtg==}
@@ -4046,6 +4064,20 @@ packages:
   launch-editor@2.9.1:
     resolution: {integrity: sha512-Gcnl4Bd+hRO9P9icCP/RVVT2o8SFlPXofuCxvA2SaZuH45whSvf5p8x5oih5ftLiVhEI4sp5xDY+R+b3zJBh5w==}
 
+  lenis@1.1.20:
+    resolution: {integrity: sha512-UE64mlJEN4W8DWP2tfHzPzygk94Q2BhjzeG/YHWoyeMJ2Fd6XziBCNN+IvHwmB4GkmKIYxgr0+TvRYTSAMTMFA==}
+    peerDependencies:
+      react: '>=17.0.0'
+      vue: '>=3.0.0'
+    peerDependenciesMeta:
+      react:
+        optional: true
+      vue:
+        optional: true
+
+  lethargy@1.0.9:
+    resolution: {integrity: sha512-nFM8blpCF9rqIL5mRAaTGc78W8oQixVtsD86jbEPvcI13+lDUYJf3R7DZQQL7tCiBpbGpGKMX2gwJFO9hiaOkg==}
+
   leven@3.1.0:
     resolution: {integrity: sha512-qsda+H8jTaUaN/x5vzW2rzc+8Rw4TAQ/4KjB46IwK5VH+IlVeeeje/EoZRpiXvIqjFgK84QffqPztGI3VBLG1A==}
     engines: {node: '>=6'}
@@ -4096,6 +4128,9 @@ packages:
   locate-path@7.2.0:
     resolution: {integrity: sha512-gvVijfZvn7R+2qyPX8mAuKcFGDf6Nc61GdvGafQsHL0sBIxfKzA+usWn4GFC/bk+QdwPUD4kWFJLhElipq+0VA==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+
+  locomotive-scroll@4.1.4:
+    resolution: {integrity: sha512-6i98cFF2SKg6wIPpwVPuo2FG8qL3USsdDeew78TEYZyLoqleMWNfkSDpWA6mPym4dOfTIBXc678VmGlkgx3fTA==}
 
   lodash.camelcase@4.3.0:
     resolution: {integrity: sha512-TwuEnCnxbc3rAvhf/LbG7tJUDzhqXyFnv3dtzLOPgCG/hODL7WFnsbwktkD7yUV0RrreP/l1PALq/YSg6VvjlA==}
@@ -5431,6 +5466,9 @@ packages:
     resolution: {integrity: sha512-3dOsAHXXUkQTpOYcoAxLIorMTp4gIQr5IW3iVb7A7lFIp0VHhnynm9izx6TssdrIcVIESAlVjtnO2K8bg+Coew==}
     engines: {node: '>=12'}
 
+  smoothscroll-polyfill@0.4.4:
+    resolution: {integrity: sha512-TK5ZA9U5RqCwMpfoMq/l1mrH0JAR7y7KRvOBx0n2869aLxch+gT9GhN3yUfjiw+d/DiF1mKo14+hd62JyMmoBg==}
+
   sockjs@0.3.24:
     resolution: {integrity: sha512-GJgLTZ7vYb/JtPSSZ10hsOYIvEYsjbNU+zPdIHcUaWVNUEPivzxku31865sSSud0Da0W4lEeOPlmw93zLQchuQ==}
 
@@ -5716,6 +5754,9 @@ packages:
   thunky@1.1.0:
     resolution: {integrity: sha512-eHY7nBftgThBqOyHGVN+l8gF0BucP09fMo0oO/Lb0w1OF80dJv+lDVpXG60WMQvkcxAkNybKsrEIE3ZtKGmPrA==}
 
+  tiny-emitter@1.2.0:
+    resolution: {integrity: sha512-rWjF00inHeWtT5UbQYAXoMI4hL6TRMqohuKCsODyPYYmfAxqfMnXLsIeNrbdPEkNxlk++rojVilTnI9IVmEBtA==}
+
   tinyexec@0.3.1:
     resolution: {integrity: sha512-WiCJLEECkO18gwqIp6+hJg0//p23HXp4S+gGtAKu3mI2F2/sXC4FvHvXvB0zJVVaTPhx1/tOwdbRsa1sOBIKqQ==}
 
@@ -5934,6 +5975,9 @@ packages:
     peerDependencies:
       react: ^16.8 || ^17.0 || ^18.0 || ^19.0.0 || ^19.0.0-rc
       react-dom: ^16.8 || ^17.0 || ^18.0 || ^19.0.0 || ^19.0.0-rc
+
+  virtual-scroll@1.5.2:
+    resolution: {integrity: sha512-7jDHwlKbHUho7CYU/HojE/VKFH8GV9P5fVWP2HCa7dRUOpVvwl93OBOKIIcb2mKd+vqsbVR/0zl0X70+3sUZqA==}
 
   w3c-hr-time@1.0.2:
     resolution: {integrity: sha512-z8P5DvDNjKDoFIHK7q8r8lackT6l+jo/Ye3HOle7l9nICP9lf1Ci25fy9vHd0JOWewkIFzXIEig3TdKT7JQ5fQ==}
@@ -8132,6 +8176,8 @@ snapshots:
 
   '@types/json5@0.0.29': {}
 
+  '@types/locomotive-scroll@4.1.4': {}
+
   '@types/lodash.debounce@4.0.9':
     dependencies:
       '@types/lodash': 4.17.13
@@ -8740,6 +8786,8 @@ snapshots:
 
   batch@0.6.1: {}
 
+  bezier-easing@2.1.0: {}
+
   bfj@7.1.0:
     dependencies:
       bluebird: 3.7.2
@@ -8751,6 +8799,8 @@ snapshots:
   big.js@5.2.2: {}
 
   binary-extensions@2.3.0: {}
+
+  bindall-standalone@1.0.5: {}
 
   bluebird@3.7.2: {}
 
@@ -11030,6 +11080,12 @@ snapshots:
       picocolors: 1.1.1
       shell-quote: 1.8.2
 
+  lenis@1.1.20(react@18.3.1):
+    optionalDependencies:
+      react: 18.3.1
+
+  lethargy@1.0.9: {}
+
   leven@3.1.0: {}
 
   levn@0.3.0:
@@ -11074,6 +11130,12 @@ snapshots:
   locate-path@7.2.0:
     dependencies:
       p-locate: 6.0.0
+
+  locomotive-scroll@4.1.4:
+    dependencies:
+      bezier-easing: 2.1.0
+      smoothscroll-polyfill: 0.4.4
+      virtual-scroll: 1.5.2
 
   lodash.camelcase@4.3.0: {}
 
@@ -12479,6 +12541,8 @@ snapshots:
 
   slash@4.0.0: {}
 
+  smoothscroll-polyfill@0.4.4: {}
+
   sockjs@0.3.24:
     dependencies:
       faye-websocket: 0.11.4
@@ -12813,6 +12877,8 @@ snapshots:
 
   thunky@1.1.0: {}
 
+  tiny-emitter@1.2.0: {}
+
   tinyexec@0.3.1: {}
 
   tmpl@1.0.5: {}
@@ -13021,6 +13087,13 @@ snapshots:
     transitivePeerDependencies:
       - '@types/react'
       - '@types/react-dom'
+
+  virtual-scroll@1.5.2:
+    dependencies:
+      bindall-standalone: 1.0.5
+      lethargy: 1.0.9
+      object-assign: 4.1.1
+      tiny-emitter: 1.2.0
 
   w3c-hr-time@1.0.2:
     dependencies:

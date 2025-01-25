@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import {
   BrowserRouter as Router,
   Routes,
@@ -10,7 +10,7 @@ import {
   useNavigationContext,
 } from "./contexts/navigation.context";
 import NavigationLoader from "./components/NavigationLoader";
-import LandingPage from "./components/LandingPage/LandingPage";
+import LandingPage from "./components/LandingPage";
 import "./App.css";
 import { AnimatePresence } from "framer-motion";
 import PageHeader from "./components/Header/PageHeader";
@@ -20,22 +20,34 @@ import PortfolioPage from "./components/PortfolioPage";
 import ModeEarnClub from "./components/PortfolioPage/Cases/ModeEarnClub";
 import ConnectworX from "./components/PortfolioPage/Cases/ConnectworX";
 import NaturaLabs from "./components/PortfolioPage/Cases/NaturaLabs";
-
+import Preloader from "./components/ui/Preloader";
 
 const App = () => {
+  const { isNavigating } = useNavigationContext();
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    (async () => {
+      const LocomotiveScroll = (await import("locomotive-scroll")).default;
+      const locomotiveScroll = new LocomotiveScroll();
+
+      setTimeout(() => {
+        setIsLoading(false);
+        document.body.style.cursor = "default";
+        window.scrollTo(0, 0);
+      }, 2000);
+    })();
+  }, []);
+
   return (
     <Router>
       <NavigationProvider>
         <NavigationWrapper>
-
-          <NavigationLoader />
+          <AnimatePresence mode="wait">
+            {isLoading && <Preloader />}
+          </AnimatePresence>
           <PageHeader />
-          {/* <Routes>
-            <Route path="/" element={<LandingPage />} />
-            <Route path="/contact" element={<ContactPage />} />
-          </Routes> */}
           <AnimatedRoutes />
-
         </NavigationWrapper>
       </NavigationProvider>
     </Router>
@@ -70,34 +82,43 @@ const AnimatedRoutes = () => {
   const location = useLocation();
 
   return (
-    <AnimatePresence mode="wait">
+    <AnimatePresence>
       <Routes location={location} key={location.pathname}>
         <Route
           path="/"
-          element={<PageTransition children={<LandingPage />} />} />
+          // element={<PageTransition children={<LandingPage />} />}
+          element={<LandingPage />}
+        />
         <Route
           path="/contact"
-          element={<PageTransition children={<ContactPage />} />} />
+          // element={<PageTransition children={<ContactPage />} />}
+          element={<ContactPage />}
+        />
         <Route
           path="/portfolio"
-          element={<PageTransition children={<PortfolioPage />} />} />
-
+          // element={<PageTransition children={<PortfolioPage />} />}
+          element={<PortfolioPage />}
+        />
 
         {/* Portfoilio Routes */}
         <Route
           path="/portfolio/mode-earn-club"
-          element={<PageTransition children={<ModeEarnClub />} />} />
+          // element={<PageTransition children={<ModeEarnClub />} />}
+          element={<ModeEarnClub />}
+        />
         <Route
           path="/portfolio/connectworx"
-          element={<PageTransition children={<ConnectworX />} />} />
+          // element={<PageTransition children={<ConnectworX />} />}
+          element={<ConnectworX />}
+        />
         <Route
           path="/portfolio/natura-labs"
-          element={<PageTransition children={<NaturaLabs />} />} />
-
+          // element={<PageTransition children={<NaturaLabs />} />}
+          element={<NaturaLabs />}
+        />
       </Routes>
     </AnimatePresence>
   );
 };
 
 export default App;
-

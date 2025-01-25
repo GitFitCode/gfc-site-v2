@@ -1,9 +1,9 @@
 
 export default function GitFitCodeIntroSection() {
 	return (
-		<section id="gfc-intro-section" className="w-full my-5 flex flex-col items-center justify-center relative px-4 sm:px-8 md:px-8 lg:px-10 pt-24">
-			<div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start lg:w-[75%] md:w-[80%]">
-				{/* Left Section */}
+		<section id="gfc-intro-section" className="w-full my-5 flex flex-col items-center justify-center relative sm:px-8 md:px-5 pt-24 max-w-7xl">
+			{/* <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start ">
+				
 				<div className="flex flex-col items-start justify-center gap-4 ">
 					<h1 className="text-4xl sm:text-4xl lg:text-5xl font-bold text-coolgray-90 leading-tight">
 						AI-Enhanced Custom Enterprise Software Solutions.
@@ -26,7 +26,7 @@ export default function GitFitCodeIntroSection() {
 
 				</div>
 
-				{/* Right Section */}
+				
 				<div className="relative flex justify-center md:justify-end items-center">
 					<div className="w-full sm:w-2/3 lg:w-2/3 h-[353px] relative flex items-center">
 						<img
@@ -50,7 +50,7 @@ export default function GitFitCodeIntroSection() {
 						/>
 					</div>
 				</div>
-			</div>
+			</div> */}
 		</section>
 	)
 }
