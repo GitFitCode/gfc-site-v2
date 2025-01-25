@@ -9,6 +9,10 @@ export default function Magnetic({children}: Props) {
     const magnetic = useRef<HTMLDivElement>(null);
 
     useEffect( () => {
+<<<<<<< HEAD
+=======
+        console.log(children)
+>>>>>>> 28c2d37 (chore: added sticky footer and initial site loader)
         const xTo = gsap.quickTo(magnetic.current, "x", {duration: 1, ease: "elastic.out(1, 0.3)"})
         const yTo = gsap.quickTo(magnetic.current, "y", {duration: 1, ease: "elastic.out(1, 0.3)"})
 
