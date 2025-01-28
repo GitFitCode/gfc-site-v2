@@ -85,12 +85,20 @@ module.exports = {
         sans: ["var(--font-sans)", ...fontFamily.sans],
       },
       animation: {
+<<<<<<< HEAD
         "scroll": "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "spin-slow": "spin 3s linear infinite", // slower spin
         "bounce-slow": "bounce 2s infinite", // slower bounce
         "bg-shine": "bg-shine 2.1s linear infinite",
+=======
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
+        'spin-slow': 'spin 3s linear infinite', // slower spin
+        'bounce-slow': 'bounce 2s infinite', // slower bounce
+        "bg-shine": "bg-shine 2.1s linear infinite"
+>>>>>>> a49a46a (chore: create template buttons and modified navigation)
       },
       keyframes: {
         "accordion-down": {
@@ -103,6 +111,7 @@ module.exports = {
         },
         "bg-shine": {
           from: {
+<<<<<<< HEAD
             backgroundPosition: "0 0",
           },
           to: {
@@ -114,6 +123,14 @@ module.exports = {
             transform: "translate(calc(-50% - 0.5rem))",
           },
         },
+=======
+            "backgroundPosition": "0 0"
+          },
+          to: {
+            "backgroundPosition": "-200% 0"
+          }
+        }
+>>>>>>> a49a46a (chore: create template buttons and modified navigation)
       },
       backgroundColor: {
 <<<<<<< HEAD
@@ -154,8 +171,13 @@ module.exports = {
         "4xl": "3rem",
       },
       boxShadow: {
+<<<<<<< HEAD
         soft: "0 2px 8px rgba(0, 0, 0, 0.15)", // custom soft shadow
         hard: "0 4px 16px rgba(0, 0, 0, 0.2)", // for strong shadow
+=======
+        'soft': '0 2px 8px rgba(0, 0, 0, 0.15)', // custom soft shadow
+        'hard': '0 4px 16px rgba(0, 0, 0, 0.2)', // for strong shadow
+>>>>>>> a49a46a (chore: create template buttons and modified navigation)
       },
     },
   },
