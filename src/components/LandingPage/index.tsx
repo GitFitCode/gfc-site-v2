@@ -42,6 +42,7 @@ export default function LandingPage() {
     <div>
       <motion.div className="flex flex-col items-center relative bg-neutral-50 z-[50] shadow-md">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <AnimatedSection className="w-full mb-[6em] md:mb-[4em]">
           <GitFitCodeIntroSection />
         </AnimatedSection>
@@ -57,6 +58,9 @@ export default function LandingPage() {
         <AnimatedSection className="w-full mb-[6em] md:mb-[4em]">
 =======
         <AnimatedSection>
+=======
+        <AnimatedSection className="w-full">
+>>>>>>> f786883 (chore: redesigned hero section)
           <GitFitCodeIntroSection />
         </AnimatedSection>
 
