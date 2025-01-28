@@ -13,7 +13,7 @@ export interface ShinyBgButtonProps extends ButtonProps {
 	linkClassName?: string;
 }
 
-export const ShinyBgButton = ({ ...props }: ShinyBgButtonProps) => {
+export const ShinyBgButton = ({  navItem, linkClassName, content, handleClick, ...props }: ShinyBgButtonProps) => {
   return (
     <Magnetic>
       <Button
@@ -27,14 +27,14 @@ export const ShinyBgButton = ({ ...props }: ShinyBgButtonProps) => {
         )}
       >
         <FlipLink
-          item={props.navItem}
+          item={navItem}
           isActive={false}
           fontSize="20px"
           secondTextColor="text-neutral-50"
-          className={props.linkClassName}
-          handleClick={props.handleClick}
+          className={linkClassName}
+          handleClick={handleClick}
         >
-          {props.content}
+          {content}
         </FlipLink>
       </Button>
     </Magnetic>
