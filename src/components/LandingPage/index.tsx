@@ -28,7 +28,7 @@ export default function LandingPage() {
   return (
     <div>
       <motion.div className="flex flex-col items-center relative bg-neutral-50 z-[50] shadow-md">
-        <AnimatedSection>
+        <AnimatedSection className="w-full">
           <GitFitCodeIntroSection />
         </AnimatedSection>
 
