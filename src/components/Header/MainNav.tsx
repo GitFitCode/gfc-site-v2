@@ -32,9 +32,12 @@ import { useNavigationContext } from "../../contexts/navigation.context";
 import RoundedMagneticButton from "../ui/RoundedMagneticButton";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Magnetic from "../ui/Magnetic";
 >>>>>>> c793c6f (chore: navigation redesign)
 =======
+=======
+>>>>>>> a49a46a (chore: create template buttons and modified navigation)
 import { NavButton } from "../ui/NavButton";
 
 export interface NavItemType {
@@ -44,10 +47,13 @@ export interface NavItemType {
   sectionId: string | null;
   content: string;
 }
+<<<<<<< HEAD
 >>>>>>> 4979765 (chore: create template buttons and modified navigation)
 
 =======
 import Magnetic from "../ui/Magnetic";
+=======
+>>>>>>> a49a46a (chore: create template buttons and modified navigation)
 
 >>>>>>> 8917532 (chore: navigation redesign)
 export const nav_items = [
@@ -90,12 +96,17 @@ export const nav_items = [
 ];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const bookButton = {
   name: "Book Now",
 =======
 const bookButton = {
   name: "Book",
 >>>>>>> 8917532 (chore: navigation redesign)
+=======
+export const bookButton = {
+  name: "Book Now",
+>>>>>>> a49a46a (chore: create template buttons and modified navigation)
   // icon: <PhoneIcon className="h-6 w-6" />,
   route: "/booking",
   sectionId: null,
@@ -235,22 +246,31 @@ const MainNav = ({
         </RoundedMagneticButton>
       ) : (
 <<<<<<< HEAD
+<<<<<<< HEAD
         <div className="flex flex-row items-center gap-8">
           <div className={`flex flex-row space-x-6 relative h-fit`}>
 =======
         <div className="flex flex-row items-center gap-4">
           <div className={`flex flex-row space-x-4 relative h-fit`}>
 >>>>>>> 8917532 (chore: navigation redesign)
+=======
+        <div className="flex flex-row items-center gap-8">
+          <div className={`flex flex-row space-x-6 relative h-fit`}>
+>>>>>>> a49a46a (chore: create template buttons and modified navigation)
             {nav_items.map((item, index) => (
               <FlipLink
                 key={index}
                 item={item}
                 isActive={currentNavItem === item.name}
 <<<<<<< HEAD
+<<<<<<< HEAD
                 fontSize="20px"
 =======
                 fontSize="18px"
 >>>>>>> 8917532 (chore: navigation redesign)
+=======
+                fontSize="20px"
+>>>>>>> a49a46a (chore: create template buttons and modified navigation)
                 secondTextColor="text-gfc-accent"
                 className={`${
                   isActive ? "text-gfc-primary-100" : "text-neutral-700"
@@ -264,6 +284,9 @@ const MainNav = ({
             ))}
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> a49a46a (chore: create template buttons and modified navigation)
           <NavButton 
           linkClassName={`${isActive ? "text-gfc-accent" : "text-neutral-50"}`} 
           handleClick={() =>
@@ -273,13 +296,18 @@ const MainNav = ({
               bookButton.route
             )}
             navItem={bookButton} />
+<<<<<<< HEAD
 =======
           <Magnetic>
             <div className="py-3 px-4 bg-gfc-primary hover:bg-neutral-700 rounded-md shadow-sm cursor-pointer">
+=======
+          {/* <Magnetic>
+            <div className="py-3 px-6 bg-neutral-700 hover:bg-gfc-primary rounded-md shadow-sm cursor-pointer">
+>>>>>>> a49a46a (chore: create template buttons and modified navigation)
               <FlipLink
                 item={bookButton}
                 isActive={false}
-                fontSize="18px"
+                fontSize="20px"
                 secondTextColor="text-neutral-50"
                 className={`${
                   isActive ? "text-gfc-accent" : "text-neutral-50"
@@ -295,8 +323,12 @@ const MainNav = ({
                 {bookButton.content}
               </FlipLink>
             </div>
+<<<<<<< HEAD
           </Magnetic>
 >>>>>>> 8917532 (chore: navigation redesign)
+=======
+          </Magnetic> */}
+>>>>>>> a49a46a (chore: create template buttons and modified navigation)
         </div>
       )}
     </div>
@@ -305,6 +337,10 @@ const MainNav = ({
 
 export default MainNav;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 8917532 (chore: navigation redesign)
+=======
+
+>>>>>>> a49a46a (chore: create template buttons and modified navigation)

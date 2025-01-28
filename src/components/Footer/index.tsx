@@ -24,10 +24,14 @@ export default function Index() {
       className={`flex flex-col items-center justify-between px-4 lg:px-20 gap-8 md:py-8`}
     >
 <<<<<<< HEAD
+<<<<<<< HEAD
       <div className="w-full max-w-7xl pt-5">
 =======
       <div className="w-full max-w-7xl bg-neutral-50 pt-5">
 >>>>>>> 28c2d37 (chore: added sticky footer and initial site loader)
+=======
+      <div className="w-full max-w-7xl pt-5">
+>>>>>>> a49a46a (chore: create template buttons and modified navigation)
         {/* Ready to Start*/}
         {/* To DO: Add ready to start section here */}
 
