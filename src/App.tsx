@@ -23,8 +23,9 @@ import NaturaLabs from "./components/PortfolioPage/Cases/NaturaLabs";
 import Preloader from "./components/ui/Preloader";
 
 const App = () => {
-  const { isNavigating } = useNavigationContext();
-  const [isLoading, setIsLoading] = useState(true);
+  const { isNavigating, isSiteLoading, setIsSiteLoading } =
+    useNavigationContext();
+  // const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     (async () => {
@@ -32,7 +33,7 @@ const App = () => {
       const locomotiveScroll = new LocomotiveScroll();
 
       setTimeout(() => {
-        setIsLoading(false);
+        setIsSiteLoading(false);
         document.body.style.cursor = "default";
         window.scrollTo(0, 0);
       }, 2000);
@@ -41,15 +42,13 @@ const App = () => {
 
   return (
     <Router>
-      <NavigationProvider>
-        <NavigationWrapper>
-          <AnimatePresence mode="wait">
-            {isLoading && <Preloader />}
-          </AnimatePresence>
-          <PageHeader />
-          <AnimatedRoutes />
-        </NavigationWrapper>
-      </NavigationProvider>
+      <NavigationWrapper>
+        <AnimatePresence mode="wait">
+          {isSiteLoading && <Preloader />}
+        </AnimatePresence>
+        <PageHeader />
+        <AnimatedRoutes />
+      </NavigationWrapper>
     </Router>
   );
 };

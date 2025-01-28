@@ -10,7 +10,7 @@ export default function GitFitCodeIntroSection() {
   const navigate = useNavigate();
   return (
     <BackgroundBeamsWithCollision>
-      <div className="w-full flex flex-col items-center justify-center relative max-w-7xl mt-20 mb-40 md:my-40 px-[2em]">
+      <div className="w-full flex  items-center justify-center relative max-w-7xl  mb-40  px-[2em]">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-[6em] items-start ">
           <div className="md:col-span-2 flex flex-col items-start justify-center gap-12 ">
             <h2 className="text-[32px] z-20 md:text-4xl lg:text-7xl font-bold text-neutral-800 dark:text-white font-sans tracking-tight">
