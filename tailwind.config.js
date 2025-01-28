@@ -83,6 +83,13 @@ module.exports = {
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
       },
+      animation: {
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
+        'spin-slow': 'spin 3s linear infinite', // slower spin
+        'bounce-slow': 'bounce 2s infinite', // slower bounce
+        "bg-shine": "bg-shine 2.1s linear infinite"
+      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
@@ -92,10 +99,14 @@ module.exports = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
-      },
-      animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
+        "bg-shine": {
+          from: {
+            "backgroundPosition": "0 0"
+          },
+          to: {
+            "backgroundPosition": "-200% 0"
+          }
+        }
       },
       backgroundColor: {
         'gfc-accent': '#00C9CD',
@@ -129,10 +140,6 @@ module.exports = {
       boxShadow: {
         'soft': '0 2px 8px rgba(0, 0, 0, 0.15)', // custom soft shadow
         'hard': '0 4px 16px rgba(0, 0, 0, 0.2)', // for strong shadow
-      },
-      animation: {
-        'spin-slow': 'spin 3s linear infinite', // slower spin
-        'bounce-slow': 'bounce 2s infinite', // slower bounce
       },
     },
   },

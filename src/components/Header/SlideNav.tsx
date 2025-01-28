@@ -1,19 +1,20 @@
 import React, { useCallback, useState } from "react";
 import { motion } from "framer-motion";
 import { Link, useNavigate } from "react-router";
-import { nav_items } from "./MainNav";
+import { bookButton, nav_items } from "./MainNav";
 import FlipLink from "../ui/FlipLink";
 import { useNavigationContext } from "../../contexts/navigation.context";
 import { InstagramIcon, LinkedinIcon, TwitterIcon } from "lucide-react";
 import Magnetic from "../ui/Magnetic";
 import { MagnetIcons } from "../Footer";
+import { ShinyBgButton } from "../ui/ShinyBgButton";
 
 export default function index({
   setIsSlideActive,
 }: {
   setIsSlideActive: React.Dispatch<React.SetStateAction<boolean>>;
 }) {
-  const { isDesktop, currentNavItem, setCurrentNavItem } =
+  const { currentNavItem, setCurrentNavItem } =
     useNavigationContext();
   const navigate = useNavigate();
   const menuSlide = {
@@ -104,13 +105,12 @@ export default function index({
             />
           </div>
         </div>
-        <Magnetic>
-          <div className="z-[800] w-full bg-gfc-primary hover:bg-neutral-700 rounded-md shadow-md cursor-pointer text-neutral-800 hover:text-neutral-50 items-center text-center text-[18px] font-black uppercase py-[10px]">
-            <Link to="/contact" className="cursor-pointer">
-              Book Appointment
-            </Link>
-          </div>
-        </Magnetic>
+        <ShinyBgButton
+          className="py-6 px-8"
+          content="Book.Now"
+          navItem={bookButton}
+          handleClick={() => navigate(bookButton.route)}
+        />
         {/* <Footer /> */}
       </div>
       <Curve />

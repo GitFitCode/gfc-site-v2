@@ -23,7 +23,7 @@ export default function Index() {
       ref={container}
       className={`flex flex-col items-center justify-between px-4 lg:px-20 gap-8 md:py-8`}
     >
-      <div className="w-full max-w-7xl bg-neutral-50 pt-5">
+      <div className="w-full max-w-7xl pt-5">
         {/* Ready to Start*/}
         {/* To DO: Add ready to start section here */}
 
