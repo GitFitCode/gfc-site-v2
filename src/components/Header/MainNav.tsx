@@ -209,6 +209,7 @@ const MainNav = ({
 
       {!isTablet ? (
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         // <div onClick={() => setIsMenuOpen(!isMenuOpen)} className="relative w-[40px] h-[40px] bg-neutral-800 flex items-center justify-center rounded-md cursor-pointer">
         //   <div
@@ -218,6 +219,8 @@ const MainNav = ({
         //   ></div>
         // </div>
 >>>>>>> 8917532 (chore: navigation redesign)
+=======
+>>>>>>> f1d5d1b (fix: minor nav code fixes)
         <RoundedMagneticButton
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           className="z-[1000] relative w-[45px] h-[45px] bg-neutral-700 flex items-center justify-center rounded-md cursor-pointer shadow-lg border-1 border-neutral-400"

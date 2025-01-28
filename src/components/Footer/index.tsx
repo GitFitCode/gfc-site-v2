@@ -71,6 +71,7 @@ export default function Index() {
             {/* Socials Section */}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             {isDesktop && <MagnetIcons containerClassName="mx-[20px] mb-10 gap-[20px]" iconClassName="hover:fill-black fill-[#00c2c6] h-[35px] w-[35px]"/>}
 =======
             {isDesktop && <MagnetIcons />}
@@ -78,6 +79,9 @@ export default function Index() {
 =======
             {isDesktop && <MagnetIcons containerClassName="mx-[20px] mb-10" iconClassName="hover:fill-black fill-[#00c2c6] h-[35px] w-[35px] gap-[20px]"/>}
 >>>>>>> 8917532 (chore: navigation redesign)
+=======
+            {isDesktop && <MagnetIcons containerClassName="mx-[20px] mb-10 gap-[20px]" iconClassName="hover:fill-black fill-[#00c2c6] h-[35px] w-[35px]"/>}
+>>>>>>> f1d5d1b (fix: minor nav code fixes)
 
             <div
               style={{ display: "flex", flexDirection: "column", gap: "15px" }}
