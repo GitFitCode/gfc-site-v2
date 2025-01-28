@@ -169,13 +169,6 @@ const MainNav = ({
       </div>
 
       {!isTablet ? (
-        // <div onClick={() => setIsMenuOpen(!isMenuOpen)} className="relative w-[40px] h-[40px] bg-neutral-800 flex items-center justify-center rounded-md cursor-pointer">
-        //   <div
-        //     className={`w-full relative z-10 before:block before:h-[2px] before:w-[40%] before:m-auto before:bg-white before:relative before:transition-transform before:duration-300 after:block after:h-[2px] after:w-[40%] after:m-auto after:bg-white after:relative after:transition-transform after:duration-300 ${
-        //       isMenuOpen ? "before:rotate-45 before:top-[-1px] after:rotate-[-45deg] after:top-[0px]" : "before:top-[-5px] after:top-[5px]"
-        //     }`}
-        //   ></div>
-        // </div>
         <RoundedMagneticButton
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           className="z-[1000] relative w-[45px] h-[45px] bg-neutral-700 flex items-center justify-center rounded-md cursor-pointer shadow-lg border-1 border-neutral-400"
