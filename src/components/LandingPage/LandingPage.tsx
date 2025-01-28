@@ -2,7 +2,6 @@ import { useNavigationContext } from "../../contexts/navigation.context";
 import StatsSection from "./StatsSection";
 import SolutionsSection from "./SolutionsSection";
 import PhaseTimeline from "./PhasesTimeline";
-import SuccessStoriesSection from "./SuccessStoriesSection";
 import StartProject from "./StartProject";
 import GitFitCodeIntroSection from "./GitFitCodeIntroSection";
 
