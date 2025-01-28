@@ -223,28 +223,6 @@ const MainNav = ({
               bookButton.route
             )}
             navItem={bookButton} />
-          {/* <Magnetic>
-            <div className="py-3 px-6 bg-neutral-700 hover:bg-gfc-primary rounded-md shadow-sm cursor-pointer">
-              <FlipLink
-                item={bookButton}
-                isActive={false}
-                fontSize="20px"
-                secondTextColor="text-neutral-50"
-                className={`${
-                  isActive ? "text-gfc-accent" : "text-neutral-50"
-                }  `}
-                handleClick={() =>
-                  handleSelect(
-                    bookButton.name,
-                    bookButton.sectionId,
-                    bookButton.route
-                  )
-                }
-              >
-                {bookButton.content}
-              </FlipLink>
-            </div>
-          </Magnetic> */}
         </div>
       )}
     </div>

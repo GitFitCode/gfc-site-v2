@@ -4,6 +4,8 @@ import React, { createContext, useState, useContext, useEffect } from "react";
 const NavigationContext = createContext({
   isNavigating: false,
   setIsNavigating: (value: boolean) => {},
+  isSiteLoading: true,
+  setIsSiteLoading: (value: boolean) => {},
   isDesktop: false,
   isTablet: false,
   currentNavItem: nav_items[0].name,
@@ -16,6 +18,7 @@ export const NavigationProvider: React.FC<{ children: React.ReactNode }> = ({ ch
   const [isNavigating, setIsNavigating] = useState(false);
 	const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [currentNavItem, setCurrentNavItem] = useState(nav_items[0].name);
+  const [isSiteLoading, setIsSiteLoading] = useState(true);
 	const isDesktop = windowWidth >= 1024;
   const isTablet = windowWidth >= 768;
 
@@ -29,6 +32,8 @@ export const NavigationProvider: React.FC<{ children: React.ReactNode }> = ({ ch
 	const values = {
 		isNavigating,
 		setIsNavigating,
+    isSiteLoading,
+    setIsSiteLoading,
 		isDesktop,
     isTablet,
     currentNavItem, 
