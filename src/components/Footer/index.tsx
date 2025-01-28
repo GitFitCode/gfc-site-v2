@@ -49,7 +49,7 @@ export default function Index() {
             </div>
 
             {/* Socials Section */}
-            {isDesktop && <MagnetIcons containerClassName="mx-[20px] mb-10" iconClassName="hover:fill-black fill-[#00c2c6] h-[35px] w-[35px] gap-[20px]"/>}
+            {isDesktop && <MagnetIcons containerClassName="mx-[20px] mb-10 gap-[20px]" iconClassName="hover:fill-black fill-[#00c2c6] h-[35px] w-[35px]"/>}
 
             <div
               style={{ display: "flex", flexDirection: "column", gap: "15px" }}
