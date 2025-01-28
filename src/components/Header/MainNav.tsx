@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import Logo from './logo';
-import { HomeIcon, UserGroupIcon, CogIcon, ChatBubbleOvalLeftIcon, PhoneIcon } from '@heroicons/react/24/solid';
+import { HomeIcon, UserGroupIcon, CogIcon, PhoneIcon } from '@heroicons/react/24/solid';
 import { Link, useNavigate } from 'react-router';
 import { FolderClosedIcon } from 'lucide-react';
 

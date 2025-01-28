@@ -54,8 +54,9 @@ export default function ContactPage() {
     setError('');
 
     try {
-      // Insert form data into Supabase table
-      const { error } = await supabase
+      if (supabase) {
+        // Insert form data into Supabase table
+        const { error } = await supabase
         .from('contact_form_submissions')
         .insert([
           {
@@ -72,10 +73,11 @@ export default function ContactPage() {
           },
         ]);
 
-      if (error) throw error;
+        if (error) throw error;
 
-      // Show thank you message and start countdown for redirection
-      setIsSubmitted(true);
+        // Show thank you message and start countdown for redirection
+        setIsSubmitted(true);
+      }
     } catch (error) {
       console.error(error);
       setError('Something went wrong. Please try again later.');
