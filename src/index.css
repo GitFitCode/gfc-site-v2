@@ -51,6 +51,7 @@ code {
 
 .link-style:hover::after {
   width: 100%;
+<<<<<<< HEAD
 }
 
 .panel { 
@@ -62,4 +63,6 @@ code {
   justify-content: center;
   text-align: center;
   background-color: aliceblue;
+=======
+>>>>>>> 8917532 (chore: navigation redesign)
 }
