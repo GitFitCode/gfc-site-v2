@@ -6,12 +6,17 @@ import RoundedMagneticButton from "../ui/RoundedMagneticButton";
 import { useNavigationContext } from "../../contexts/navigation.context";
 import MainNav from "./MainNav";
 import SlideNav from "./SlideNav";
+import { set } from "lodash";
 
 export default function Index() {
   const header = useRef(null);
-  const [isSlideActive, setIsSlideActive] = useState(false);
-  const { isDesktop } = useNavigationContext();
   const button = useRef(null);
+  const [isSlideActive, setIsSlideActive] = useState(false);
+  const { currentNavItem } = useNavigationContext();
+
+  useEffect(() => {
+    setIsSlideActive(false);
+  }, [currentNavItem]);
 
   useLayoutEffect(() => {
     if (!button.current) return;

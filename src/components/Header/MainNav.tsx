@@ -24,8 +24,20 @@ import { FolderClosedIcon } from "lucide-react";
 import FlipLink from "../ui/FlipLink";
 import { useNavigationContext } from "../../contexts/navigation.context";
 import RoundedMagneticButton from "../ui/RoundedMagneticButton";
+<<<<<<< HEAD
 import Magnetic from "../ui/Magnetic";
 >>>>>>> c793c6f (chore: navigation redesign)
+=======
+import { NavButton } from "../ui/NavButton";
+
+export interface NavItemType {
+  name: string;
+  icon?: React.ReactNode;
+  route: string;
+  sectionId: string | null;
+  content: string;
+}
+>>>>>>> 4979765 (chore: create template buttons and modified navigation)
 
 export const nav_items = [
   {
@@ -66,8 +78,8 @@ export const nav_items = [
   },
 ];
 
-const bookButton = {
-  name: "Book",
+export const bookButton = {
+  name: "Book Now",
   // icon: <PhoneIcon className="h-6 w-6" />,
   route: "/booking",
   sectionId: null,
@@ -182,14 +194,14 @@ const MainNav = ({
           ></div>
         </RoundedMagneticButton>
       ) : (
-        <div className="flex flex-row items-center gap-4">
-          <div className={`flex flex-row space-x-4 relative h-fit`}>
+        <div className="flex flex-row items-center gap-8">
+          <div className={`flex flex-row space-x-6 relative h-fit`}>
             {nav_items.map((item, index) => (
               <FlipLink
                 key={index}
                 item={item}
                 isActive={currentNavItem === item.name}
-                fontSize="18px"
+                fontSize="20px"
                 secondTextColor="text-gfc-accent"
                 className={`${
                   isActive ? "text-gfc-primary-100" : "text-neutral-700"
@@ -202,12 +214,21 @@ const MainNav = ({
               </FlipLink>
             ))}
           </div>
-          <Magnetic>
-            <div className="py-3 px-4 bg-gfc-primary hover:bg-neutral-700 rounded-md shadow-sm cursor-pointer">
+          <NavButton 
+          linkClassName={`${isActive ? "text-gfc-accent" : "text-neutral-50"}`} 
+          handleClick={() =>
+            handleSelect(
+              bookButton.name,
+              bookButton.sectionId,
+              bookButton.route
+            )}
+            navItem={bookButton} />
+          {/* <Magnetic>
+            <div className="py-3 px-6 bg-neutral-700 hover:bg-gfc-primary rounded-md shadow-sm cursor-pointer">
               <FlipLink
                 item={bookButton}
                 isActive={false}
-                fontSize="18px"
+                fontSize="20px"
                 secondTextColor="text-neutral-50"
                 className={`${
                   isActive ? "text-gfc-accent" : "text-neutral-50"
@@ -223,7 +244,7 @@ const MainNav = ({
                 {bookButton.content}
               </FlipLink>
             </div>
-          </Magnetic>
+          </Magnetic> */}
         </div>
       )}
     </div>
@@ -231,3 +252,4 @@ const MainNav = ({
 };
 
 export default MainNav;
+
