@@ -43,29 +43,41 @@ export default function Index() {
                   Version
                 </h3>
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <p className="link-style">2022 © Edition</p>
 =======
                 <p>2022 © Edition</p>
 >>>>>>> 28c2d37 (chore: added sticky footer and initial site loader)
+=======
+                <p className="link-style">2022 © Edition</p>
+>>>>>>> 8917532 (chore: navigation redesign)
               </span>
               <span>
                 <h3 className="text-neutral-400 cursor-default font-light text-[1em]">
                   Location
                 </h3>
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <p className="link-style">Los Angeles, CA</p>
 =======
                 <p>Los Angeles, CA</p>
 >>>>>>> 28c2d37 (chore: added sticky footer and initial site loader)
+=======
+                <p className="link-style">Los Angeles, CA</p>
+>>>>>>> 8917532 (chore: navigation redesign)
               </span>
             </div>
 
             {/* Socials Section */}
 <<<<<<< HEAD
+<<<<<<< HEAD
             {isDesktop && <MagnetIcons containerClassName="mx-[20px] mb-10 gap-[20px]" iconClassName="hover:fill-black fill-[#00c2c6] h-[35px] w-[35px]"/>}
 =======
             {isDesktop && <MagnetIcons />}
 >>>>>>> 28c2d37 (chore: added sticky footer and initial site loader)
+=======
+            {isDesktop && <MagnetIcons containerClassName="mx-[20px] mb-10" iconClassName="hover:fill-black fill-[#00c2c6] h-[35px] w-[35px] gap-[20px]"/>}
+>>>>>>> 8917532 (chore: navigation redesign)
 
             <div
               style={{ display: "flex", flexDirection: "column", gap: "15px" }}
@@ -77,28 +89,40 @@ export default function Index() {
               </span>
               <Magnetic>
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <Link to="/" className="cursor-pointer link-style">
 =======
                 <Link to="/" className="cursor-pointer">
 >>>>>>> 28c2d37 (chore: added sticky footer and initial site loader)
+=======
+                <Link to="/" className="cursor-pointer link-style">
+>>>>>>> 8917532 (chore: navigation redesign)
                   Home
                 </Link>
               </Magnetic>
               <Magnetic>
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <Link to="/portfolio" className="cursor-pointer link-style">
 =======
                 <Link to="/portfolio" className="cursor-pointer">
 >>>>>>> 28c2d37 (chore: added sticky footer and initial site loader)
+=======
+                <Link to="/portfolio" className="cursor-pointer link-style">
+>>>>>>> 8917532 (chore: navigation redesign)
                   Portfolio
                 </Link>
               </Magnetic>
               <Magnetic>
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <Link to="/contact" className="cursor-pointer link-style">
 =======
                 <Link to="/contact" className="cursor-pointer">
 >>>>>>> 28c2d37 (chore: added sticky footer and initial site loader)
+=======
+                <Link to="/contact" className="cursor-pointer link-style">
+>>>>>>> 8917532 (chore: navigation redesign)
                   Contact US
                 </Link>
               </Magnetic>
@@ -112,6 +136,7 @@ export default function Index() {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const MagnetIcons = ({iconClassName, containerClassName}: {iconClassName?: string, containerClassName?: string}) => { 
   return (
     <div className={`flex ${containerClassName}`}>
@@ -121,13 +146,20 @@ export const MagnetIcons = ({iconClassName, containerClassName}: {iconClassName?
           className={` cursor-pointer ${iconClassName}  transition-colors duration-300`}
 =======
 const MagnetIcons = () => {
+=======
+export const MagnetIcons = ({iconClassName, containerClassName}: {iconClassName?: string, containerClassName?: string}) => { 
+>>>>>>> 8917532 (chore: navigation redesign)
   return (
-    <div className="flex gap-[20px] mx-[20px] mb-10">
+    <div className={`flex ${containerClassName}`}>
       {/* Facebook */}
       <GsapMagnetic>
         <svg
+<<<<<<< HEAD
           className="h-[35px] w-[35px] cursor-pointer hover:fill-black fill-[#00c2c6]  transition-colors duration-300"
 >>>>>>> 28c2d37 (chore: added sticky footer and initial site loader)
+=======
+          className={` cursor-pointer ${iconClassName}  transition-colors duration-300`}
+>>>>>>> 8917532 (chore: navigation redesign)
           id="Layer_2"
           data-name="Layer 2"
           xmlns="http://www.w3.org/2000/svg"
@@ -141,10 +173,14 @@ const MagnetIcons = () => {
       <GsapMagnetic>
         <svg
 <<<<<<< HEAD
+<<<<<<< HEAD
           className={`] cursor-pointer ${iconClassName} transition-colors duration-300`}
 =======
           className="h-[35px] w-[35px]] cursor-pointer hover:fill-black fill-[#00c2c6] transition-colors duration-300"
 >>>>>>> 28c2d37 (chore: added sticky footer and initial site loader)
+=======
+          className={`] cursor-pointer ${iconClassName} transition-colors duration-300`}
+>>>>>>> 8917532 (chore: navigation redesign)
           id="Layer_2"
           data-name="Layer 2"
           xmlns="http://www.w3.org/2000/svg"
@@ -158,10 +194,14 @@ const MagnetIcons = () => {
       <GsapMagnetic>
         <svg
 <<<<<<< HEAD
+<<<<<<< HEAD
           className={` cursor-pointer ${iconClassName} transition-colors duration-300`}
 =======
           className="h-[35px] w-[35px] cursor-pointer hover:fill-black fill-[#00c2c6] transition-colors duration-300"
 >>>>>>> 28c2d37 (chore: added sticky footer and initial site loader)
+=======
+          className={` cursor-pointer ${iconClassName} transition-colors duration-300`}
+>>>>>>> 8917532 (chore: navigation redesign)
           id="Layer_2"
           data-name="Layer 2"
           xmlns="http://www.w3.org/2000/svg"
@@ -175,10 +215,14 @@ const MagnetIcons = () => {
       <GsapMagnetic>
         <svg
 <<<<<<< HEAD
+<<<<<<< HEAD
           className={` cursor-pointer ${iconClassName} transition-colors duration-300`}
 =======
           className="h-[35px] w-[35px] cursor-pointer hover:fill-black fill-[#00c2c6] transition-colors duration-300"
 >>>>>>> 28c2d37 (chore: added sticky footer and initial site loader)
+=======
+          className={` cursor-pointer ${iconClassName} transition-colors duration-300`}
+>>>>>>> 8917532 (chore: navigation redesign)
           id="Layer_2"
           data-name="Layer 2"
           xmlns="http://www.w3.org/2000/svg"

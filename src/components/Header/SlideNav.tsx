@@ -1,20 +1,31 @@
 import React, { useCallback, useState } from "react";
 import { motion } from "framer-motion";
 import { Link, useNavigate } from "react-router";
+<<<<<<< HEAD
 import { bookButton, nav_items } from "./MainNav";
+=======
+import { nav_items } from "./MainNav";
+>>>>>>> 8917532 (chore: navigation redesign)
 import FlipLink from "../ui/FlipLink";
 import { useNavigationContext } from "../../contexts/navigation.context";
 import { InstagramIcon, LinkedinIcon, TwitterIcon } from "lucide-react";
 import Magnetic from "../ui/Magnetic";
 import { MagnetIcons } from "../Footer";
+<<<<<<< HEAD
 import { ShinyBgButton } from "../ui/ShinyBgButton";
+=======
+>>>>>>> 8917532 (chore: navigation redesign)
 
 export default function index({
   setIsSlideActive,
 }: {
   setIsSlideActive: React.Dispatch<React.SetStateAction<boolean>>;
 }) {
+<<<<<<< HEAD
   const { currentNavItem, setCurrentNavItem } =
+=======
+  const { isDesktop, currentNavItem, setCurrentNavItem } =
+>>>>>>> 8917532 (chore: navigation redesign)
     useNavigationContext();
   const navigate = useNavigate();
   const menuSlide = {
@@ -105,12 +116,22 @@ export default function index({
             />
           </div>
         </div>
+<<<<<<< HEAD
         <ShinyBgButton
           className="py-6 px-8"
           content="Book.Now"
           navItem={bookButton}
           handleClick={() => navigate(bookButton.route)}
         />
+=======
+        <Magnetic>
+          <div className="z-[800] w-full bg-gfc-primary hover:bg-neutral-700 rounded-md shadow-md cursor-pointer text-neutral-800 hover:text-neutral-50 items-center text-center text-[18px] font-black uppercase py-[10px]">
+            <Link to="/contact" className="cursor-pointer">
+              Book Appointment
+            </Link>
+          </div>
+        </Magnetic>
+>>>>>>> 8917532 (chore: navigation redesign)
         {/* <Footer /> */}
       </div>
       <Curve />

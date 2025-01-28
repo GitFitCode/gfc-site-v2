@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useEffect, useCallback } from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -13,6 +14,8 @@ import { HomeIcon, UserGroupIcon, CogIcon, ChatBubbleOvalLeftIcon, PhoneIcon } f
 import { Link, useNavigate } from 'react-router';
 import { FolderClosedIcon } from 'lucide-react';
 =======
+=======
+>>>>>>> 8917532 (chore: navigation redesign)
 import Logo from "./Logo";
 import {
   HomeIcon,
@@ -28,6 +31,7 @@ import FlipLink from "../ui/FlipLink";
 import { useNavigationContext } from "../../contexts/navigation.context";
 import RoundedMagneticButton from "../ui/RoundedMagneticButton";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Magnetic from "../ui/Magnetic";
 >>>>>>> c793c6f (chore: navigation redesign)
 =======
@@ -42,6 +46,10 @@ export interface NavItemType {
 }
 >>>>>>> 4979765 (chore: create template buttons and modified navigation)
 
+=======
+import Magnetic from "../ui/Magnetic";
+
+>>>>>>> 8917532 (chore: navigation redesign)
 export const nav_items = [
   {
     name: "Home",
@@ -81,8 +89,13 @@ export const nav_items = [
   },
 ];
 
+<<<<<<< HEAD
 export const bookButton = {
   name: "Book Now",
+=======
+const bookButton = {
+  name: "Book",
+>>>>>>> 8917532 (chore: navigation redesign)
   // icon: <PhoneIcon className="h-6 w-6" />,
   route: "/booking",
   sectionId: null,
@@ -169,6 +182,9 @@ const MainNav = ({
   return (
     <div
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8917532 (chore: navigation redesign)
       ref={headerRef}
       className={`top-0 z-1000 transition-all duration-300 relative ${
         scrolled
@@ -179,16 +195,29 @@ const MainNav = ({
           ? "lg:flex lg:flex-row lg:space-x-4 lg:justify-between lg:items-center lg:p-4 w-full"
           : "flex flex-row items-center justify-between p-2 w-[97%]"
       }`}
+<<<<<<< HEAD
 =======
       className={` top-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white bg-opacity-90 border-b-4 border-gfc-primary-100' : 'bg-white bg-opacity-100'
         } ${isDesktop ? 'lg:flex lg:flex-row lg:space-x-4 lg:justify-between lg:items-center lg:p-4 w-full' : 'flex flex-row items-center justify-between p-2 w-[97%]'}`}
 >>>>>>> 28c2d37 (chore: added sticky footer and initial site loader)
+=======
+>>>>>>> 8917532 (chore: navigation redesign)
     >
       <div className="flex items-center">
         <Logo setShowNav={() => {}} showNav={showNav} />
       </div>
 
       {!isTablet ? (
+<<<<<<< HEAD
+=======
+        // <div onClick={() => setIsMenuOpen(!isMenuOpen)} className="relative w-[40px] h-[40px] bg-neutral-800 flex items-center justify-center rounded-md cursor-pointer">
+        //   <div
+        //     className={`w-full relative z-10 before:block before:h-[2px] before:w-[40%] before:m-auto before:bg-white before:relative before:transition-transform before:duration-300 after:block after:h-[2px] after:w-[40%] after:m-auto after:bg-white after:relative after:transition-transform after:duration-300 ${
+        //       isMenuOpen ? "before:rotate-45 before:top-[-1px] after:rotate-[-45deg] after:top-[0px]" : "before:top-[-5px] after:top-[5px]"
+        //     }`}
+        //   ></div>
+        // </div>
+>>>>>>> 8917532 (chore: navigation redesign)
         <RoundedMagneticButton
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           className="z-[1000] relative w-[45px] h-[45px] bg-neutral-700 flex items-center justify-center rounded-md cursor-pointer shadow-lg border-1 border-neutral-400"
@@ -202,14 +231,23 @@ const MainNav = ({
           ></div>
         </RoundedMagneticButton>
       ) : (
+<<<<<<< HEAD
         <div className="flex flex-row items-center gap-8">
           <div className={`flex flex-row space-x-6 relative h-fit`}>
+=======
+        <div className="flex flex-row items-center gap-4">
+          <div className={`flex flex-row space-x-4 relative h-fit`}>
+>>>>>>> 8917532 (chore: navigation redesign)
             {nav_items.map((item, index) => (
               <FlipLink
                 key={index}
                 item={item}
                 isActive={currentNavItem === item.name}
+<<<<<<< HEAD
                 fontSize="20px"
+=======
+                fontSize="18px"
+>>>>>>> 8917532 (chore: navigation redesign)
                 secondTextColor="text-gfc-accent"
                 className={`${
                   isActive ? "text-gfc-primary-100" : "text-neutral-700"
@@ -222,6 +260,7 @@ const MainNav = ({
               </FlipLink>
             ))}
           </div>
+<<<<<<< HEAD
           <NavButton 
           linkClassName={`${isActive ? "text-gfc-accent" : "text-neutral-50"}`} 
           handleClick={() =>
@@ -231,6 +270,30 @@ const MainNav = ({
               bookButton.route
             )}
             navItem={bookButton} />
+=======
+          <Magnetic>
+            <div className="py-3 px-4 bg-gfc-primary hover:bg-neutral-700 rounded-md shadow-sm cursor-pointer">
+              <FlipLink
+                item={bookButton}
+                isActive={false}
+                fontSize="18px"
+                secondTextColor="text-neutral-50"
+                className={`${
+                  isActive ? "text-gfc-accent" : "text-neutral-50"
+                }  `}
+                handleClick={() =>
+                  handleSelect(
+                    bookButton.name,
+                    bookButton.sectionId,
+                    bookButton.route
+                  )
+                }
+              >
+                {bookButton.content}
+              </FlipLink>
+            </div>
+          </Magnetic>
+>>>>>>> 8917532 (chore: navigation redesign)
         </div>
       )}
     </div>
@@ -238,4 +301,7 @@ const MainNav = ({
 };
 
 export default MainNav;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8917532 (chore: navigation redesign)
