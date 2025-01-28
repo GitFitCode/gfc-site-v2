@@ -38,18 +38,18 @@ export default function Index() {
                   className="text-neutral-400 cursor-default font-light text-[1em]">
                   Version
                 </h3>
-                <p>2022 © Edition</p>
+                <p className="link-style">2022 © Edition</p>
               </span>
               <span>
                 <h3 className="text-neutral-400 cursor-default font-light text-[1em]">
                   Location
                 </h3>
-                <p>Los Angeles, CA</p>
+                <p className="link-style">Los Angeles, CA</p>
               </span>
             </div>
 
             {/* Socials Section */}
-            {isDesktop && <MagnetIcons />}
+            {isDesktop && <MagnetIcons containerClassName="mx-[20px] mb-10" iconClassName="hover:fill-black fill-[#00c2c6] h-[35px] w-[35px] gap-[20px]"/>}
 
             <div
               style={{ display: "flex", flexDirection: "column", gap: "15px" }}
@@ -60,17 +60,17 @@ export default function Index() {
                 </h3>
               </span>
               <Magnetic>
-                <Link to="/" className="cursor-pointer">
+                <Link to="/" className="cursor-pointer link-style">
                   Home
                 </Link>
               </Magnetic>
               <Magnetic>
-                <Link to="/portfolio" className="cursor-pointer">
+                <Link to="/portfolio" className="cursor-pointer link-style">
                   Portfolio
                 </Link>
               </Magnetic>
               <Magnetic>
-                <Link to="/contact" className="cursor-pointer">
+                <Link to="/contact" className="cursor-pointer link-style">
                   Contact US
                 </Link>
               </Magnetic>
@@ -83,13 +83,13 @@ export default function Index() {
   );
 }
 
-const MagnetIcons = () => {
+export const MagnetIcons = ({iconClassName, containerClassName}: {iconClassName?: string, containerClassName?: string}) => { 
   return (
-    <div className="flex gap-[20px] mx-[20px] mb-10">
+    <div className={`flex ${containerClassName}`}>
       {/* Facebook */}
       <GsapMagnetic>
         <svg
-          className="h-[35px] w-[35px] cursor-pointer hover:fill-black fill-[#00c2c6]  transition-colors duration-300"
+          className={` cursor-pointer ${iconClassName}  transition-colors duration-300`}
           id="Layer_2"
           data-name="Layer 2"
           xmlns="http://www.w3.org/2000/svg"
@@ -102,7 +102,7 @@ const MagnetIcons = () => {
       {/* X */}
       <GsapMagnetic>
         <svg
-          className="h-[35px] w-[35px]] cursor-pointer hover:fill-black fill-[#00c2c6] transition-colors duration-300"
+          className={`] cursor-pointer ${iconClassName} transition-colors duration-300`}
           id="Layer_2"
           data-name="Layer 2"
           xmlns="http://www.w3.org/2000/svg"
@@ -115,7 +115,7 @@ const MagnetIcons = () => {
       {/* YouTube */}
       <GsapMagnetic>
         <svg
-          className="h-[35px] w-[35px] cursor-pointer hover:fill-black fill-[#00c2c6] transition-colors duration-300"
+          className={` cursor-pointer ${iconClassName} transition-colors duration-300`}
           id="Layer_2"
           data-name="Layer 2"
           xmlns="http://www.w3.org/2000/svg"
@@ -128,7 +128,7 @@ const MagnetIcons = () => {
       {/* TikTok */}
       <GsapMagnetic>
         <svg
-          className="h-[35px] w-[35px] cursor-pointer hover:fill-black fill-[#00c2c6] transition-colors duration-300"
+          className={` cursor-pointer ${iconClassName} transition-colors duration-300`}
           id="Layer_2"
           data-name="Layer 2"
           xmlns="http://www.w3.org/2000/svg"
