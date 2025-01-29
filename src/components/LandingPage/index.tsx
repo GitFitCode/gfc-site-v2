@@ -14,40 +14,40 @@ import Lenis from "lenis";
 export default function LandingPage() {
   const { isDesktop } = useNavigationContext();
 
-  useEffect(() => {
-    const lenis = new Lenis();
+  // useEffect(() => {
+  //   const lenis = new Lenis();
 
-    function raf(time: number) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
+  //   function raf(time: number) {
+  //     lenis.raf(time);
+  //     requestAnimationFrame(raf);
+  //   }
 
-    requestAnimationFrame(raf);
-  }, []);
+  //   requestAnimationFrame(raf);
+  // }, []);
 
   return (
     <div>
       <motion.div className="flex flex-col items-center relative bg-neutral-50 z-[50] shadow-md">
-        <AnimatedSection className="w-full">
+        <AnimatedSection className="w-full mb-[6em] md:mb-[4em]">
           <GitFitCodeIntroSection />
         </AnimatedSection>
 
-        <AnimatedSection>
+        <AnimatedSection className="w-full flex items-center justify-center mb-[6em] md:mb-[4em]">
           <StatsSection />
         </AnimatedSection>
 
-        <AnimatedSection>
+        <AnimatedSection className="w-full mb-[6em] md:mb-[4em]">
           <SolutionsSection />
         </AnimatedSection>
 
-        <AnimatedSection>
+        <AnimatedSection className="w-full mb-[6em] md:mb-[4em]">
           <PhaseTimeline />
         </AnimatedSection>
 
         {/* Uncomment when needed */}
-        <AnimatedSection>
-        <SuccessStoriesSection />
-      </AnimatedSection>
+        <AnimatedSection className="w-full mb-[6em] md:mb-[4em]">
+          <SuccessStoriesSection />
+        </AnimatedSection>
 
         {/* <AnimatedSection>
           <StartProject />
