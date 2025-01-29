@@ -69,9 +69,10 @@ export default function Preloader() {
       }}
       initial="initial"
       exit="exit"
-      // style={{ backgroundColor: "#00c2c6" }}
       className="h-[100vh] w-[100vw] flex items-center justify-center fixed z-[99999] bg-neutral-100 shadow-md"
     >
+      <div className="z-[99999] absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-dot-black/[0.2]"></div> 
+      <div className="z-[999999] absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-neutral-50 [mask-image:radial-gradient(ellipse_at_center,transparent_10%,black)]"></div> 
       {dimension.width > 0 && (
         <>
           {!showImage ? (
@@ -116,7 +117,9 @@ export default function Preloader() {
               // backgroundColor: "transparent",
             }}
             fill="none"
+            className=""
           >
+            
             {/* SVG Drop Shadow Filter */}
             <defs>
               <filter

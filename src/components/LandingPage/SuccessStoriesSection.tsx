@@ -24,12 +24,6 @@ export default function SuccessStoriesSection() {
       ref={container}
       id="success-stories-section"
       className="flex flex-col gap-5 relative mt-[200px] z-1"
-    //   flex-direction: column;
-    // gap: 3vw;
-    // position: relative;
-    // margin-top: 200px;
-    // background-color: white;
-    // z-index: 1;
     >
       {/* <div className="w-full gap-12 flex flex-col items-start">
         <div className="flex-col items-center gap-2 self-stretch w-full flex-[0_0_auto] flex relative">
@@ -62,9 +56,6 @@ export default function SuccessStoriesSection() {
           <CarouselNext />
         </Carousel>
       </div> */}
-      <motion.div style={{ height }} className="relative mt-[100px] bg-red">
-        <div className="h-[1550%] w-[120%] left-[-10%] radius-[0_0_50%_50%] bg-white z-1 absolute shadow-lg" style={{ height: height.get() }}></div>
-      </motion.div>
     </section>
   );
 }

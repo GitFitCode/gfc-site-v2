@@ -45,6 +45,7 @@ const App = () => {
       <NavigationWrapper>
         <AnimatePresence mode="wait">
           {isSiteLoading && <Preloader />}
+          {/* <Preloader /> */}
         </AnimatePresence>
         <PageHeader />
         <AnimatedRoutes />
