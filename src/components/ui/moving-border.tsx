@@ -32,7 +32,7 @@ export function Button({
   return (
     <Component
       className={cn(
-        "bg-transparent relative text-xl h-8  p-[1px] overflow-hidden shadow-[0_0_4px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_38px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]",
+        "bg-transparent relative text-xl h-8  p-[1px] overflow-hidden ",
         containerClassName
       )}
       style={{
@@ -41,13 +41,13 @@ export function Button({
       {...otherProps}
     >
       <div
-        className="absolute inset-0"
+        className="absolute inset-0 "
         style={{ borderRadius: `calc(${borderRadius} * 0.96)` }}
       >
         <MovingBorder duration={duration} rx="30%" ry="30%">
           <div
             className={cn(
-              "h-20 w-20 opacity-[0.8] bg-[radial-gradient(var(--sky-500)_40%,transparent_60%)]",
+              " h-20 w-20 opacity-[0.8] bg-[radial-gradient(#3cb5b8_40%,transparent_60%)]",
               borderClassName
             )}
           />
@@ -56,7 +56,7 @@ export function Button({
 
       <div
         className={cn(
-          "relative bg-slate-900/[0.8] border border-slate-800 backdrop-blur-xl text-white flex items-center justify-center w-full h-full text-sm antialiased px-4",
+          "relative bg-slate-900/[0.8]  border border-slate-800 text-white flex items-center justify-center w-full h-full text-sm antialiased px-4",
           className
         )}
         style={{
