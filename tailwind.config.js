@@ -35,7 +35,7 @@ module.exports = {
         "4k": "2560px",
       },
       colors: {
-        "gfc-accent": "#00C9CD",
+        "gfc-accent": "#3cb5b8",
         "gfc-dark": "#231E21",
         "gfc-darker": "#181918",
         "gfc-light": "#E6F7F8", // new light color
