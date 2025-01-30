@@ -16,9 +16,13 @@ const AnimatedSection = ({ children, className }: { children: ReactNode, classNa
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
+<<<<<<< HEAD
       viewport={{ once: true, amount: 0.2 }} // Triggers animation when the section enters viewport
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+      viewport={{ once: false, amount: 0.2 }} // Triggers animation when the section enters viewport
+>>>>>>> 7f9e90e (chore: page transition changes)
       className={className}
 =======
 >>>>>>> 28c2d37 (chore: added sticky footer and initial site loader)
