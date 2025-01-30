@@ -43,7 +43,7 @@ export default function Index() {
             <div className="flex flex-col gap-[15px] justify-between">
               <span>
                 <h3
-                  className="text-neutral-400 cursor-default font-light text-[1em]">
+                  className="text-gray-400 cursor-default font-light text-[1em]">
                   Version
                 </h3>
 <<<<<<< HEAD
@@ -57,7 +57,7 @@ export default function Index() {
 >>>>>>> 8917532 (chore: navigation redesign)
               </span>
               <span>
-                <h3 className="text-neutral-400 cursor-default font-light text-[1em]">
+                <h3 className="text-gray-400 cursor-default font-light text-[1em]">
                   Location
                 </h3>
 <<<<<<< HEAD
@@ -91,7 +91,7 @@ export default function Index() {
               style={{ display: "flex", flexDirection: "column", gap: "15px" }}
             >
               <span>
-                <h3 className="text-neutral-400 cursor-default font-light text-[1em]">
+                <h3 className="text-gray-400 cursor-default font-light text-[1em]">
                   Links
                 </h3>
               </span>
