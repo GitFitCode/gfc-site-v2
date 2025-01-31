@@ -22,7 +22,7 @@ import connect_hero from "../../images/portfolio/connectworx/hero.png";
 import networking_features from "../../images/portfolio/connectworx/networking-features.png";
 import keynote_features from "../../images/portfolio/connectworx/keynote-features.png";
 import studio_features from "../../images/portfolio/connectworx/studio-features.png";
-
+import { Link } from "react-router";
 
 export const TimelineSection = () => {
   const ref = useRef<HTMLDivElement>(null);
@@ -48,50 +48,59 @@ export const TimelineSection = () => {
             user acquisition and profitability.
           </p>
           <div className="grid grid-cols-2 gap-4">
-            <motion.img
-              onHoverStart={handleHoverStart}
-              whileHover={{
-                scale: 0.95,
-                rotate: `${randomRotation}deg`,
-              }}
-              src={natura_hero}
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-            <motion.img
-              onHoverStart={handleHoverStart}
-              whileHover={{
-                scale: 0.95,
-                rotate: `${randomRotation}deg`,
-              }}
-              src={phones}
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-            <motion.img
-              onHoverStart={handleHoverStart}
-              whileHover={{
-                scale: 0.95,
-                rotate: `${randomRotation}deg`,
-              }}
-              src={screens}
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-            <motion.img
-              onHoverStart={handleHoverStart}
-              whileHover={{
-                scale: 0.95,
-                rotate: `${randomRotation}deg`,
-              }}
-              src={desktop_screens}
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
+            <Link to={"/portfolio/natura-labs"}>
+              <motion.img
+                onHoverStart={handleHoverStart}
+                whileHover={{
+                  scale: 0.95,
+                  rotate: `${randomRotation}deg`,
+                }}
+                src={natura_hero}
+                width={500}
+                height={500}
+                className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+              />
+            </Link>
+
+            <Link to={"/portfolio/natura-labs"}>
+              <motion.img
+                onHoverStart={handleHoverStart}
+                whileHover={{
+                  scale: 0.95,
+                  rotate: `${randomRotation}deg`,
+                }}
+                src={phones}
+                width={500}
+                height={500}
+                className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+              />
+            </Link>
+            <Link to={"/portfolio/natura-labs"}>
+              <motion.img
+                onHoverStart={handleHoverStart}
+                whileHover={{
+                  scale: 0.95,
+                  rotate: `${randomRotation}deg`,
+                }}
+                src={screens}
+                width={500}
+                height={500}
+                className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+              />
+            </Link>
+            <Link to={"/portfolio/natura-labs"}>
+              <motion.img
+                onHoverStart={handleHoverStart}
+                whileHover={{
+                  scale: 0.95,
+                  rotate: `${randomRotation}deg`,
+                }}
+                src={desktop_screens}
+                width={500}
+                height={500}
+                className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+              />
+            </Link>
           </div>
         </motion.div>
       ),
@@ -108,53 +117,61 @@ export const TimelineSection = () => {
             reading news, and taking surveys
           </p>
           <div className="grid grid-cols-2 gap-4">
-            <motion.img
-              onHoverStart={handleHoverStart}
-              whileHover={{
-                scale: 0.95,
-                rotate: `${randomRotation}deg`,
-              }}
-              src={mode_hero}
-              alt="hero template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-            <motion.img
-              onHoverStart={handleHoverStart}
-              whileHover={{
-                scale: 0.95,
-                rotate: `${randomRotation}deg`,
-              }}
-              src={screens_three}
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-            <motion.img
-              onHoverStart={handleHoverStart}
-              whileHover={{
-                scale: 0.95,
-                rotate: `${randomRotation}deg`,
-              }}
-              src={screens_four}
-              alt="bento template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-            <motion.img
-              onHoverStart={handleHoverStart}
-              whileHover={{
-                scale: 0.95,
-                rotate: `${randomRotation}deg`,
-              }}
-              src={screens_five}
-              alt="cards template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
+            <Link to={"/portfolio/mode-earn-club"}>
+              <motion.img
+                onHoverStart={handleHoverStart}
+                whileHover={{
+                  scale: 0.95,
+                  rotate: `${randomRotation}deg`,
+                }}
+                src={mode_hero}
+                alt="hero template"
+                width={500}
+                height={500}
+                className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+              />
+            </Link>
+            <Link to={"/portfolio/mode-earn-club"}>
+              <motion.img
+                onHoverStart={handleHoverStart}
+                whileHover={{
+                  scale: 0.95,
+                  rotate: `${randomRotation}deg`,
+                }}
+                src={screens_three}
+                width={500}
+                height={500}
+                className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+              />
+            </Link>
+            <Link to={"/portfolio/mode-earn-club"}>
+              <motion.img
+                onHoverStart={handleHoverStart}
+                whileHover={{
+                  scale: 0.95,
+                  rotate: `${randomRotation}deg`,
+                }}
+                src={screens_four}
+                alt="bento template"
+                width={500}
+                height={500}
+                className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+              />
+            </Link>
+            <Link to={"/portfolio/mode-earn-club"}>
+              <motion.img
+                onHoverStart={handleHoverStart}
+                whileHover={{
+                  scale: 0.95,
+                  rotate: `${randomRotation}deg`,
+                }}
+                src={screens_five}
+                alt="cards template"
+                width={500}
+                height={500}
+                className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+              />
+            </Link>
           </div>
         </div>
       ),
@@ -171,53 +188,62 @@ export const TimelineSection = () => {
           </p>
 
           <div className="grid grid-cols-2 gap-4">
-            <motion.img
-              onHoverStart={handleHoverStart}
-              whileHover={{
-                scale: 0.95,
-                rotate: `${randomRotation}deg`,
-              }}
-              src={connect_hero}
-              alt="hero template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-            <motion.img
-              onHoverStart={handleHoverStart}
-              whileHover={{
-                scale: 0.95,
-                rotate: `${randomRotation}deg`,
-              }}
-              src={networking_features}
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-            <motion.img
-              onHoverStart={handleHoverStart}
-              whileHover={{
-                scale: 0.95,
-                rotate: `${randomRotation}deg`,
-              }}
-              src={keynote_features}
-              alt="bento template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-            <motion.img
-              onHoverStart={handleHoverStart}
-              whileHover={{
-                scale: 0.95,
-                rotate: `${randomRotation}deg`,
-              }}
-              src={studio_features}
-              alt="cards template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
+            <Link to={"/portfolio/connectworx"}>
+              <motion.img
+                onHoverStart={handleHoverStart}
+                whileHover={{
+                  scale: 0.95,
+                  rotate: `${randomRotation}deg`,
+                }}
+                src={connect_hero}
+                alt="hero template"
+                width={500}
+                height={500}
+                className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+              />
+            </Link>
+            <Link to={"/portfolio/connectworx"}>
+              <motion.img
+                onHoverStart={handleHoverStart}
+                whileHover={{
+                  scale: 0.95,
+                  rotate: `${randomRotation}deg`,
+                }}
+                src={keynote_features}
+                alt="bento template"
+                width={500}
+                height={500}
+                className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+              />
+            </Link>
+            <Link to={"/portfolio/connectworx"}>
+              <motion.img
+                onHoverStart={handleHoverStart}
+                whileHover={{
+                  scale: 0.95,
+                  rotate: `${randomRotation}deg`,
+                }}
+                src={studio_features}
+                alt="cards template"
+                width={500}
+                height={500}
+                className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+              />
+            </Link>
+            <Link to={"/portfolio/connectworx"}>
+              <motion.img
+                onHoverStart={handleHoverStart}
+                whileHover={{
+                  scale: 0.95,
+                  rotate: `${randomRotation}deg`,
+                }}
+                src={networking_features}
+                alt="cards template"
+                width={500}
+                height={500}
+                className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+              />
+            </Link>
           </div>
         </div>
       ),
