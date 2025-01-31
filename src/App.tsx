@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import {
   BrowserRouter as Router,
   Routes,
@@ -6,13 +6,16 @@ import {
   useLocation,
 } from "react-router";
 import {
+  NavigationProvider,
   useNavigationContext,
 } from "./contexts/navigation.context";
+import NavigationLoader from "./components/NavigationLoader";
 import LandingPage from "./components/LandingPage";
 import "./App.css";
 import { AnimatePresence } from "framer-motion";
 import PageHeader from "./components/Header/PageHeader";
 import ContactPage from "./components/ContactPage";
+import PageTransition from "./components/PageTransition";
 import PortfolioPage from "./components/PortfolioPage";
 import ModeEarnClub from "./components/PortfolioPage/Cases/ModeEarnClub";
 import ConnectworX from "./components/PortfolioPage/Cases/ConnectworX";
@@ -24,6 +27,7 @@ const App = () => {
   const { isNavigating, isSiteLoading, setIsSiteLoading } =
     useNavigationContext();
 <<<<<<< HEAD
+<<<<<<< HEAD
   // const [isLoading, setIsLoading] = useState(true);
 =======
   const { isNavigating } = useNavigationContext();
@@ -32,6 +36,9 @@ const App = () => {
 =======
 
 >>>>>>> f8cf7ef (chore: codebase cleanup comments and unused code)
+=======
+  // const [isLoading, setIsLoading] = useState(true);
+>>>>>>> d2e9fea (fix: page transitions)
 
   useEffect(() => {
     (async () => {
@@ -53,13 +60,18 @@ const App = () => {
   return (
     <Router>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <NavigationWrapper>
+=======
+      {/* <NavigationWrapper> */}
+>>>>>>> d2e9fea (fix: page transitions)
         <AnimatePresence mode="wait">
           {isSiteLoading && <Preloader />}
           {/* <Preloader /> */}
         </AnimatePresence>
         <PageHeader />
         <AnimatedRoutes />
+<<<<<<< HEAD
       </NavigationWrapper>
 =======
       <NavigationProvider>
@@ -72,6 +84,9 @@ const App = () => {
         </NavigationWrapper>
       </NavigationProvider>
 >>>>>>> 28c2d37 (chore: added sticky footer and initial site loader)
+=======
+      {/* </NavigationWrapper> */}
+>>>>>>> d2e9fea (fix: page transitions)
     </Router>
   );
 };
@@ -108,29 +123,35 @@ const AnimatedRoutes = () => {
       <Routes location={location} key={location.pathname}>
         <Route
           path="/"
-          element={<LandingPage />}
+          element={<PageTransition children={<LandingPage />} />}
+          // element={<LandingPage />}
         />
         <Route
           path="/contact"
-          element={<ContactPage />}
+          element={<PageTransition children={<ContactPage />} />}
+          // element={<ContactPage />}
         />
         <Route
           path="/portfolio"
-          element={<PortfolioPage />}
+          element={<PageTransition children={<PortfolioPage />} />}
+          // element={<PortfolioPage />}
         />
 
         {/* Portfoilio Routes */}
         <Route
           path="/portfolio/mode-earn-club"
-          element={<ModeEarnClub />}
+          element={<PageTransition children={<ModeEarnClub />} />}
+          // element={<ModeEarnClub />}
         />
         <Route
           path="/portfolio/connectworx"
-          element={<ConnectworX />}
+          element={<PageTransition children={<ConnectworX />} />}
+          // element={<ConnectworX />}
         />
         <Route
           path="/portfolio/natura-labs"
-          element={<NaturaLabs />}
+          element={<PageTransition children={<NaturaLabs />} />}
+          // element={<NaturaLabs />}
         />
       </Routes>
     </AnimatePresence>

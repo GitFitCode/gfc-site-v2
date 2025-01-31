@@ -44,11 +44,10 @@ export default function PortfolioPage() {
   }, []);
   return (
     <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, scale: 0.98, transition: { duration: 0.5 } }}
-      transition={{ duration: 0.8, ease: "easeOut" }}
-      viewport={{ once: false, amount: 0.2 }} // Triggers animation when the section enters viewport
+    initial={{ opacity: 0, y: 50 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    exit={{ opacity: 0, scale: 0.98, transition: { duration: 0.5 } }}
+    transition={{ duration: 0.8, ease: "easeOut" }}
       className={`flex flex-col items-center justify-between px-4 lg:px-20 gap-8 md:py-16 pt-16`}
     >
       <section

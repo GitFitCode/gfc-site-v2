@@ -17,6 +17,9 @@ export default function LandingPage() {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> d2e9fea (fix: page transitions)
   // useEffect(() => {
   //   const lenis = new Lenis();
 
@@ -27,6 +30,7 @@ export default function LandingPage() {
 
   //   requestAnimationFrame(raf);
   // }, []);
+<<<<<<< HEAD
 =======
   useEffect(() => {
     const lenis = new Lenis();
@@ -54,6 +58,11 @@ export default function LandingPage() {
       exit={{ opacity: 0, scale: 0.98, transition: { duration: 0.5 } }}
       transition={{ duration: 0.8, ease: "easeOut" }}
     >
+=======
+
+  return (
+    <div>
+>>>>>>> d2e9fea (fix: page transitions)
       <div className="flex flex-col items-center relative  bg-white z-[50] shadow-md">
         <AnimatedSection className="w-full">
 >>>>>>> 8ce7ed9 (fix: HeroSection ui changes)
@@ -122,6 +131,6 @@ export default function LandingPage() {
       </div>
 
       <Footer />
-    </motion.div>
+    </div>
   );
 }
