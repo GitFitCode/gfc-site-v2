@@ -1,6 +1,10 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import { useNavigationContext } from "../../contexts/navigation.context";
+>>>>>>> b6b80fc (fix: preloader ui changes)
 import longLogo from "../../images/logo-long.png";
 
 const words = [
@@ -29,8 +33,12 @@ export default function Preloader() {
   const [dimension, setDimension] = useState({ width: 0, height: 0 });
 <<<<<<< HEAD
   const [showImage, setShowImage] = useState(false);
+<<<<<<< HEAD
 =======
 >>>>>>> 28c2d37 (chore: added sticky footer and initial site loader)
+=======
+  const { isTablet } = useNavigationContext();
+>>>>>>> b6b80fc (fix: preloader ui changes)
 
   useEffect(() => {
     setDimension({ width: window.innerWidth, height: window.innerHeight });
@@ -111,10 +119,14 @@ const targetPath = `M0 0 L${dimension.width} 0 L${dimension.width} ${
       initial="initial"
       exit="exit"
 <<<<<<< HEAD
+<<<<<<< HEAD
       className="h-[100vh] w-[100vw] flex items-center justify-center fixed z-[99999] bg-neutral-100 shadow-md"
+=======
+      className="h-[100vh] w-[100vw] flex items-center justify-center fixed z-[99999] bg-white shadow-md"
+>>>>>>> b6b80fc (fix: preloader ui changes)
     >
       <div className="z-[99999] absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-dot-black/[0.2]"></div> 
-      <div className="z-[999999] absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-neutral-50 [mask-image:radial-gradient(ellipse_at_center,transparent_10%,black)]"></div> 
+      <div className="z-[999999] absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_10%,black)]"></div> 
       {dimension.width > 0 && (
         <>
           {!showImage ? (
@@ -128,7 +140,7 @@ const targetPath = `M0 0 L${dimension.width} 0 L${dimension.width} ${
               }}
               initial="initial"
               animate="enter"
-              className={`flex items-center absolute font-black z-10 uppercase text-neutral-700 ${
+              className={`flex items-center absolute font-black z-10 uppercase text-gray-800 ${
                 index === words.length - 1 ? "text-[60px]" : "text-[42px]"
               }`}
             >
@@ -150,6 +162,7 @@ const targetPath = `M0 0 L${dimension.width} 0 L${dimension.width} ${
               className="flex items-center absolute z-10 h-[8em] w-auto"
             />
           )}
+<<<<<<< HEAD
 =======
       style={{ backgroundColor: "#00c2c6" }}
       className="h-[100vh] w-[100vw] flex items-center justify-center fixed z-[99999]"
@@ -174,6 +187,10 @@ const targetPath = `M0 0 L${dimension.width} 0 L${dimension.width} ${
           </motion.p>
 >>>>>>> 28c2d37 (chore: added sticky footer and initial site loader)
           <svg
+=======
+          {isTablet && (
+            <svg
+>>>>>>> b6b80fc (fix: preloader ui changes)
             style={{
               position: "absolute",
               top: 0,
@@ -205,7 +222,7 @@ const targetPath = `M0 0 L${dimension.width} 0 L${dimension.width} ${
             </defs>
             <motion.path
              filter="url(#dropShadow)" // Apply shadow effect
-              fill={"#f5f5f5"}
+              fill={"white"}
               variants={curve}
               initial="initial"
               exit="exit"
@@ -218,6 +235,7 @@ const targetPath = `M0 0 L${dimension.width} 0 L${dimension.width} ${
             <motion.path variants={curve} initial="initial" exit="exit"></motion.path>
 >>>>>>> 28c2d37 (chore: added sticky footer and initial site loader)
           </svg>
+          )}
         </>
       )}
     </motion.div>
