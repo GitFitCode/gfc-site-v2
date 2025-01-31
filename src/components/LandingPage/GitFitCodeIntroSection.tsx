@@ -38,37 +38,42 @@ export default function GitFitCodeIntroSection() {
   const navigate = useNavigate();
   return (
     // <BackgroundBeamsWithCollision>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     <div className="h-[92vh] bg-gradient-to-b from-white to-neutral-100 dark:from-neutral-950 dark:to-neutral-800 relative flex items-center w-full justify-center overflow-hidden">
+=======
+    <div className="py-20 md:h-[92vh] bg-gradient-to-b  dark:from-neutral-950 dark:to-neutral-800 relative flex items-center w-full justify-center overflow-hidden">
+>>>>>>> 8ce7ed9 (fix: HeroSection ui changes)
       <div className="w-full flex flex-col items-center justify-center relative max-w-7xl px-[2em]">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-[6em] items-start mb-[10em]">
           <div className="md:col-span-2 flex flex-col items-start justify-center gap-12 ">
-            <h2 className="z-20 text-[40px] md:text-4xl lg:text-7xl font-bold text-neutral-800 dark:text-white font-sans tracking-tight">
+            <h2 className="z-20 text-[40px]/[1.2] md:text-4xl lg:text-7xl/[1.1] font-bold text-gray-800 dark:text-white tracking-tight">
               Designed for Growth.{" "}
-              <div className="relative mx-auto inline-block w-max-[120px] [filter:drop-shadow(0px_1px_3px_rgba(27,_37,_80,_0.14))]">
-                <div className="absolute left-0 top-[1px] bg-clip-text bg-no-repeat text-transparent bg-gradient-to-r py-0 md:py-2 from-[#00C9CD] via-[#80E3E5] to-[#008A8C] [text-shadow:0_0_rgba(0,0,0,0.1)]">
+              <span className="text-gfc-accent">Engineered to Scale.</span>
+              {/* <div className="relative mx-auto inline-block w-max-[120px] ">
+                <div className="absolute left-0 top-[1px] bg-clip-text bg-no-repeat text-transparent bg-gradient-to-r py-0 md:py-2 from-[#70c9ca] via-[#80E3E5] to-[#008A8C] [text-shadow:0_0_rgba(0,0,0,0.1)]">
                   <span className="">Engineered to Scale.</span>
                 </div>
                 <div className="relative bg-clip-text text-transparent bg-no-repeat bg-gradient-to-r from-[#00C9CD] via-[#52cacc] to-[#38cbce] py-0 md:py-2">
                   <span className="">Engineered to Scale.</span>
                 </div>
-              </div>
+              </div> */}
             </h2>
-            <p className="text-lg md:text-xl text-neutral-600 dark:text-neutral-300 font-sans tracking-tight max-w-2xl">
+            <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 tracking-tight max-w-2xl">
               We build enterprise-grade software solutions that adapt, evolve,
               and scale seamlessly—powering businesses, ideas, and innovation at
               any stage.
             </p>
             <ShinyBgButton
               className={`py-6 px-8 ${!isTablet && "w-full"}`}
-              content="Book.Now"
+              content="Launch"
               navItem={bookButton}
               handleClick={() => navigate(bookButton.route)}
             />
           </div>
 
-          {isTablet && (
+          {
             <div className="relative h-[310px] md:h-[335px] w-full">
               <div className="relative">
                 <img
@@ -92,9 +97,8 @@ export default function GitFitCodeIntroSection() {
                 />
               </div>
             </div>
-          )}
+          }
         </div>
-        {/* <LogoSlider /> */}
         <InfiniteMovingIcons
           direction="left"
           speed="slow"
