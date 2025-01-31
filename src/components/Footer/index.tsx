@@ -40,6 +40,7 @@ export default function Index() {
           {!isDesktop && <MagnetIcons />}
 
           <div className="flex flex-col sm:flex-row gap-4 justify-between w-full">
+<<<<<<< HEAD
             <div className="flex flex-col gap-[15px] justify-between">
               <span>
                 <h3
@@ -56,10 +57,14 @@ export default function Index() {
                 <p className="link-style">2022 © Edition</p>
 >>>>>>> 8917532 (chore: navigation redesign)
               </span>
+=======
+            <div className="flex flex-col gap-[15px] ">
+>>>>>>> 517d306 (chore: added threejs libraries and set static React version)
               <span>
                 <h3 className="text-gray-400 cursor-default font-light text-[1em]">
                   Location
                 </h3>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                 <p className="link-style">Los Angeles, CA</p>
@@ -69,10 +74,17 @@ export default function Index() {
 =======
                 <p className="link-style">Los Angeles, CA</p>
 >>>>>>> 8917532 (chore: navigation redesign)
+=======
+              </span>
+              <p className="link-style">Los Angeles, CA</p>
+              <span>
+                <p className="link-style">2025 © GitFitCode</p>
+>>>>>>> 517d306 (chore: added threejs libraries and set static React version)
               </span>
             </div>
 
             {/* Socials Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -86,6 +98,14 @@ export default function Index() {
 =======
             {isDesktop && <MagnetIcons containerClassName="mx-[20px] mb-10 gap-[20px]" iconClassName="hover:fill-black fill-[#00c2c6] h-[35px] w-[35px]"/>}
 >>>>>>> f1d5d1b (fix: minor nav code fixes)
+=======
+            {isDesktop && (
+              <MagnetIcons
+                containerClassName="mx-[20px] mb-10 gap-[20px]"
+                iconClassName="hover:fill-black fill-[#00c2c6] h-[35px] w-[35px]"
+              />
+            )}
+>>>>>>> 517d306 (chore: added threejs libraries and set static React version)
 
             <div
               style={{ display: "flex", flexDirection: "column", gap: "15px" }}
@@ -134,7 +154,6 @@ export default function Index() {
                   Contact US
                 </Link>
               </Magnetic>
-
             </div>
           </div>
         </div>
@@ -145,7 +164,17 @@ export default function Index() {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const MagnetIcons = ({iconClassName, containerClassName}: {iconClassName?: string, containerClassName?: string}) => { 
+=======
+export const MagnetIcons = ({
+  iconClassName,
+  containerClassName,
+}: {
+  iconClassName?: string;
+  containerClassName?: string;
+}) => {
+>>>>>>> 517d306 (chore: added threejs libraries and set static React version)
   return (
     <div className={`flex ${containerClassName}`}>
       {/* Facebook */}
