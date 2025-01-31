@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { cn } from "../../lib/util";
-import noise from '../../images/noise.webp'
+import noise from "../../images/noise.webp";
 
 export const WobbleCard = ({
   children,
@@ -15,7 +15,7 @@ export const WobbleCard = ({
 }) => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
- 
+
   const handleMouseMove = (event: React.MouseEvent<HTMLElement>) => {
     const { clientX, clientY } = event;
     const rect = event.currentTarget.getBoundingClientRect();
@@ -25,6 +25,10 @@ export const WobbleCard = ({
   };
   return (
     <motion.section
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+      viewport={{ once: false, amount: 0.2 }}
       onMouseMove={handleMouseMove}
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => {
@@ -65,7 +69,7 @@ export const WobbleCard = ({
     </motion.section>
   );
 };
- 
+
 const Noise = () => {
   return (
     <div
