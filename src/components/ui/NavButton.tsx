@@ -16,12 +16,12 @@ export const NavButton = ({
 }) => {
   return (
     <Magnetic>
-      <div className="py-3 px-6 bg-neutral-700 hover:bg-gfc-primary rounded-md shadow-sm cursor-pointer">
+      <div className="py-3 px-6 bg-gfc-accent hover:bg-neutral-800 rounded-md shadow-sm cursor-pointer">
         <FlipLink
           item={navItem}
           isActive={isActive}
           fontSize="20px"
-          secondTextColor="text-neutral-50"
+          secondTextColor="text-gray-50"
           className={linkClassName}
           handleClick={handleClick}
         >

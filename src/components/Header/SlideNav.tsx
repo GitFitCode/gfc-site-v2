@@ -90,7 +90,7 @@ export default function index({
       animate="enter"
       exit="exit"
       className={
-        "z-[900] h-full bg-neutral-800 fixed right-0 top-0 text-neutral-50 shadow-lg"
+        "z-[900] h-full bg-neutral-800 fixed right-0 top-0 text-gray-50 shadow-lg"
       }
     >
       <div
