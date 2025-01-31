@@ -5,8 +5,15 @@ import { useNavigate } from "react-router";
 import { useNavigationContext } from "../../contexts/navigation.context";
 <<<<<<< HEAD
 import { InfiniteMovingIcons } from "../ui/InfiniteIcons";
+import { AsciiRenderer, Environment } from "@react-three/drei";
+import { Canvas, useFrame, useThree } from "@react-three/fiber";
+import { Model } from "./StatsSection";
+import { motion } from "framer-motion";
+import { useRef } from "react";
+import * as THREE from "three";
 
 export default function GitFitCodeIntroSection() {
+<<<<<<< HEAD
 <<<<<<< HEAD
   const { isTablet } = useNavigationContext();
 =======
@@ -34,6 +41,9 @@ export default function GitFitCodeIntroSection() {
 						</button>
 					</a>
 >>>>>>> 28c2d37 (chore: added sticky footer and initial site loader)
+=======
+  const { isDesktop, isTablet } = useNavigationContext();
+>>>>>>> 517d306 (chore: added threejs libraries and set static React version)
 
   const navigate = useNavigate();
   return (
@@ -73,31 +83,66 @@ export default function GitFitCodeIntroSection() {
             />
           </div>
 
-          {
-            <div className="relative h-[310px] md:h-[335px] w-full">
-              <div className="relative">
-                <img
-                  className="absolute w-[222px] h-[299px] top-0 right-16"
-                  alt="Element"
-                  src="https://c.animaapp.com/2fHzREgW/img/7e1bbb97-69a6-4a54-8a5a-7c3749c09731-jpg--1-.png"
+          {(isTablet || isDesktop) && (
+            <motion.div
+              // style={isTablet || isDesktop ? { position: "sticky", top: "0" } : {}}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              viewport={{ once: false, amount: 0.2 }}
+              className="h-full w-full flex items-center justify-center self-start"
+            >
+              <Canvas
+                // style={{ height: "80vh", width: "98%" }}
+                className="h-full"
+                orthographic
+                camera={{
+                  position: [0, 0, 200],
+                  zoom: isDesktop ? 100 : isTablet ? 100 : 100,
+                }}
+              >
+                <Model />
+                <ambientLight intensity={0.5} />
+                <spotLight position={[50, 50, -30]} castShadow />
+                <pointLight
+                  position={[-10, -10, -10]}
+                  color="white"
+                  intensity={2}
                 />
-                <img
-                  className="absolute w-8 h-8 top-10 right-16"
-                  alt="Thumbs up"
-                  src="https://c.animaapp.com/2fHzREgW/img/thumbs-up.png"
+                <pointLight position={[0, -5, 5]} intensity={0.5} />
+                <directionalLight
+                  position={[0, -5, 0]}
+                  color="white"
+                  intensity={1}
                 />
-                <img
-                  className="absolute w-[214px] h-[218px] top-[135px] right-0"
-                  alt="Linkedin profile"
-                  src="https://c.animaapp.com/2fHzREgW/img/linkedin-profile-picture-11-08-2022-1.png"
-                />
+                <Environment preset="studio" />
+              </Canvas>
+            </motion.div>
+          )}
 
-                <div
-                  className={`z-10 w-8 h-8 bg-[url(https://c.animaapp.com/2fHzREgW/img/notification-2.svg)] bg-[100%_100%] absolute right-1 top-[164px]`}
-                />
-              </div>
-            </div>
-          }
+          {/* // <div className="relative h-[310px] md:h-[335px] w-full">
+            //   <div className="relative">
+            //     <img
+            //       className="absolute w-[222px] h-[299px] top-0 right-16"
+            //       alt="Element"
+            //       src="https://c.animaapp.com/2fHzREgW/img/7e1bbb97-69a6-4a54-8a5a-7c3749c09731-jpg--1-.png"
+            //     />
+            //     <img
+            //       className="absolute w-8 h-8 top-10 right-16"
+            //       alt="Thumbs up"
+            //       src="https://c.animaapp.com/2fHzREgW/img/thumbs-up.png"
+            //     />
+            //     <img
+            //       className="absolute w-[214px] h-[218px] top-[135px] right-0"
+            //       alt="Linkedin profile"
+            //       src="https://c.animaapp.com/2fHzREgW/img/linkedin-profile-picture-11-08-2022-1.png"
+            //     />
+
+            //     <div
+            //       className={`z-10 w-8 h-8 bg-[url(https://c.animaapp.com/2fHzREgW/img/notification-2.svg)] bg-[100%_100%] absolute right-1 top-[164px]`}
+            //     />
+            //   </div>
+            // </div> */}
         </div>
         <InfiniteMovingIcons
           direction="left"
@@ -109,6 +154,7 @@ export default function GitFitCodeIntroSection() {
     // </BackgroundBeamsWithCollision>
   );
 }
+<<<<<<< HEAD
 =======
 				
 				<div className="relative flex justify-center md:justify-end items-center">
@@ -203,3 +249,25 @@ export default function GitFitCodeIntroSection() {
   );
 }
 >>>>>>> f786883 (chore: redesigned hero section)
+=======
+
+function Torusknot(props: JSX.IntrinsicElements["mesh"]) {
+  const ref = useRef<THREE.Mesh>(null);
+  const viewport = useThree((state) => state.viewport);
+  useFrame((state, delta) => {
+    if (ref.current) {
+      ref.current.rotation.x = ref.current.rotation.y += delta / 2;
+    }
+  });
+  return (
+    <mesh
+      scale={Math.min(viewport.width, viewport.height) / 5}
+      {...props}
+      ref={ref}
+    >
+      <torusKnotGeometry args={[1, 0.2, 128, 32]} />
+      <meshStandardMaterial color="red" />
+    </mesh>
+  );
+}
+>>>>>>> 517d306 (chore: added threejs libraries and set static React version)

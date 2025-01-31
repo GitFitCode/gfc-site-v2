@@ -122,22 +122,23 @@ const StatisticsSection = () => {
         </div>
 
         {/* 3D model of logo */}
-        <motion.div
+        {(isTablet || isDesktop) && (
+          <motion.div
           ref={ref}
           style={isTablet || isDesktop ? { position: "sticky", top: "0" } : {}}
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: false, amount: 0.2 }}
-          className="w-full flex items-center justify-center self-start"
+          className="w-full flex items-center justify-center self-start "
         >
           <Canvas
-            style={{ height: "100vh", width: "98%" }}
+            style={{ height: "80vh", width: "98%" }}
             className=""
             orthographic
             camera={{
               position: [0, 0, 200],
-              zoom: isDesktop ? 300 : isTablet ? 200 : 170,
+              zoom: isDesktop ? 200 : isTablet ? 200 : 170,
             }}
           >
             <Model />
@@ -157,6 +158,7 @@ const StatisticsSection = () => {
             <Environment preset="studio" />
           </Canvas>
         </motion.div>
+        )}
       </div>
     </div>
   );
@@ -182,9 +184,9 @@ export function Model() {
   }, [activeShape]);
 
   return (
-    <group position={[-0.1, 0, 0]}>
-      <Mesh node={nodes.Node2} multiplier={1} isActive={activeShape == 1} />
-      <Mesh node={nodes.Node1} multiplier={1} isActive={activeShape == 2} />
+    <group position={[0, 0, 0]}>
+      <Mesh node={nodes.Node2} multiplier={1} isActive={activeShape == 1} isTablet={isTablet} />
+      <Mesh node={nodes.Node1} multiplier={1} isActive={activeShape == 2} isTablet={isTablet} />
     </group>
   );
 }
@@ -195,10 +197,12 @@ function Mesh({
   node,
   multiplier,
   isActive,
+  isTablet
 }: {
   node: any;
   multiplier: number;
   isActive: boolean;
+  isTablet: boolean;
 }) {
   const { geometry, material, position, scale, rotation } = node;
   const a = multiplier / 2;

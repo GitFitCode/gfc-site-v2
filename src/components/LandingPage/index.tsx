@@ -1,5 +1,5 @@
 import { useNavigationContext } from "../../contexts/navigation.context";
-import StatsSection from "./StatsSection";
+import StatsSection, { Model } from "./StatsSection";
 import SolutionsSection from "./SolutionsSection";
 import PhaseTimeline from "./PhasesTimeline";
 import SuccessStoriesSection from "./SuccessStoriesSection";
@@ -8,12 +8,10 @@ import GitFitCodeIntroSection from "./GitFitCodeIntroSection";
 import { motion } from "framer-motion";
 import AnimatedSection from "../ui/AnimatedSection";
 import Footer from "../Footer";
-import { useEffect } from "react";
-import Lenis from "lenis";
 import TimelineSection from "./TimelineSection";
 
 export default function LandingPage() {
-  const { isDesktop } = useNavigationContext();
+  const { isDesktop, isTablet } = useNavigationContext();
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -22,12 +20,10 @@ export default function LandingPage() {
 >>>>>>> d2e9fea (fix: page transitions)
   // useEffect(() => {
   //   const lenis = new Lenis();
-
   //   function raf(time: number) {
   //     lenis.raf(time);
   //     requestAnimationFrame(raf);
   //   }
-
   //   requestAnimationFrame(raf);
   // }, []);
 <<<<<<< HEAD
@@ -61,8 +57,12 @@ export default function LandingPage() {
 =======
 
   return (
+<<<<<<< HEAD
     <div>
 >>>>>>> d2e9fea (fix: page transitions)
+=======
+    <>
+>>>>>>> 517d306 (chore: added threejs libraries and set static React version)
       <div className="flex flex-col items-center relative  bg-white z-[50] shadow-md">
         <AnimatedSection className="w-full">
 >>>>>>> 8ce7ed9 (fix: HeroSection ui changes)
@@ -131,6 +131,6 @@ export default function LandingPage() {
       </div>
 
       <Footer />
-    </div>
+    </>
   );
 }

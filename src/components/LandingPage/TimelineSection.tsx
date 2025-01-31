@@ -276,7 +276,7 @@ export const TimelineSection = () => {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            viewport={{ once: false, amount: 0.2 }}
+            viewport={{ once: false, amount: 0.1 }}
             className="grid-cols-1 mb-8 text-[35px]/[1.1] font-[700] md:text-5xl/[1.2] md:mb-10 "
           >
             <span className="text-gfc-accent">Smart Solutions</span> for an
@@ -286,7 +286,7 @@ export const TimelineSection = () => {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            viewport={{ once: false, amount: 0.2 }}
+            viewport={{ once: false, amount: 0.1 }}
             className="text-base md:text-lg text-gray-800 dark:text-gray-500 "
           >
             A glimpse into our cutting-edge solutions for forward-thinking
@@ -303,7 +303,7 @@ export const TimelineSection = () => {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            viewport={{ once: false, amount: 0.2 }}
+            viewport={{ once: false, amount: 0.1 }}
             key={index}
             className="flex justify-start pt-10 md:pt-40 md:gap-10"
           >
