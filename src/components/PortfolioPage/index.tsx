@@ -44,9 +44,11 @@ export default function PortfolioPage() {
   }, []);
   return (
     <motion.div
-      initial={{ opacity: 1 }}
-      animate={{ opacity: 1 }}
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, scale: 0.98, transition: { duration: 0.5 } }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      viewport={{ once: false, amount: 0.2 }} // Triggers animation when the section enters viewport
       className={`flex flex-col items-center justify-between px-4 lg:px-20 gap-8 md:py-16 pt-16`}
     >
       <section
@@ -66,12 +68,18 @@ export default function PortfolioPage() {
         <div className="flex flex-col md:flex-row justify-center items-center ">
           <div className="flex-1 max-w-7xl relative mx-auto md:py-20 px-4 w-full left-0 top-0">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <h1 className="text-4xl md:text-7xl font-bold  text-neutral-800 dark:text-white">
               Our Portfolio {isDesktop &&  'of Excellence'}
+=======
+            <h1 className="text-4xl md:text-7xl font-bold  text-gray-800 dark:text-white">
+              Our Portfolio {isDesktop && "of Excellence"}
+>>>>>>> f7e6f86 (fix: PortfolioPage transition)
             </h1>
             <h4 className="text-lg md:text-xl mt-1 text-[#757575] font-[400] leading-relaxed">
               Check out some of my latest product design case studies.
             </h4>
+<<<<<<< HEAD
             <p className=" text-sm md:text-base mt-8 dark:text-neutral-600">
 =======
             <h1 className="text-3xl md:text-7xl font-bold dark:text-white">
@@ -82,6 +90,9 @@ export default function PortfolioPage() {
             </p>
             <p className="font-[300] md:text-lg mt-8 dark:text-neutral-800">
 >>>>>>> 28c2d37 (chore: added sticky footer and initial site loader)
+=======
+            <p className=" text-sm md:text-base mt-8 dark:text-gray-600">
+>>>>>>> f7e6f86 (fix: PortfolioPage transition)
               We have worked for startups, agencies, corporations, and
               government and have created products used by millions of people.
             </p>
@@ -107,7 +118,7 @@ export default function PortfolioPage() {
               <h2 className="mt-4 text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
                 {portfolio.project}
               </h2>
-              <p className="mt-4 text-left text-base/6 text-neutral-200">
+              <p className="mt-4 text-left text-base/6 text-gray-200">
                 {portfolio.description}
               </p>
             </WobbleCard>
