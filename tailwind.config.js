@@ -134,7 +134,11 @@ module.exports = {
       },
       backgroundColor: {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "gfc-accent": "#00C9CD",
+=======
+        "gfc-accent": "#3cb5b8",
+>>>>>>> 8ce7ed9 (fix: HeroSection ui changes)
         "gfc-dark": "#231E21",
         "gfc-darker": "#181918",
         "gfc-teal": "rgba(0,200,204,1)",
