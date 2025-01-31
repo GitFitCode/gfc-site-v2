@@ -7,10 +7,6 @@ import {
 } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 
-interface TimelineEntry {
-  title: string;
-  content: React.ReactNode;
-}
 // Natura Labs
 import natura_hero from "../../images/portfolio/natura_labs/hero.png";
 import phones from "../../images/portfolio/natura_labs/phones.png";
@@ -26,10 +22,7 @@ import connect_hero from "../../images/portfolio/connectworx/hero.png";
 import networking_features from "../../images/portfolio/connectworx/networking-features.png";
 import keynote_features from "../../images/portfolio/connectworx/keynote-features.png";
 import studio_features from "../../images/portfolio/connectworx/studio-features.png";
-import { Button } from "../ui/moving-border";
-import { SendLink } from "../ui/SendLink";
-import { ArrowRight, Send } from "lucide-react";
-import { Link } from "react-router";
+
 
 export const TimelineSection = () => {
   const ref = useRef<HTMLDivElement>(null);
