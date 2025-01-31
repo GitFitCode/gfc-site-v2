@@ -16,6 +16,7 @@ export default function LandingPage() {
   const { isDesktop } = useNavigationContext();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   // useEffect(() => {
   //   const lenis = new Lenis();
 
@@ -39,6 +40,8 @@ export default function LandingPage() {
   }, []);
 >>>>>>> 28c2d37 (chore: added sticky footer and initial site loader)
 
+=======
+>>>>>>> f8cf7ef (chore: codebase cleanup comments and unused code)
   return (
 <<<<<<< HEAD
     <div>
@@ -48,10 +51,7 @@ export default function LandingPage() {
         <AnimatedSection className="w-full mb-[6em] md:mb-[4em]">
 =======
     <motion.div
-      // initial={{ opacity: 0, y: 40 }} // start hidden and shifted down
-      // animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, scale: 0.98, transition: { duration: 0.5 } }}
-      // whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
     >
       <div className="flex flex-col items-center relative  bg-white z-[50] shadow-md">

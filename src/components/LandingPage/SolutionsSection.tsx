@@ -10,8 +10,6 @@ import {
 import React, { useEffect, useRef, useState } from "react";
 import web from "../../images/services/web.webp";
 import dashboard from "../../images/services/dashboard.webp";
-import monitor from "../../images/services/monitor.png";
-import analytics from "../../images/services/analytics.png";
 import integrations from "../../images/services/integrations.webp";
 import ai from "../../images/services/ai.png";
 import { Bolt, Bot, Computer, Database, Webhook } from "lucide-react";
@@ -37,9 +35,6 @@ const SolutionsSection = () => {
     target: containerRef,
     offset: ["start 10%", "end 50%"],
   });
-
-  const heightTransform = useTransform(scrollYProgress, [0, 1], [0, height]);
-  const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
 
   return (
     <div
