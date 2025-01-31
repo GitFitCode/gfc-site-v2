@@ -110,7 +110,7 @@ export const bookButton = {
   // icon: <PhoneIcon className="h-6 w-6" />,
   route: "/booking",
   sectionId: null,
-  content: "Book",
+  content: "Launch",
 };
 
 const MainNav = ({
@@ -234,7 +234,7 @@ const MainNav = ({
 >>>>>>> f1d5d1b (fix: minor nav code fixes)
         <RoundedMagneticButton
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="z-[1000] relative w-[45px] h-[45px] bg-neutral-700 flex items-center justify-center rounded-md cursor-pointer shadow-lg border-1 border-neutral-400"
+          className="z-[1000] relative w-[45px] h-[45px] bg-gfc-accent flex items-center justify-center rounded-md cursor-pointer shadow-lg border-1 border-neutral-400"
         >
           <div
             className={`w-full relative z-10 before:block before:h-[2px] before:w-[40%] before:m-auto before:bg-white before:relative before:transition-transform before:duration-300 after:block after:h-[2px] after:w-[40%] after:m-auto after:bg-white after:relative after:transition-transform after:duration-300 ${
@@ -273,7 +273,7 @@ const MainNav = ({
 >>>>>>> a49a46a (chore: create template buttons and modified navigation)
                 secondTextColor="text-gfc-accent"
                 className={`${
-                  isActive ? "text-gfc-primary-100" : "text-neutral-700"
+                  isActive ? "text-gfc-primary-100" : "text-gray-800"
                 }`}
                 handleClick={() =>
                   handleSelect(item.name, item.sectionId, item.route)
@@ -283,6 +283,7 @@ const MainNav = ({
               </FlipLink>
             ))}
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -329,6 +330,21 @@ const MainNav = ({
 =======
           </Magnetic> */}
 >>>>>>> a49a46a (chore: create template buttons and modified navigation)
+=======
+          <NavButton
+            linkClassName={`${
+              isActive ? "text-gfc-accent" : "text-gray-50"
+            }`}
+            handleClick={() =>
+              handleSelect(
+                bookButton.name,
+                bookButton.sectionId,
+                bookButton.route
+              )
+            }
+            navItem={bookButton}
+          />
+>>>>>>> 099a1fb (fix: navigation ui changes)
         </div>
       )}
     </div>
@@ -338,9 +354,12 @@ const MainNav = ({
 export default MainNav;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 8917532 (chore: navigation redesign)
 =======
 
 >>>>>>> a49a46a (chore: create template buttons and modified navigation)
+=======
+>>>>>>> 099a1fb (fix: navigation ui changes)
