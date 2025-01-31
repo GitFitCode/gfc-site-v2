@@ -1,211 +1,254 @@
-// import { motion } from "framer-motion";
-// import { useState } from "react";
+"use client";
+import { defaultMaxListeners } from "events";
+import {
+  useMotionValueEvent,
+  useScroll,
+  useTransform,
+  motion,
+  m,
+} from "framer-motion";
+import React, { useEffect, useRef, useState } from "react";
+import web from "../../images/services/web.webp";
+import dashboard from "../../images/services/dashboard.webp";
+import monitor from "../../images/services/monitor.png";
+import analytics from "../../images/services/analytics.png";
+import integrations from "../../images/services/integrations.webp";
+import ai from "../../images/services/ai.png";
+import { Bolt, Bot, Computer, Database, Webhook } from "lucide-react";
 
-// export default function SolutionsSection() {
-//   const [billing, setBilling] = useState("monthly");
-
-//   const plans = [
-//     {
-//       name: "Free",
-//       description: "Everything to start",
-//       price: "$0",
-//       per: "/month",
-//       features: [
-//         "10,000 requests/month",
-//         "Basic in-app support",
-//         "2 users on your account",
-//         "1 workspace",
-//       ],
-//       buttonText: "Sign up free",
-//       color: "bg-black",
-//     },
-//     {
-//       name: "Professional",
-//       description: "Everything to launch",
-//       price: "$49",
-//       per: "/month",
-//       features: [
-//         "100,000 requests/month",
-//         "Email in-app support",
-//         "10 users on your account",
-//         "10 workspaces",
-//       ],
-//       buttonText: "Sign up professional",
-//       color: "bg-indigo-500",
-//     },
-//     {
-//       name: "Enterprise",
-//       description: "Everything to go public",
-//       price: "$499",
-//       per: "/month",
-//       features: [
-//         "10,000,000 requests/month",
-//         "Phone support",
-//         "Unlimited users",
-//         "Unlimited workspaces",
-//       ],
-//       buttonText: "Sign up enterprise",
-//       color: "bg-black",
-//     },
-//   ];
-
-//   return (
-//     <section className="w-full text-black bg-white px-4 lg:px-8 py-12 lg:py-24 relative overflow-hidden">
-//       <motion.div
-//         initial={{ opacity: 0, y: -20 }}
-//         animate={{ opacity: 1, y: 0 }}
-//         transition={{ duration: 0.5 }}
-//         className="mb-12 lg:mb-24 relative z-10 text-center"
-//       >
-//         <h3 className="font-semibold text-5xl lg:text-7xl mb-6">Pricing plans</h3>
-//         <p className="mx-auto max-w-lg mb-8">
-//           Lorem ipsum dolor sit amet consectetur. Pulvinar eu rhoncus tincidunt eget mattis netus ridiculus.
-//         </p>
-//         <div className="flex items-center justify-center gap-3">
-//           <button
-//             className={`text-white font-medium rounded-lg py-3 w-28 relative transition-all ${billing === "monthly" ? "bg-black" : "hover:bg-slate-100"}`}
-//             onClick={() => setBilling("monthly")}
-//           >
-//             Monthly
-//           </button>
-//           <button
-//             className={`font-medium rounded-lg py-3 w-28 relative transition-all ${billing === "annual" ? "bg-black text-white" : "hover:bg-slate-100"}`}
-//             onClick={() => setBilling("annual")}
-//           >
-//             Annual
-//           </button>
-//         </div>
-//       </motion.div>
-
-//       <div className="flex flex-col lg:flex-row gap-8 lg:gap-4 w-full max-w-6xl mx-auto relative z-10">
-//         {plans.map((plan, index) => (
-//           <motion.div
-//             key={index}
-//             initial={{ opacity: 0, y: 20 }}
-//             animate={{ opacity: 1, y: 0 }}
-//             transition={{ duration: 0.6, delay: index * 0.2 }}
-//             className="w-full bg-white p-6 border border-slate-300 rounded-xl"
-//           >
-//             <p className="text-2xl font-bold mb-2">{plan.name}</p>
-//             <p className="text-lg mb-6">{plan.description}</p>
-//             <div className="mb-8">
-//               <p className="text-6xl font-bold {plan.color}">{plan.price}<span className="font-normal text-xl">{plan.per}</span></p>
-//             </div>
-//             {plan.features.map((feature, idx) => (
-//               <div key={idx} className="flex items-center gap-2 mb-2">
-//                 <span className="text-base">✓ {feature}</span>
-//               </div>
-//             ))}
-//             <button className={`w-full py-4 mt-8 font-semibold text-white rounded-lg uppercase ${plan.color}`}>
-//               {plan.buttonText}
-//             </button>
-//           </motion.div>
-//         ))}
-//       </div>
-
-//       <motion.div
-//         className="w-[450px] h-[450px] rounded-full border-2 border-slate-500 border-dotted absolute z-0 -left-[250px] -top-[200px]"
-//         animate={{ rotate: 360 }}
-//         transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
-//       ></motion.div>
-//       <motion.div
-//         className="w-[450px] h-[450px] rounded-full border-2 border-slate-500 border-dotted absolute z-0 -right-[250px] -bottom-[200px]"
-//         animate={{ rotate: -360 }}
-//         transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
-//       ></motion.div>
-//     </section>
-//   );
-// }
-
-export default function SolutionsSection() {
-
-  return (
-    <section
-      id="solutions-section"
-      className="flex flex-col w-full items-center gap-[60px] my-[5rem] bg-defaultwhite"
-    >
-      <div className="flex flex-col items-center gap-2 self-stretch w-full text-center">
-        <p className="font-other-caption font-semibold text-[#00c2c6] text-lg">
-          THE RIGHT FIT FOR ANY SOFTWARE SOLUTION
-        </p>
-        <p className="font-bold text-coolgray-90 text-4xl">
-          Designing And Building Platforms
-        </p>
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-6 w-full px-16">
-        <div className="flex flex-col items-center gap-4 p-4 bg-[#f8f9fb] rounded-lg">
-          <img
-            className="h-[213px] object-cover"
-            alt="Application design"
-            src="https://c.animaapp.com/rDitUAdQ/img/application-design-and-development-preview-1@2x.png"
-          />
-          <div className="font-bold text-[#21272a] text-xl text-center">
-            Mobile Apps for Growth
-          </div>
-          <p className="text-[#21272acc] text-base text-center">
-            We build intuitive, scalable mobile apps for iOS and Android that
-            focus on user engagement and performance.
-          </p>
-        </div>
-
-        <div className="flex flex-col items-center gap-4 p-4 bg-[#f8f9fb] rounded-lg">
-          <img
-            className=" h-[206px] object-cover"
-            alt="Web design and"
-            src="https://c.animaapp.com/rDitUAdQ/img/web-design-and-development-preview-1@2x.png"
-          />
-          <div className="font-bold text-[#21272a] text-xl text-center">
-            High Performance Web Apps
-          </div>
-          <p className="text-[#21272acc] text-base text-center">
-            Our web apps deliver seamless experiences across all devices.
-          </p>
-        </div>
-
-        <div className="flex flex-col items-center gap-4 p-4 bg-[#f8f9fb] rounded-lg">
-          <img
-            className=" h-[207px] object-cover"
-            alt="Untitled design"
-            src="https://c.animaapp.com/rDitUAdQ/img/untitled-design--1--1@2x.png"
-          />
-          <div className="font-bold text-[#21272a] text-xl text-center">
-            Interactive Dashboards
-          </div>
-          <p className="text-[#21272acc] text-base text-center">
-            Make smarter decisions with custom dashboards that track your key
-            metrics.
-          </p>
-        </div>
-
-        <div className="flex flex-col items-center gap-4 p-4 bg-[#f8f9fb] rounded-lg">
-          <img
-            className="h-[220px] object-cover"
-            alt="Custom software"
-            src="https://c.animaapp.com/rDitUAdQ/img/custom-software-development-preview-1@2x.png"
-          />
-          <div className="font-bold text-[#21272a] text-xl text-center">
-            Custom Tailored Solutions
-          </div>
-          <p className="text-[#21272acc] text-base text-center">
-            We create custom software solutions for unique business needs.
-          </p>
-        </div>
-      </div>
-      <a
-				href="https://calendar.app.google/9RQZmAHjNjV51Jyz9"
-				target="_blank"
-				rel="noopener noreferrer"
-				className="all-[unset] box-border inline-flex h-14 items-center justify-center bg-[#00c2c6] text-white rounded-lg hover:bg-gfc-primary-100 hover:text-black"
-			>
-				<button className="all-[unset] box-border inline-flex h-14 items-center justify-center p-4 ">
-					<div className="inline-flex items-center justify-center gap-2.5 px-4 flex-[0_0_auto] font-bold">
-						Start Building
-					</div>
-				</button>
-			</a>
-
-    </section>
-  );
+interface TimelineEntry {
+  title: string;
+  content: React.ReactNode;
 }
 
+const SolutionsSection = () => {
+  const ref = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [height, setHeight] = useState(0);
+
+  useEffect(() => {
+    if (ref.current) {
+      const rect = ref.current.getBoundingClientRect();
+      setHeight(rect.height);
+    }
+  }, [ref]);
+
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start 10%", "end 50%"],
+  });
+
+  const heightTransform = useTransform(scrollYProgress, [0, 1], [0, height]);
+  const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
+
+  return (
+    <div
+      className="w-full flex flex-col  relativebg-white dark:bg-neutral-950 max-w-7xl px-[2em] mx-auto"
+      ref={containerRef}
+    >
+      <div className="md:grid grid-cols-2">
+        <div className="grid-cols-2 md:grid-cols-1">
+          <motion.h2
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: false, amount: 0.2 }}
+            className="grid-cols-1 mb-8 text-[35px]/[1.1] font-[700] md:text-5xl/[1.2] md:mb-10 "
+          >
+            <span className="text-gfc-accent">Software Solutions</span>{" "}
+            Designed for Growth
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: false, amount: 0.2 }}
+            className="text-base md:text-lg text-gray-800 dark:text-gray-500 mb-[4em]"
+          >
+            From intelligent automation to AI-powered insights, we build custom
+            software solutions that drive efficiency, scalability, and
+            innovation. Our expertise spans multiple industries, ensuring your
+            technology evolves alongside your business needs.
+          </motion.p>
+        </div>
+      </div>
+
+      <section className="max-w-7xl py-12 text-slate-800">
+        <div className="mb-4 grid grid-cols-12 gap-4">
+          <BounceCard className="col-span-12 md:col-span-4">
+            <div className="flex flex-col gap-8">
+              <div className="h-fit w-fit p-3 bg-black text-white rounded-lg">
+                <Webhook className="h-6 w-6" />
+              </div>
+
+              <CardTitle>
+                SaaS Development <br />& API Integrations
+              </CardTitle>
+              <p className="text-sm text-gray-600 max-w-[450px]">
+                Whether you’re launching a new SaaS product or scaling an
+                existing platform, we provide robust, cloud-native architectures
+                for seamless growth.
+              </p>
+            </div>
+            <div
+              className="bg-neutral-100 absolute bottom-0 left-4 right-4 top-[50%] translate-y-8 rounded-t-2xl bg-gradient-to-br from-amber-400 to-orange-400 p-4 transition-transform duration-[250ms] group-hover:translate-y-4 group-hover:rotate-[2deg]"
+              style={{
+                backgroundImage: `url(${integrations})`,
+                backgroundSize: "100%",
+                backgroundPosition: "50% 50%",
+                backgroundRepeat: "no-repeat",
+              }}
+            >
+              <motion.div
+                className="absolute top-[42%] left-[42%] transform -translate-x-1/2 -translate-y-1/2
+                   flex items-center justify-center 
+                   w-12 h-12 rounded-full text-white bg-gfc-accent
+                   cursor-pointer"
+                initial={{
+                  boxShadow: "0 0 0 0 rgba(128,128,128, 0.1)",
+                  scale: 1,
+                }}
+                animate={{
+                  boxShadow: [
+                    "0 0 0 0 black",
+                    "0 0 0 10px rgba(128,128,128, 0.1)",
+                    "0 0 0 10px rgba(128,128,128, 0.1)",
+                  ],
+                  scale: [1, 1.2, 1],
+                }}
+                exit={{ boxShadow: "0 0 0 0 rgba(128,128,128, 0.1)" }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  repeatType: "loop",
+                  ease: "easeOut",
+                }}
+              >
+                <Bolt className="w-5 h-5" />
+              </motion.div>
+            </div>
+          </BounceCard>
+          <BounceCard className="col-span-12 md:col-span-8">
+            <div className="flex flex-col gap-8">
+              <div className="h-fit w-fit p-3 bg-black text-white rounded-lg">
+                <Database className="h-6 w-6" />
+              </div>
+
+              <CardTitle>
+                Data Engineering <br />& Analytics
+              </CardTitle>
+              <p className="text-sm text-gray-600 max-w-[450px]">
+                Turn raw data into actionable insights with our advanced data
+                pipelines, real-time analytics, and AI-driven reporting.
+              </p>
+            </div>
+
+            <div
+              className="absolute bottom-0 left-4 right-4 top-[35%] translate-y-8 rounded-t-2xl bg-gradient-to-br from-amber-400 to-orange-400 p-4 transition-transform duration-[250ms] group-hover:translate-y-4 group-hover:rotate-[2deg]"
+              style={{
+                backgroundImage: `url(${dashboard})`,
+                backgroundSize: "210%",
+                backgroundPosition: "-198px -102px",
+                backgroundRepeat: "no-repeat",
+              }}
+            ></div>
+          </BounceCard>
+        </div>
+
+        <div className="mb-4 grid grid-cols-12 gap-4">
+          <BounceCard className="col-span-12 md:col-span-8 space-y-4">
+            <div className="flex flex-col gap-8">
+              <div className="h-fit w-fit p-3 bg-black text-white rounded-lg">
+                <Computer className="h-6 w-6" />
+              </div>
+
+              {/* <div className="flex flex-col"> */}
+              <CardTitle>
+                Custom <br />
+                Software Development
+              </CardTitle>
+              <p className="text-sm text-gray-600 max-w-[450px]">
+                We build tailor-made software solutions that align with your
+                industry-specific needs—whether for startups, enterprises, or
+                government agencies.
+              </p>
+              {/* </div> */}
+            </div>
+
+            <div
+              className="absolute bottom-0 left-4 right-4 top-[35%] translate-y-8 rounded-t-2xl bg-gradient-to-br from-amber-400 to-orange-400 p-4 transition-transform duration-[250ms] group-hover:translate-y-4 group-hover:rotate-[2deg]"
+              style={{
+                backgroundImage: `url(${web})`,
+                backgroundSize: "210%",
+                backgroundPosition: "-198px -102px",
+                backgroundRepeat: "no-repeat",
+              }}
+            ></div>
+          </BounceCard>
+          <BounceCard className="col-span-12 md:col-span-4">
+            <div className="flex flex-col gap-8">
+              <div className="h-fit w-fit p-3 bg-black text-white rounded-lg">
+                <Bot className="h-6 w-6" />
+              </div>
+
+              <CardTitle>
+                AI & ML <br /> Solutions
+              </CardTitle>
+              <p className="text-sm text-gray-600 max-w-[450px]">
+                Leverage the power of AI to automate decision-making, enhance
+                customer experiences, and unlock new business opportunities.
+              </p>
+            </div>
+
+            <div
+              className="absolute bottom-0 left-4 right-4 top-[40%] translate-y-8 rounded-t-2xl bg-gradient-to-br from-amber-400 to-orange-400 p-4 transition-transform duration-[250ms] group-hover:translate-y-4 group-hover:rotate-[2deg]"
+              style={{
+                backgroundImage: `url(${ai})`,
+                backgroundSize: "210%",
+                backgroundPosition: "-198px 0px",
+                backgroundRepeat: "no-repeat",
+              }}
+            ></div>
+          </BounceCard>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default SolutionsSection;
+
+interface BounceCardProps {
+  className?: string;
+  children: React.ReactNode;
+}
+
+const BounceCard: React.FC<BounceCardProps> = ({ className, children }) => {
+  // State to hold the random rotation value
+  const [randomRotation, setRandomRotation] = useState(0);
+  // Function to generate a new random rotation between -5 and +5
+  const handleHoverStart = () => {
+    const rotation = Math.floor(Math.random() * 11) - 5; // -5..+5 (inclusive)
+    setRandomRotation(rotation);
+  };
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+      viewport={{ once: false, amount: 0.2 }}
+      onHoverStart={handleHoverStart}
+      whileHover={{
+        scale: 0.95,
+        rotate: `${randomRotation}deg`,
+      }}
+      className={`group relative min-h-[600px] md:min-h-[700px] cursor-pointer overflow-hidden rounded-2xl bg-slate-100 p-8 ${className}`}
+    >
+      {children}
+    </motion.div>
+  );
+};
+
+const CardTitle: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  return <h3 className="text-xl md:text-3xl font-semibold">{children}</h3>;
+};
