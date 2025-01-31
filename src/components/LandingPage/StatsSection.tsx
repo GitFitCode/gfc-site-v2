@@ -1,11 +1,12 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, useScroll } from "framer-motion";
 import { motion as three_motion } from "framer-motion-3d";
-import { Canvas } from "@react-three/fiber";
-import { Environment, Float, useGLTF } from "@react-three/drei";
+import * as THREE from "three";
+import { Canvas, useFrame, useThree } from "@react-three/fiber";
+import { CameraShake, Environment, Float, useGLTF } from "@react-three/drei";
 import { Button } from "../ui/moving-border";
 import { useNavigationContext } from "../../contexts/navigation.context";
-import { BadgeCheck, Upload, Users } from "lucide-react";
+import { BadgeCheck, ServerCog, ServerIcon, Upload, Users } from "lucide-react";
 import StatCard, { StatCardType } from "../ui/StatCard";
 
 const statCards: StatCardType[] = [
@@ -25,20 +26,20 @@ const statCards: StatCardType[] = [
       "by our web applications and digital platforms with worldwide outreach",
   },
   {
-    icon: <Users className="h-6 w-6" />,
-    statRange: [0, 10],
-    symbol: "M",
-    titleStack: ["Users", "Impacted"],
-    subtitle:
-      "by our web applications and digital platforms with worldwide outreach",
-  },
-  {
     icon: <BadgeCheck className="h-6 w-6" />,
     statRange: [0, 15],
     symbol: "+",
     titleStack: ["Years of", "Industry Experience"],
     subtitle:
       "bringing a wealth of expertise in web development, UX/UI design, and software engineering.",
+  },
+  {
+    icon: <ServerIcon className="h-6 w-6" />,
+    statRange: [0, 99],
+    symbol: "%",
+    titleStack: ["Uptime", "& Response"],
+    subtitle:
+      "ensuring that our services are available and responsive when you need them.",
   },
 ];
 
@@ -70,31 +71,31 @@ const StatisticsSection = () => {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            viewport={{ once: true, amount: 0.2 }}
+            viewport={{ once: false, amount: 0.2 }}
             className=" mb-8 text-[35px]/[1.1] font-[700] md:text-5xl/[1.2] md:mb-10 "
           >
-            <span className="text-gfc-accent">Technology That Evolves</span>{" "}
+            <span className="text-gfc-accent">Software That Evolves</span>{" "}
             With Your Business
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            viewport={{ once: true, amount: 0.2 }}
-            className="text-base md:text-lg text-neutral-700 dark:text-neutral-500 mb-[4em] md:mb-[6em]"
+            viewport={{ once: false, amount: 0.2 }}
+            className="text-base md:text-lg text-gray-700 dark:text-gray-500 mb-[6em] md:mb-[4em]"
           >
             We don’t just build software—we engineer solutions that grow, adapt,
             and optimize alongside your business, keeping you ahead of the
             curve.
           </motion.p>
-          <h4 className="text-lg md:text-xl mb-[2em] text-[#757575] font-[300] leading-relaxed">
+          <h4 className="text-lg md:text-xl mb-[1em] text-[#757575] font-[300] leading-relaxed">
             Industries Served
           </h4>
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            viewport={{ once: true, amount: 0.2 }}
+            viewport={{ once: false, amount: 0.2 }}
             className="flex flex-wrap gap-4 mb-[4em]"
           >
             {industries.map((industry, index) => (
@@ -102,14 +103,14 @@ const StatisticsSection = () => {
                 key={index}
                 borderRadius="1.75rem"
                 containerClassName=""
-                className="bg-white dark:bg-slate-900 text-black dark:text-white border-neutral-200 shadow-lg dark:border-slate-800"
+                className="bg-slate-100 dark:bg-slate-900 text-grey-600 dark:text-white cursor-pointer border-neutral-200 shadow-lg dark:border-slate-800"
               >
                 {industry}
               </Button>
             ))}
           </motion.div>
 
-          <h4 className="text-lg md:text-xl mb-[2em] text-[#757575] font-[300] leading-relaxed">
+          <h4 className="text-lg md:text-xl mb-[1em] text-[#757575] font-[300] leading-relaxed">
             Success in Numbers
           </h4>
 
@@ -127,12 +128,12 @@ const StatisticsSection = () => {
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: true, amount: 0.2 }}
+          viewport={{ once: false, amount: 0.2 }}
           className="w-full flex items-center justify-center self-start"
         >
           <Canvas
             style={{ height: "100vh", width: "98%" }}
-            className="bg-white"
+            className=""
             orthographic
             camera={{
               position: [0, 0, 200],
@@ -140,6 +141,19 @@ const StatisticsSection = () => {
             }}
           >
             <Model />
+            <ambientLight intensity={0.5} />
+            <spotLight position={[50, 50, -30]} castShadow />
+            <pointLight
+              position={[-10, -10, -10]}
+              color="white"
+              intensity={2}
+            />
+            <pointLight position={[0, -5, 5]} intensity={0.5} />
+            <directionalLight
+              position={[0, -5, 0]}
+              color="white"
+              intensity={1}
+            />
             <Environment preset="studio" />
           </Canvas>
         </motion.div>
@@ -148,10 +162,12 @@ const StatisticsSection = () => {
   );
 };
 
+
+
 export default StatisticsSection;
 
 export function Model() {
-  const { nodes } = useGLTF("/short.glb");
+  const { nodes } = useGLTF("/short1.glb");
   const [activeShape, setActiveShape] = useState(1);
   const { isTablet, isDesktop } = useNavigationContext();
 
@@ -173,7 +189,7 @@ export function Model() {
   );
 }
 
-useGLTF.preload("/short.glb");
+useGLTF.preload("/short1.glb");
 
 function Mesh({
   node,
