@@ -11,7 +11,7 @@ interface RoundedMagneticButtonProps {
 
 export default function RoundedMagneticButton({
   children,
-  backgroundColor = "#00C9CD", 
+  backgroundColor = '#3cb5b8', 
   ...attributes
 }: RoundedMagneticButtonProps) {
   const circle = useRef<HTMLDivElement | null>(null);

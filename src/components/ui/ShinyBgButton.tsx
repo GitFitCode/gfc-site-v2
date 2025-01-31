@@ -24,8 +24,8 @@ export const ShinyBgButton = ({ ...props }: ShinyBgButtonProps) => {
         {...props}
         className={cn(
 					`${props.className}`,
-          "relative border-[1px] rounded-lg tracking-wide overflow-hidden duration-[2200ms] shadow-md",
-          "border-[#00C9CD] text-neutral-50 bg-neutral-800 hover:bg-[#00C9CD] uppercase font-black",
+          "relative rounded-lg tracking-wide overflow-hidden duration-[2200ms] shadow-md",
+          " text-white bg-gfc-accent hover:bg-neutral-800 uppercase font-black",
           "before:absolute before:inset-0 before:bg-[length:200%_100%] before:animate-bg-shine",
           "before:bg-[linear-gradient(110deg,transparent,45%,rgba(255,255,255,0.4),55%,transparent)]"
         )}
@@ -35,7 +35,7 @@ export const ShinyBgButton = ({ ...props }: ShinyBgButtonProps) => {
           item={navItem}
           isActive={false}
           fontSize="20px"
-          secondTextColor="text-neutral-50"
+          secondTextColor="text-gray-50"
           className={linkClassName}
           handleClick={handleClick}
         >
