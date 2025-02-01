@@ -1,3 +1,9 @@
+## 0.3.3 (2025-02-01)
+
+### Fix
+
+- handle missing supabase env vars
+
 ## 0.3.2 (2024-12-21)
 
 ### Fix
