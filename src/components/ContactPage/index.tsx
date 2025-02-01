@@ -160,10 +160,10 @@ export default function ContactPage() {
               us. We would love to hear from you! If you don't like filling out
               forms, just send an email to{" "}
               <a
-                href="mailto:dom@gitfitcode.com"
+                href="mailto:sirrele@gitfitcode.com"
                 className="border-b-gfc-accent box-border m-0 min-w-0 inline-block border-b text-gfc-accent font-bold"
               >
-                dom@gitfitcode.com
+                sirrele@gitfitcode.com
               </a>{" "}
               to start discussing your project with our team!
             </p>

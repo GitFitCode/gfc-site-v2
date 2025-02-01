@@ -38,6 +38,7 @@ const SolutionsSection = () => {
 
   return (
     <div
+      id="solutions-section"
       className="w-full flex flex-col  relativebg-white dark:bg-neutral-950 max-w-7xl px-[2em] mx-auto"
       ref={containerRef}
     >

@@ -64,7 +64,7 @@ const StatisticsSection = () => {
   ];
 
   return (
-    <div className="w-full flex items-center justify-center relative max-w-7xl px-[2em]">
+    <div id="intro-section" className="w-full flex items-center justify-center relative max-w-7xl px-[2em]">
       <div className="flex flex-col-reverse items-start gap-y-10 sm:gap-y-15 md:grid md:grid-cols-2 md:items-center md:justify-between md:gap-10 lg:items-center lg:gap-15 xl:gap-20">
         <div className="left-grid h-fit flex flex-col md:grid text-start md:py-[11em]">
           <motion.h2
