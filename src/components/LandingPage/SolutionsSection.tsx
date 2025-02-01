@@ -13,6 +13,7 @@ import dashboard from "../../images/services/dashboard.webp";
 import integrations from "../../images/services/integrations.webp";
 import ai from "../../images/services/ai.png";
 import { Bolt, Bot, Computer, Database, Webhook } from "lucide-react";
+import { useNavigationContext } from "../../contexts/navigation.context";
 
 interface TimelineEntry {
   title: string;
@@ -22,6 +23,7 @@ interface TimelineEntry {
 const SolutionsSection = () => {
   const ref = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
+  const { isTablet } = useNavigationContext();
   const [height, setHeight] = useState(0);
 
   useEffect(() => {
@@ -140,11 +142,11 @@ const SolutionsSection = () => {
             </div>
 
             <div
-              className="absolute bottom-0 left-4 right-4 top-[35%] translate-y-8 rounded-t-2xl bg-gradient-to-br from-amber-400 to-orange-400 p-4 transition-transform duration-[250ms] group-hover:translate-y-4 group-hover:rotate-[2deg]"
+              className="bg-neutral-100 absolute bottom-0 left-4 right-4 top-[50%] translate-y-8 rounded-t-2xl bg-gradient-to-br from-amber-400 to-orange-400 p-4 transition-transform duration-[250ms] group-hover:translate-y-4 group-hover:rotate-[2deg]"
               style={{
                 backgroundImage: `url(${dashboard})`,
-                backgroundSize: "210%",
-                backgroundPosition: "-198px -102px",
+                backgroundSize: isTablet ? "210%" : "300%",
+                backgroundPosition: isTablet ? "-198px -50px": '-211px -19px',
                 backgroundRepeat: "no-repeat",
               }}
             ></div>
@@ -172,11 +174,11 @@ const SolutionsSection = () => {
             </div>
 
             <div
-              className="absolute bottom-0 left-4 right-4 top-[35%] translate-y-8 rounded-t-2xl bg-gradient-to-br from-amber-400 to-orange-400 p-4 transition-transform duration-[250ms] group-hover:translate-y-4 group-hover:rotate-[2deg]"
+              className="bg-neutral-100 absolute bottom-0 left-4 right-4 top-[50%] translate-y-8 rounded-t-2xl bg-gradient-to-br from-amber-400 to-orange-400 p-4 transition-transform duration-[250ms] group-hover:translate-y-4 group-hover:rotate-[2deg]"
               style={{
                 backgroundImage: `url(${web})`,
-                backgroundSize: "210%",
-                backgroundPosition: "-198px -102px",
+                backgroundSize: isTablet ? "210%" : "300%",
+                backgroundPosition: isTablet ? "-198px -90px": '-211px -29px',
                 backgroundRepeat: "no-repeat",
               }}
             ></div>
@@ -197,13 +199,17 @@ const SolutionsSection = () => {
             </div>
 
             <div
-              className="absolute bottom-0 left-4 right-4 top-[40%] translate-y-8 rounded-t-2xl bg-gradient-to-br from-amber-400 to-orange-400 p-4 transition-transform duration-[250ms] group-hover:translate-y-4 group-hover:rotate-[2deg]"
+              className="bg-neutral-200 absolute bottom-0 left-4 right-4 top-[50%] translate-y-8 rounded-t-2xl bg-gradient-to-br from-amber-400 to-orange-400 p-4 transition-transform duration-[250ms] group-hover:translate-y-4 group-hover:rotate-[2deg]"
               style={{
                 backgroundImage: `url(${ai})`,
-                backgroundSize: "210%",
-                backgroundPosition: "-198px 0px",
+                backgroundSize: '180%',
+                backgroundPosition: isTablet ? "-140px 0px": '-116px -15px',
                 backgroundRepeat: "no-repeat",
+    //             background-size: 180%;
+    // background-repeat: no-repeat;
+    // background-position: -116px -15px;
               }}
+             
             ></div>
           </BounceCard>
         </div>

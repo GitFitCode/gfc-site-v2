@@ -20,6 +20,9 @@
 =======
     "@react-three/fiber": "^8.17.14",
     "@supabase/supabase-js": "latest",
+    "@tsparticles/engine": "^3.8.1",
+    "@tsparticles/react": "^3.0.0",
+    "@tsparticles/slim": "^3.8.1",
     "@types/three": "^0.173.0",
 >>>>>>> 517d306 (chore: added threejs libraries and set static React version)
     "class-variance-authority": "latest",
@@ -55,7 +58,11 @@
     "three": "^0.172.0",
 =======
     "three": "^0.173.0",
+<<<<<<< HEAD
 >>>>>>> 517d306 (chore: added threejs libraries and set static React version)
+=======
+    "three-globe": "^2.41.5",
+>>>>>>> e9626e0 (chore: bug fixes Co-authored-by: Sirrele Steinfeld <gitfitbro@users.noreply.github.com>)
     "vaul": "^1.1.2",
     "web-vitals": "latest"
   },

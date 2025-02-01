@@ -7,10 +7,12 @@ import { useNavigationContext } from "../../contexts/navigation.context";
 import { InfiniteMovingIcons } from "../ui/InfiniteIcons";
 import { AsciiRenderer, Environment } from "@react-three/drei";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
-import { Model } from "./StatsSection";
+import GlassModel from "../Models/Glass";
 import { motion } from "framer-motion";
 import { useRef } from "react";
 import * as THREE from "three";
+import GoogleCalendarButton from "../GoogleCalendarButton";
+import { Model } from "./StatsSection";
 
 export default function GitFitCodeIntroSection() {
 <<<<<<< HEAD
@@ -75,12 +77,15 @@ export default function GitFitCodeIntroSection() {
               and scale seamlessly—powering businesses, ideas, and innovation at
               any stage.
             </p>
-            <ShinyBgButton
-              className={`py-6 px-8 ${!isTablet && "w-full"}`}
-              content="Launch"
-              navItem={bookButton}
-              handleClick={() => navigate(bookButton.route)}
-            />
+            <div className="flex flex-row gap-4">
+              <ShinyBgButton
+                className={`py-6 px-8 ${!isTablet && "w-full"}`}
+                content="Launch"
+                navItem={bookButton}
+                handleClick={() => navigate(bookButton.route)}
+              />
+              <GoogleCalendarButton />
+            </div>
           </div>
 
           {(isTablet || isDesktop) && (
@@ -117,6 +122,11 @@ export default function GitFitCodeIntroSection() {
                 />
                 <Environment preset="studio" />
               </Canvas>
+              {/* <Canvas style={{ background: "white" }}>
+                <GlassModel />
+                <directionalLight intensity={2} position={[0, 2, 3]} />
+                <Environment preset="city" />
+              </Canvas> */}
             </motion.div>
           )}
 

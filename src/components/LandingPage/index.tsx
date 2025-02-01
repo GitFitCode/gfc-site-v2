@@ -9,6 +9,7 @@ import { motion } from "framer-motion";
 import AnimatedSection from "../ui/AnimatedSection";
 import Footer from "../Footer";
 import TimelineSection from "./TimelineSection";
+import GoogleCalendarButton from "../GoogleCalendarButton";
 
 export default function LandingPage() {
   const { isDesktop, isTablet } = useNavigationContext();
@@ -63,11 +64,18 @@ export default function LandingPage() {
 =======
     <>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 517d306 (chore: added threejs libraries and set static React version)
       <div className="flex flex-col items-center relative  bg-white z-[50] shadow-md">
 =======
       <div id="gfc-intro-section" className="flex flex-col items-center relative  bg-white z-[50] shadow-md">
 >>>>>>> 1f4c9de (chore: made minor fixes to nav routing)
+=======
+      <div
+        id="gfc-intro-section"
+        className="flex flex-col items-center relative  bg-white z-[50] shadow-md"
+      >
+>>>>>>> e9626e0 (chore: bug fixes Co-authored-by: Sirrele Steinfeld <gitfitbro@users.noreply.github.com>)
         <AnimatedSection className="w-full">
 >>>>>>> 8ce7ed9 (fix: HeroSection ui changes)
           <GitFitCodeIntroSection />
@@ -107,6 +115,9 @@ export default function LandingPage() {
           <TimelineSection />
 >>>>>>> 8ce7ed9 (fix: HeroSection ui changes)
         </AnimatedSection>
+
+        {/* <AnimatedSection className="w-full flex items-center justify-center mb-[6em] md:mb-[8em]">
+        </AnimatedSection> */}
 
         {/* <AnimatedSection className="w-full mb-[6em] md:mb-[8em]">
           <PhaseTimeline />
