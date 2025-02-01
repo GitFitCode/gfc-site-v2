@@ -17,7 +17,7 @@ const root = ReactDOM.createRoot(
 );
 try {
   root.render(
-    <React.StrictMode>
+    // <React.StrictMode>
       <PostHogProvider
         apiKey={process.env.REACT_APP_PUBLIC_POSTHOG_KEY}
         options={options}
@@ -28,7 +28,7 @@ try {
           </NavigationProvider>
         </ErrorBoundary>
       </PostHogProvider>
-    </React.StrictMode>
+    // </React.StrictMode>
   );
 } catch (error) {
   console.error("Error rendering app:", error);

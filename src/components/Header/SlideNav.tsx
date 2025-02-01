@@ -134,7 +134,7 @@ export default function index({
 >>>>>>> a49a46a (chore: create template buttons and modified navigation)
         <ShinyBgButton
           className="py-6 px-8"
-          content="Book.Now"
+          content="Launch"
           navItem={bookButton}
           handleClick={() => navigate(bookButton.route)}
         />
