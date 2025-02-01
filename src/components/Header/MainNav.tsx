@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useEffect, useCallback } from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -17,6 +18,9 @@ import { FolderClosedIcon } from 'lucide-react';
 =======
 >>>>>>> 8917532 (chore: navigation redesign)
 import Logo from "./Logo";
+=======
+import Logo from "./logo";
+>>>>>>> 1f4c9de (chore: made minor fixes to nav routing)
 import {
   HomeIcon,
   UserGroupIcon,
@@ -67,14 +71,14 @@ export const nav_items = [
   {
     name: "About",
     icon: <UserGroupIcon className="h-6 w-6" />,
-    route: "#about",
-    sectionId: "stats-section",
+    route: "/",
+    sectionId: "intro-section",
     content: "About",
   },
   {
     name: "Services",
     icon: <CogIcon className="h-6 w-6" />,
-    route: "#services",
+    route: "/",
     sectionId: "solutions-section",
     content: "Services",
   },
@@ -82,23 +86,24 @@ export const nav_items = [
   {
     name: "Portfolio",
     icon: <FolderClosedIcon className="h-6 w-6" />,
-    route: "/portfolio",
-    sectionId: null,
+    route: "/",
+    sectionId: 'portfolio-section',
     content: "Portfolio",
   },
-  {
-    name: "Contact",
-    icon: <PhoneIcon className="h-6 w-6" />,
-    route: "/contact",
-    sectionId: null,
-    content: "Contact",
-  },
+  // {
+  //   name: "Contact",
+  //   icon: <PhoneIcon className="h-6 w-6" />,
+  //   route: "/contact",
+  //   sectionId: 'contact-section',
+  //   content: "Contact",
+  // },
 ];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 export const bookButton = {
   name: "Book Now",
+<<<<<<< HEAD
 =======
 const bookButton = {
   name: "Book",
@@ -110,6 +115,10 @@ export const bookButton = {
   // icon: <PhoneIcon className="h-6 w-6" />,
   route: "/booking",
   sectionId: null,
+=======
+  route: "/contact",
+  sectionId: 'contact-section',
+>>>>>>> 1f4c9de (chore: made minor fixes to nav routing)
   content: "Launch",
 };
 
@@ -153,9 +162,12 @@ const MainNav = ({
   };
 
   useEffect(() => {
+    
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []); // Empty dependency array to run only once on mount
+  }, [
+    handleScroll,
+  ]); // Empty dependency array to run only once on mount
 
   const handleSelect = useCallback(
     (itemName: string, sectionId: string | null, route: string) => {
@@ -174,15 +186,9 @@ const MainNav = ({
         }
       };
 
-      if (itemName === "Contact") {
-        navigate(route);
-      } else if (sectionId) {
-        if (window.location.pathname === "/") {
-          scrollToSection(sectionId);
-        } else {
-          navigate("/");
-          setTimeout(() => scrollToSection(sectionId), 500);
-        }
+      if (sectionId) {
+        navigate("/");
+        setTimeout(() => scrollToSection(sectionId), 500);
       } else {
         navigate(route);
       }

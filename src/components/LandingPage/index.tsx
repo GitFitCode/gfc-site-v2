@@ -62,8 +62,12 @@ export default function LandingPage() {
 >>>>>>> d2e9fea (fix: page transitions)
 =======
     <>
+<<<<<<< HEAD
 >>>>>>> 517d306 (chore: added threejs libraries and set static React version)
       <div className="flex flex-col items-center relative  bg-white z-[50] shadow-md">
+=======
+      <div id="gfc-intro-section" className="flex flex-col items-center relative  bg-white z-[50] shadow-md">
+>>>>>>> 1f4c9de (chore: made minor fixes to nav routing)
         <AnimatedSection className="w-full">
 >>>>>>> 8ce7ed9 (fix: HeroSection ui changes)
           <GitFitCodeIntroSection />
