@@ -1,9 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 const { fontFamily } = require("tailwindcss/defaultTheme");
 const svgToDataUri = require("mini-svg-data-uri");
-const {
-  default: flattenColorPalette,
-} = require("tailwindcss/lib/util/flattenColorPalette");
+const { default: flattenColorPalette } = require("tailwindcss/lib/util/flattenColorPalette");
 
 module.exports = {
   darkMode: "class",
@@ -35,12 +33,12 @@ module.exports = {
         "4k": "2560px",
       },
       colors: {
-        "gfc-accent": "#3cb5b8",
+        "gfc-accent": "#00C9CD",
         "gfc-dark": "#231E21",
         "gfc-darker": "#181918",
         "gfc-light": "#E6F7F8", // new light color
         "gfc-primary-100": "rgba(0, 201, 205, 0.2)",
-        "gfc-primary": "#048c8f",
+        "gfc-primary": "#00C9CD",
         "gfc-secondary": "#048c8f",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -76,29 +74,16 @@ module.exports = {
           foreground: "hsl(var(--card-foreground))",
         },
       },
-      // borderRadius: {
-      //   lg: `var(--radius)`,
-      //   md: `calc(var(--radius) - 8px)`,
-      //   sm: "calc(var(--radius) - 14px)",
-      // },
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
       },
       animation: {
-<<<<<<< HEAD
         "scroll": "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "spin-slow": "spin 3s linear infinite", // slower spin
         "bounce-slow": "bounce 2s infinite", // slower bounce
         "bg-shine": "bg-shine 2.1s linear infinite",
-=======
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
-        'spin-slow': 'spin 3s linear infinite', // slower spin
-        'bounce-slow': 'bounce 2s infinite', // slower bounce
-        "bg-shine": "bg-shine 2.1s linear infinite"
->>>>>>> a49a46a (chore: create template buttons and modified navigation)
       },
       keyframes: {
         "accordion-down": {
@@ -110,48 +95,20 @@ module.exports = {
           to: { height: "0" },
         },
         "bg-shine": {
-          from: {
-<<<<<<< HEAD
-            backgroundPosition: "0 0",
-          },
-          to: {
-            backgroundPosition: "-200% 0",
-          },
+          from: { backgroundPosition: "0 0" },
+          to: { backgroundPosition: "-200% 0" },
         },
         "scroll": {
-          to: {
-            transform: "translate(calc(-50% - 0.5rem))",
-          },
+          to: { transform: "translate(calc(-50% - 0.5rem))" },
         },
-=======
-            "backgroundPosition": "0 0"
-          },
-          to: {
-            "backgroundPosition": "-200% 0"
-          }
-        }
->>>>>>> a49a46a (chore: create template buttons and modified navigation)
       },
       backgroundColor: {
-<<<<<<< HEAD
-<<<<<<< HEAD
         "gfc-accent": "#00C9CD",
-=======
-        "gfc-accent": "#3cb5b8",
->>>>>>> 8ce7ed9 (fix: HeroSection ui changes)
         "gfc-dark": "#231E21",
         "gfc-darker": "#181918",
         "gfc-teal": "rgba(0,200,204,1)",
         "gfc-primary-100": "rgba(0, 201, 205, 0.2)",
         "gfc-primary": "#00C9CD",
-=======
-        'gfc-accent': '#00C9CD',
-        'gfc-dark': '#231E21',
-        'gfc-darker': '#181918',
-        'gfc-teal': 'rgba(0,200,204,1)',
-        'gfc-primary-100': 'rgba(0, 201, 205, 0.2)',
-        'gfc-primary': '#00C9CD',
->>>>>>> f1d5d1b (fix: minor nav code fixes)
       },
       height: {
         21: "21.5rem",
@@ -175,13 +132,8 @@ module.exports = {
         "4xl": "3rem",
       },
       boxShadow: {
-<<<<<<< HEAD
         soft: "0 2px 8px rgba(0, 0, 0, 0.15)", // custom soft shadow
         hard: "0 4px 16px rgba(0, 0, 0, 0.2)", // for strong shadow
-=======
-        'soft': '0 2px 8px rgba(0, 0, 0, 0.15)', // custom soft shadow
-        'hard': '0 4px 16px rgba(0, 0, 0, 0.2)', // for strong shadow
->>>>>>> a49a46a (chore: create template buttons and modified navigation)
       },
     },
   },
@@ -203,7 +155,7 @@ module.exports = {
           }),
           "bg-dot": (value) => ({
             backgroundImage: `url("${svgToDataUri(
-              `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="16" height="16" fill="none"><circle fill="${value}" id="pattern-circle" cx="10" cy="10" r="1.6257413380501518"></circle></svg>`
+              `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="16" height="16" fill="none"><circle fill="${value}" cx="10" cy="10" r="1.6257413380501518"></circle></svg>`
             )}")`,
           }),
         },

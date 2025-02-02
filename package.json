@@ -13,32 +13,18 @@
     "@radix-ui/react-slot": "latest",
     "@react-spring/web": "latest",
     "@react-three/drei": "^9.121.4",
-<<<<<<< HEAD
-    "@react-three/fiber": "^8.17.12",
-    "@supabase/supabase-js": "latest",
-    "@types/three": "^0.172.0",
-=======
     "@react-three/fiber": "^8.17.14",
     "@supabase/supabase-js": "latest",
     "@tsparticles/engine": "^3.8.1",
     "@tsparticles/react": "^3.0.0",
     "@tsparticles/slim": "^3.8.1",
     "@types/three": "^0.173.0",
->>>>>>> 517d306 (chore: added threejs libraries and set static React version)
     "class-variance-authority": "latest",
     "classnames": "latest",
     "clsx": "latest",
     "embla-carousel-react": "latest",
-<<<<<<< HEAD
     "framer-motion": "^11.15.0",
     "framer-motion-3d": "^12.0.6",
-=======
-    "framer-motion": "latest",
-<<<<<<< HEAD
->>>>>>> 28c2d37 (chore: added sticky footer and initial site loader)
-=======
-    "framer-motion-3d": "^12.0.6",
->>>>>>> 517d306 (chore: added threejs libraries and set static React version)
     "gsap": "^3.12.5",
     "jquery": "latest",
     "lenis": "^1.1.20",
@@ -54,15 +40,8 @@
     "react-spinners": "latest",
     "tailwind-merge": "latest",
     "tailwindcss-animate": "latest",
-<<<<<<< HEAD
-    "three": "^0.172.0",
-=======
     "three": "^0.173.0",
-<<<<<<< HEAD
->>>>>>> 517d306 (chore: added threejs libraries and set static React version)
-=======
     "three-globe": "^2.41.5",
->>>>>>> e9626e0 (chore: bug fixes Co-authored-by: Sirrele Steinfeld <gitfitbro@users.noreply.github.com>)
     "vaul": "^1.1.2",
     "web-vitals": "latest"
   },
@@ -70,11 +49,7 @@
     "build": "react-scripts build",
     "deploy": "dotenv -e .env gcloud -- app deploy app.yaml --project gfc-website-313010",
     "eject": "react-scripts eject",
-<<<<<<< HEAD
     "start": "set GENERATE_SOURCEMAP=false && react-scripts start",
-=======
-    "start": "react-scripts start",
->>>>>>> 28c2d37 (chore: added sticky footer and initial site loader)
     "test": "react-scripts test"
   },
   "eslintConfig": {
@@ -103,13 +78,13 @@
     "@types/react": "18.3.12",
     "@types/react-dom": "18.3.1",
     "dotenv-cli": "latest",
-    "husky": "latest",
+    "husky": "^9.1.7",
     "react-scripts": "latest",
     "tailwindcss": "latest",
     "typescript": "latest"
   },
   "engines": {
     "node": "22.x",
-    "pnpm": "9.x"
+    "pnpm": ">=9.x"
   }
 }

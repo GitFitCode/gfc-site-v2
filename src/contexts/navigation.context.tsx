@@ -18,10 +18,7 @@ export const NavigationProvider: React.FC<{ children: React.ReactNode }> = ({ ch
   const [isNavigating, setIsNavigating] = useState(false);
 	const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [currentNavItem, setCurrentNavItem] = useState(nav_items[0].name);
-<<<<<<< HEAD
   const [isSiteLoading, setIsSiteLoading] = useState(true);
-=======
->>>>>>> 8917532 (chore: navigation redesign)
 	const isDesktop = windowWidth >= 1024;
   const isTablet = windowWidth >= 768;
 

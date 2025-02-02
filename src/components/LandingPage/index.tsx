@@ -14,11 +14,7 @@ import GoogleCalendarButton from "../GoogleCalendarButton";
 export default function LandingPage() {
   const { isDesktop, isTablet } = useNavigationContext();
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> d2e9fea (fix: page transitions)
+  // Optionally, you can uncomment and use Lenis for smooth scrolling:
   // useEffect(() => {
   //   const lenis = new Lenis();
   //   function raf(time: number) {
@@ -27,57 +23,14 @@ export default function LandingPage() {
   //   }
   //   requestAnimationFrame(raf);
   // }, []);
-<<<<<<< HEAD
-=======
-  useEffect(() => {
-    const lenis = new Lenis();
-
-    function raf(time: number) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
-  }, []);
->>>>>>> 28c2d37 (chore: added sticky footer and initial site loader)
-
-=======
->>>>>>> f8cf7ef (chore: codebase cleanup comments and unused code)
-  return (
-<<<<<<< HEAD
-    <div>
-      <motion.div className="flex flex-col items-center relative bg-neutral-50 z-[50] shadow-md">
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <AnimatedSection className="w-full mb-[6em] md:mb-[4em]">
-=======
-    <motion.div
-      exit={{ opacity: 0, scale: 0.98, transition: { duration: 0.5 } }}
-      transition={{ duration: 0.8, ease: "easeOut" }}
-    >
-=======
 
   return (
-<<<<<<< HEAD
-    <div>
->>>>>>> d2e9fea (fix: page transitions)
-=======
     <>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 517d306 (chore: added threejs libraries and set static React version)
-      <div className="flex flex-col items-center relative  bg-white z-[50] shadow-md">
-=======
-      <div id="gfc-intro-section" className="flex flex-col items-center relative  bg-white z-[50] shadow-md">
->>>>>>> 1f4c9de (chore: made minor fixes to nav routing)
-=======
       <div
         id="gfc-intro-section"
-        className="flex flex-col items-center relative  bg-white z-[50] shadow-md"
+        className="flex flex-col items-center relative bg-white z-[50] shadow-md"
       >
->>>>>>> e9626e0 (chore: bug fixes Co-authored-by: Sirrele Steinfeld <gitfitbro@users.noreply.github.com>)
-        <AnimatedSection className="w-full">
->>>>>>> 8ce7ed9 (fix: HeroSection ui changes)
+        <AnimatedSection className="w-full mb-[6em] md:mb-[8em]">
           <GitFitCodeIntroSection />
         </AnimatedSection>
 
@@ -89,60 +42,23 @@ export default function LandingPage() {
           <SolutionsSection />
         </AnimatedSection>
 
-<<<<<<< HEAD
-        <AnimatedSection className="w-full mb-[6em] md:mb-[4em]">
-=======
-        <AnimatedSection>
-=======
-        <AnimatedSection className="w-full">
->>>>>>> f786883 (chore: redesigned hero section)
-          <GitFitCodeIntroSection />
-        </AnimatedSection>
-
-        <AnimatedSection>
-          <StatsSection />
-        </AnimatedSection>
-
-        <AnimatedSection>
-          <SolutionsSection />
-        </AnimatedSection>
-
-        <AnimatedSection>
->>>>>>> 28c2d37 (chore: added sticky footer and initial site loader)
-          <PhaseTimeline />
-=======
         <AnimatedSection className="w-full mb-[6em] md:mb-[8em]">
           <TimelineSection />
->>>>>>> 8ce7ed9 (fix: HeroSection ui changes)
         </AnimatedSection>
 
-        {/* <AnimatedSection className="w-full flex items-center justify-center mb-[6em] md:mb-[8em]">
-        </AnimatedSection> */}
+        {/*
+          Uncomment the section below if you want to include Success Stories:
+          <AnimatedSection className="w-full mb-[6em] md:mb-[8em]">
+            <SuccessStoriesSection />
+          </AnimatedSection>
+        */}
 
-        {/* <AnimatedSection className="w-full mb-[6em] md:mb-[8em]">
-          <PhaseTimeline />
-        </AnimatedSection> */}
-
-        {/* Uncomment when needed */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <AnimatedSection className="w-full mb-[6em] md:mb-[4em]">
-          <SuccessStoriesSection />
-        </AnimatedSection>
-=======
-        <AnimatedSection>
-        <SuccessStoriesSection />
-      </AnimatedSection>
->>>>>>> 28c2d37 (chore: added sticky footer and initial site loader)
-=======
-        {/* <AnimatedSection className="w-full mb-[6em] md:mb-[8em]">
-          <SuccessStoriesSection />
-        </AnimatedSection> */}
->>>>>>> 8ce7ed9 (fix: HeroSection ui changes)
-
-        {/* <AnimatedSection>
-          <StartProject />
-        </AnimatedSection> */}
+        {/*
+          Uncomment if you want to include the Start Project section:
+          <AnimatedSection>
+            <StartProject />
+          </AnimatedSection>
+        */}
       </div>
 
       <Footer />

@@ -21,7 +21,7 @@ export default function RoundedMagneticButton({
   let timeline = useRef<gsap.core.Timeline | null>(null);
   let timeoutId: ReturnType<typeof setTimeout> | null = null;
   useEffect(() => {
-    console.log("circle ref:", circle.current); // Debugging
+    // console.log("circle ref:", circle.current); // Debugging
 
     if (!circle.current) return;
     timeline.current = gsap.timeline({ paused: true });

@@ -183,8 +183,6 @@ export function Model() {
     }, 2000);
   }, [activeShape]);
 
-  console.log('logo', nodes)
-
   return (
     <group position={[0, 0, 0]}>
       <Mesh node={nodes.Node2} multiplier={1} isActive={activeShape == 1} isTablet={isTablet} />

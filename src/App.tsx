@@ -23,22 +23,9 @@ import NaturaLabs from "./components/PortfolioPage/Cases/NaturaLabs";
 import Preloader from "./components/ui/Preloader";
 
 const App = () => {
-<<<<<<< HEAD
+  // Use site loading state from the navigation context
   const { isNavigating, isSiteLoading, setIsSiteLoading } =
     useNavigationContext();
-<<<<<<< HEAD
-<<<<<<< HEAD
-  // const [isLoading, setIsLoading] = useState(true);
-=======
-  const { isNavigating } = useNavigationContext();
-  const [isLoading, setIsLoading] = useState(true);
->>>>>>> 28c2d37 (chore: added sticky footer and initial site loader)
-=======
-
->>>>>>> f8cf7ef (chore: codebase cleanup comments and unused code)
-=======
-  // const [isLoading, setIsLoading] = useState(true);
->>>>>>> d2e9fea (fix: page transitions)
 
   useEffect(() => {
     (async () => {
@@ -46,47 +33,24 @@ const App = () => {
       const locomotiveScroll = new LocomotiveScroll();
 
       setTimeout(() => {
-<<<<<<< HEAD
         setIsSiteLoading(false);
-=======
-        setIsLoading(false);
->>>>>>> 28c2d37 (chore: added sticky footer and initial site loader)
         document.body.style.cursor = "default";
         window.scrollTo(0, 0);
       }, 2000);
     })();
-  }, []);
+  }, [setIsSiteLoading]);
 
   return (
     <Router>
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <NavigationWrapper>
-=======
-      {/* <NavigationWrapper> */}
->>>>>>> d2e9fea (fix: page transitions)
-        <AnimatePresence mode="wait">
-          {isSiteLoading && <Preloader />}
-          {/* <Preloader /> */}
-        </AnimatePresence>
-        <PageHeader />
-        <AnimatedRoutes />
-<<<<<<< HEAD
-      </NavigationWrapper>
-=======
       <NavigationProvider>
         <NavigationWrapper>
           <AnimatePresence mode="wait">
-            {isLoading && <Preloader />}
+            {isSiteLoading && <Preloader />}
           </AnimatePresence>
           <PageHeader />
           <AnimatedRoutes />
         </NavigationWrapper>
       </NavigationProvider>
->>>>>>> 28c2d37 (chore: added sticky footer and initial site loader)
-=======
-      {/* </NavigationWrapper> */}
->>>>>>> d2e9fea (fix: page transitions)
     </Router>
   );
 };
@@ -103,7 +67,7 @@ const NavigationWrapper: React.FC<{ children: React.ReactNode }> = ({
 
     const timeoutId = setTimeout(() => {
       setIsNavigating(false); // Clear the navigation state after a brief delay
-    }, 400); // Simulate a delay; adjust this based on your actual loading logic
+    }, 400);
 
     return () => {
       clearTimeout(timeoutId);
@@ -124,34 +88,27 @@ const AnimatedRoutes = () => {
         <Route
           path="/"
           element={<PageTransition children={<LandingPage />} />}
-          // element={<LandingPage />}
         />
         <Route
           path="/contact"
           element={<PageTransition children={<ContactPage />} />}
-          // element={<ContactPage />}
         />
         <Route
           path="/portfolio"
           element={<PageTransition children={<PortfolioPage />} />}
-          // element={<PortfolioPage />}
         />
-
-        {/* Portfoilio Routes */}
+        {/* Portfolio Routes */}
         <Route
           path="/portfolio/mode-earn-club"
           element={<PageTransition children={<ModeEarnClub />} />}
-          // element={<ModeEarnClub />}
         />
         <Route
           path="/portfolio/connectworx"
           element={<PageTransition children={<ConnectworX />} />}
-          // element={<ConnectworX />}
         />
         <Route
           path="/portfolio/natura-labs"
           element={<PageTransition children={<NaturaLabs />} />}
-          // element={<NaturaLabs />}
         />
       </Routes>
     </AnimatePresence>
