@@ -54,7 +54,6 @@ code {
 
 .link-style:hover::after {
   width: 100%;
-<<<<<<< HEAD
 }
 
 .panel { 
@@ -66,10 +65,6 @@ code {
   justify-content: center;
   text-align: center;
   background-color: aliceblue;
-<<<<<<< HEAD
-=======
->>>>>>> 8917532 (chore: navigation redesign)
-=======
 }
 
 
@@ -87,5 +82,4 @@ code {
   border-width: 0;
   cursor: pointer;
   word-break: break-word;
->>>>>>> e9626e0 (chore: bug fixes Co-authored-by: Sirrele Steinfeld <gitfitbro@users.noreply.github.com>)
 }

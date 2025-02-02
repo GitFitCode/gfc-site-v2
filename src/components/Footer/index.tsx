@@ -2,156 +2,101 @@ import { useRef } from "react";
 import { useScroll, motion, useTransform } from "framer-motion";
 import Magnetic from "../ui/Magnetic";
 import GsapMagnetic from "../ui/GsapMagnetic";
-import { Link } from "react-router";
+import { Link, To, useNavigate } from "react-router";
 import { useNavigationContext } from "../../contexts/navigation.context";
 
-export default function Index() {
-  const { isDesktop } = useNavigationContext();
+export default function FooterSection() {
+  const { isDesktop, setCurrentNavItem } = useNavigationContext();
+  const navigate = useNavigate();
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
     target: container,
     offset: ["start end", "end end"],
   });
-
-  const x = useTransform(scrollYProgress, [0, 1], [0, 100]);
   const y = useTransform(scrollYProgress, [0, 1], [-500, 0]);
-  const rotate = useTransform(scrollYProgress, [0, 1], [120, 90]);
+
+  // Custom handler for footer links
+  const handleFooterSelect = (itemName: string, sectionId: any, route: To) => {
+    setCurrentNavItem(itemName);
+
+    const scrollToSection = (sectionId: string) => {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        const offset = 90;
+        const sectionTop = section.getBoundingClientRect().top + window.scrollY;
+        window.scrollTo({
+          top: sectionTop - offset,
+          behavior: "smooth",
+        });
+      }
+    };
+
+    // Prevent immediate navigation: scroll if a section is provided; otherwise, just navigate.
+    if (sectionId) {
+      navigate("/");
+      setTimeout(() => scrollToSection(sectionId), 500);
+    } else {
+      navigate(route);
+    }
+  };
 
   return (
     <motion.div
       style={{ y }}
       ref={container}
-      className={`flex flex-col items-center justify-between px-4 lg:px-20 gap-8 md:py-8`}
+      className="flex flex-col items-center justify-between px-4 lg:px-20 gap-8 md:py-8"
     >
-<<<<<<< HEAD
-<<<<<<< HEAD
       <div className="w-full max-w-7xl pt-5">
-=======
-      <div className="w-full max-w-7xl bg-neutral-50 pt-5">
->>>>>>> 28c2d37 (chore: added sticky footer and initial site loader)
-=======
-      <div className="w-full max-w-7xl pt-5">
->>>>>>> a49a46a (chore: create template buttons and modified navigation)
-        {/* Ready to Start*/}
-        {/* To DO: Add ready to start section here */}
-
         {/* Info Section */}
         <div className="flex flex-col items-center w-full mt-10 p-5">
           {!isDesktop && <MagnetIcons />}
-
           <div className="flex flex-col sm:flex-row gap-4 justify-between w-full">
-<<<<<<< HEAD
-            <div className="flex flex-col gap-[15px] justify-between">
-              <span>
-                <h3
-                  className="text-gray-400 cursor-default font-light text-[1em]">
-                  Version
-                </h3>
-<<<<<<< HEAD
-<<<<<<< HEAD
-                <p className="link-style">2022 © Edition</p>
-=======
-                <p>2022 © Edition</p>
->>>>>>> 28c2d37 (chore: added sticky footer and initial site loader)
-=======
-                <p className="link-style">2022 © Edition</p>
->>>>>>> 8917532 (chore: navigation redesign)
-              </span>
-=======
-            <div className="flex flex-col gap-[15px] ">
->>>>>>> 517d306 (chore: added threejs libraries and set static React version)
+            {/* Right Column */}
+            <div className="flex flex-col gap-[15px]">
               <span>
                 <h3 className="text-gray-400 cursor-default font-light text-[1em]">
                   Location
                 </h3>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
                 <p className="link-style">Los Angeles, CA</p>
-=======
-                <p>Los Angeles, CA</p>
->>>>>>> 28c2d37 (chore: added sticky footer and initial site loader)
-=======
-                <p className="link-style">Los Angeles, CA</p>
->>>>>>> 8917532 (chore: navigation redesign)
-=======
               </span>
-              <p className="link-style">Los Angeles, CA</p>
               <span>
                 <p className="link-style">2025 © GitFitCode</p>
->>>>>>> 517d306 (chore: added threejs libraries and set static React version)
               </span>
             </div>
-
             {/* Socials Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-            {isDesktop && <MagnetIcons containerClassName="mx-[20px] mb-10 gap-[20px]" iconClassName="hover:fill-black fill-[#00c2c6] h-[35px] w-[35px]"/>}
-=======
-            {isDesktop && <MagnetIcons />}
->>>>>>> 28c2d37 (chore: added sticky footer and initial site loader)
-=======
-            {isDesktop && <MagnetIcons containerClassName="mx-[20px] mb-10" iconClassName="hover:fill-black fill-[#00c2c6] h-[35px] w-[35px] gap-[20px]"/>}
->>>>>>> 8917532 (chore: navigation redesign)
-=======
-            {isDesktop && <MagnetIcons containerClassName="mx-[20px] mb-10 gap-[20px]" iconClassName="hover:fill-black fill-[#00c2c6] h-[35px] w-[35px]"/>}
->>>>>>> f1d5d1b (fix: minor nav code fixes)
-=======
             {isDesktop && (
               <MagnetIcons
                 containerClassName="mx-[20px] mb-10 gap-[20px]"
                 iconClassName="hover:fill-black fill-[#00c2c6] h-[35px] w-[35px]"
               />
             )}
->>>>>>> 517d306 (chore: added threejs libraries and set static React version)
-
-            <div
-              style={{ display: "flex", flexDirection: "column", gap: "15px" }}
-            >
+            {/* Links Section */}
+            <div style={{ display: "flex", flexDirection: "column", gap: "15px" }}>
               <span>
                 <h3 className="text-gray-400 cursor-default font-light text-[1em]">
                   Links
                 </h3>
               </span>
               <Magnetic>
-<<<<<<< HEAD
-<<<<<<< HEAD
-                <Link to="/" className="cursor-pointer link-style">
-=======
-                <Link to="/" className="cursor-pointer">
->>>>>>> 28c2d37 (chore: added sticky footer and initial site loader)
-=======
-                <Link to="/" className="cursor-pointer link-style">
->>>>>>> 8917532 (chore: navigation redesign)
+                <Link
+                  to="/"
+                  className="cursor-pointer link-style"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleFooterSelect("Home", "top-header", "/");
+                  }}
+                >
                   Home
                 </Link>
               </Magnetic>
               <Magnetic>
-<<<<<<< HEAD
-<<<<<<< HEAD
                 <Link to="/portfolio" className="cursor-pointer link-style">
-=======
-                <Link to="/portfolio" className="cursor-pointer">
->>>>>>> 28c2d37 (chore: added sticky footer and initial site loader)
-=======
-                <Link to="/portfolio" className="cursor-pointer link-style">
->>>>>>> 8917532 (chore: navigation redesign)
                   Portfolio
                 </Link>
               </Magnetic>
               <Magnetic>
-<<<<<<< HEAD
-<<<<<<< HEAD
                 <Link to="/contact" className="cursor-pointer link-style">
-=======
-                <Link to="/contact" className="cursor-pointer">
->>>>>>> 28c2d37 (chore: added sticky footer and initial site loader)
-=======
-                <Link to="/contact" className="cursor-pointer link-style">
->>>>>>> 8917532 (chore: navigation redesign)
-                  Contact US
+                  Contact Us
                 </Link>
               </Magnetic>
             </div>
@@ -162,11 +107,6 @@ export default function Index() {
   );
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-export const MagnetIcons = ({iconClassName, containerClassName}: {iconClassName?: string, containerClassName?: string}) => { 
-=======
 export const MagnetIcons = ({
   iconClassName,
   containerClassName,
@@ -174,29 +114,12 @@ export const MagnetIcons = ({
   iconClassName?: string;
   containerClassName?: string;
 }) => {
->>>>>>> 517d306 (chore: added threejs libraries and set static React version)
   return (
-    <div className={`flex ${containerClassName}`}>
+    <div className={`flex ${containerClassName || ""}`}>
       {/* Facebook */}
       <GsapMagnetic>
         <svg
-          className={` cursor-pointer ${iconClassName}  transition-colors duration-300`}
-=======
-const MagnetIcons = () => {
-=======
-export const MagnetIcons = ({iconClassName, containerClassName}: {iconClassName?: string, containerClassName?: string}) => { 
->>>>>>> 8917532 (chore: navigation redesign)
-  return (
-    <div className={`flex ${containerClassName}`}>
-      {/* Facebook */}
-      <GsapMagnetic>
-        <svg
-<<<<<<< HEAD
-          className="h-[35px] w-[35px] cursor-pointer hover:fill-black fill-[#00c2c6]  transition-colors duration-300"
->>>>>>> 28c2d37 (chore: added sticky footer and initial site loader)
-=======
-          className={` cursor-pointer ${iconClassName}  transition-colors duration-300`}
->>>>>>> 8917532 (chore: navigation redesign)
+          className={`cursor-pointer ${iconClassName || ""} transition-colors duration-300`}
           id="Layer_2"
           data-name="Layer 2"
           xmlns="http://www.w3.org/2000/svg"
@@ -205,19 +128,10 @@ export const MagnetIcons = ({iconClassName, containerClassName}: {iconClassName?
           <path d="m20.72,22.16c2.77,0,5.55.02,8.32.03.4,0,.8.02,1.2.03.07.06.14.13.21.19-.28,1.58-.56,3.16-.83,4.75-.32,1.87-.64,3.74-.99,5.76-1.37.13-2.76-.07-4.14-.04-1.36.03-2.72,0-4.2,0-.13,8.38.12,16.72.11,25.11h-11.17v-24.91H0v-10.81h9.16c.04-.39.11-.71.11-1.02-.01-1.58-.05-3.17-.06-4.75-.01-1.62-.16-3.26.02-4.85.19-1.69.64-3.35,1.52-4.86,1.36-2.33,3.28-4.06,5.58-5.4,1.39-.81,2.94-1.25,4.52-1.3C24.28-.03,27.71.02,31.15,0c.07,0,.13.05.35.14.04,3.3-.29,6.66-.18,10.11-1.13,0-2.15.03-3.17,0-1.57-.07-3.15-.06-4.65.46-1.42.49-2.46,1.4-2.89,2.95-.3,1.08-.36,2.16-.34,3.25.04,1.69.13,3.38.2,5.07.08.06.16.13.24.19Z" />
         </svg>
       </GsapMagnetic>
-
       {/* X */}
       <GsapMagnetic>
         <svg
-<<<<<<< HEAD
-<<<<<<< HEAD
-          className={`] cursor-pointer ${iconClassName} transition-colors duration-300`}
-=======
-          className="h-[35px] w-[35px]] cursor-pointer hover:fill-black fill-[#00c2c6] transition-colors duration-300"
->>>>>>> 28c2d37 (chore: added sticky footer and initial site loader)
-=======
-          className={`] cursor-pointer ${iconClassName} transition-colors duration-300`}
->>>>>>> 8917532 (chore: navigation redesign)
+          className={`cursor-pointer ${iconClassName || ""} transition-colors duration-300`}
           id="Layer_2"
           data-name="Layer 2"
           xmlns="http://www.w3.org/2000/svg"
@@ -226,19 +140,10 @@ export const MagnetIcons = ({iconClassName, containerClassName}: {iconClassName?
           <path d="m0,41.47c3.69-.34,7.11-.82,10.38-1.89,2.05-.67,4.03-1.62,5.71-3.35-.55-.18-1.03-.38-1.53-.48-2.77-.58-5.26-1.64-7-4-.72-.98-1.33-2.03-2.03-3.1,1.23-.3,2.43-.59,3.81-.93-.91-.56-1.7-1.08-2.52-1.53-2.08-1.13-3.73-2.68-4.6-4.91-.37-.95-.52-1.98-.77-2.98-.11-.43-.19-.86-.3-1.33,1.42.02,2.71.63,4.2.28-.72-1.12-1.37-2.17-2.06-3.2-1.78-2.65-2.05-5.51-1.29-8.54.23-.91.43-1.84.69-2.95.78.63,1.4,1.05,1.94,1.56,2.42,2.28,5.16,4.11,8.01,5.83,2.36,1.43,4.89,2.38,7.49,3.17,1.99.61,4.06.96,6.33.91.02-.67.06-1.3.07-1.92.05-2.38.81-4.54,1.99-6.57,1.71-2.92,4.43-4.39,7.56-5.26,1.39-.39,2.76-.3,4.22-.14,2.64.29,4.8,1.52,6.96,2.82.49.3.86.38,1.4.19,1.21-.43,2.43-.83,3.67-1.19.49-.15,1.02-.18,1.84-.31-1.11,1.79-2.05,3.3-3,4.82,1.65.08,3.16-.84,4.97-.57-.86,1.35-1.83,2.42-2.78,3.52-.78.91-1.81,1.7-2.04,2.98-.25,1.43-.63,2.83-.75,4.31-.14,1.7-.6,3.37-.96,5.05-.14.64-.37,1.25-.58,1.87-1.35,3.9-3.27,7.44-5.93,10.64-2.96,3.55-6.42,6.42-10.55,8.47-2.84,1.4-5.83,2.42-8.95,2.97-2.6.45-5.24.39-7.87.33-2.95-.07-5.78-.69-8.6-1.52-2.27-.67-4.39-1.61-6.51-2.61-.14-.07-.26-.18-.61-.44Z" />
         </svg>
       </GsapMagnetic>
-
       {/* YouTube */}
       <GsapMagnetic>
         <svg
-<<<<<<< HEAD
-<<<<<<< HEAD
-          className={` cursor-pointer ${iconClassName} transition-colors duration-300`}
-=======
-          className="h-[35px] w-[35px] cursor-pointer hover:fill-black fill-[#00c2c6] transition-colors duration-300"
->>>>>>> 28c2d37 (chore: added sticky footer and initial site loader)
-=======
-          className={` cursor-pointer ${iconClassName} transition-colors duration-300`}
->>>>>>> 8917532 (chore: navigation redesign)
+          className={`cursor-pointer ${iconClassName || ""} transition-colors duration-300`}
           id="Layer_2"
           data-name="Layer 2"
           xmlns="http://www.w3.org/2000/svg"
@@ -247,19 +152,10 @@ export const MagnetIcons = ({iconClassName, containerClassName}: {iconClassName?
           <path d="m26.22,36.56c-4.74,0-9.49,0-14.23,0-3.93,0-7.19-1.49-9.63-4.58-1.02-1.29-1.66-2.82-2.03-4.45-.28-1.25-.28-2.52-.29-3.78C.03,19.98,0,16.21,0,12.44c0-1.06,0-2.13.18-3.17.2-1.09.59-2.15,1.16-3.13C2.75,3.73,4.77,1.97,7.28.79c.85-.4,1.78-.61,2.74-.63,2.02-.04,4.04-.21,6.06-.14,7.73.27,15.47.02,23.2.14,1.97.03,3.89.43,5.62,1.33,2.23,1.16,3.98,2.81,4.91,5.25.52,1.36.76,2.72.93,4.16.56,4.65.3,9.32.27,13.98-.02,2.7-.92,5.16-2.63,7.27-1.73,2.15-3.95,3.62-6.68,4.08-1.8.31-3.64.39-5.47.43-3.34.06-6.68.02-10.02.02,0-.04,0-.07,0-.11Zm7.94-18.51c-4.62-2.62-9.12-5.17-13.62-7.71-.12-.07-.29-.07-.4-.1v16.33c4.78-2.84,9.41-5.56,14.03-8.52Z" />
         </svg>
       </GsapMagnetic>
-
       {/* TikTok */}
       <GsapMagnetic>
         <svg
-<<<<<<< HEAD
-<<<<<<< HEAD
-          className={` cursor-pointer ${iconClassName} transition-colors duration-300`}
-=======
-          className="h-[35px] w-[35px] cursor-pointer hover:fill-black fill-[#00c2c6] transition-colors duration-300"
->>>>>>> 28c2d37 (chore: added sticky footer and initial site loader)
-=======
-          className={` cursor-pointer ${iconClassName} transition-colors duration-300`}
->>>>>>> 8917532 (chore: navigation redesign)
+          className={`cursor-pointer ${iconClassName || ""} transition-colors duration-300`}
           id="Layer_2"
           data-name="Layer 2"
           xmlns="http://www.w3.org/2000/svg"

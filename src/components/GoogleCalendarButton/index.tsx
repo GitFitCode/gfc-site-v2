@@ -4,7 +4,7 @@ import Magnetic from '../ui/Magnetic';
 import { Button } from '../ui/Button';
 import Modal from '../ui/Modal'; // Adjust the import path as necessary
 
-const GoogleCalendarButton = () => {
+const GoogleCalendarButton = ({ ...props}) => {
   const [isModalOpen, setModalOpen] = useState(false);
 
   const handleClick = () => {
@@ -21,6 +21,7 @@ const GoogleCalendarButton = () => {
         <Button
           onClick={handleClick}
           className={cn(
+            `${props.className}`,
             'py-6 px-8 text-[20px]',
             'relative rounded-lg tracking-wide overflow-hidden duration-[2200ms] shadow-md',
             'text-white hover:bg-gfc-accent bg-neutral-800 uppercase font-black',

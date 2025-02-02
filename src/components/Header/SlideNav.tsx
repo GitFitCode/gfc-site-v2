@@ -1,45 +1,22 @@
 import React, { useCallback, useState } from "react";
 import { motion } from "framer-motion";
 import { Link, useNavigate } from "react-router";
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { bookButton, nav_items } from "./MainNav";
-=======
-import { nav_items } from "./MainNav";
->>>>>>> 8917532 (chore: navigation redesign)
-=======
-import { bookButton, nav_items } from "./MainNav";
->>>>>>> a49a46a (chore: create template buttons and modified navigation)
 import FlipLink from "../ui/FlipLink";
 import { useNavigationContext } from "../../contexts/navigation.context";
 import { InstagramIcon, LinkedinIcon, TwitterIcon } from "lucide-react";
 import Magnetic from "../ui/Magnetic";
 import { MagnetIcons } from "../Footer";
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { ShinyBgButton } from "../ui/ShinyBgButton";
-=======
->>>>>>> 8917532 (chore: navigation redesign)
-=======
-import { ShinyBgButton } from "../ui/ShinyBgButton";
->>>>>>> a49a46a (chore: create template buttons and modified navigation)
 
-export default function index({
+export default function Index({
   setIsSlideActive,
 }: {
   setIsSlideActive: React.Dispatch<React.SetStateAction<boolean>>;
 }) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const { currentNavItem, setCurrentNavItem } =
-=======
-  const { isDesktop, currentNavItem, setCurrentNavItem } =
->>>>>>> 8917532 (chore: navigation redesign)
-=======
-  const { currentNavItem, setCurrentNavItem } =
->>>>>>> a49a46a (chore: create template buttons and modified navigation)
-    useNavigationContext();
+  const { isDesktop, currentNavItem, setCurrentNavItem } = useNavigationContext();
   const navigate = useNavigate();
+
   const menuSlide = {
     initial: { x: "calc(100% + 100px)" },
     enter: { x: "0", transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1] } },
@@ -80,7 +57,7 @@ export default function index({
       }
       setIsSlideActive(false);
     },
-    [navigate]
+    [navigate, setCurrentNavItem, setIsSlideActive]
   );
 
   return (
@@ -89,67 +66,43 @@ export default function index({
       initial="initial"
       animate="enter"
       exit="exit"
-      className={
-        "z-[900] h-full bg-neutral-800 fixed right-0 top-0 text-gray-50 shadow-lg"
-      }
+      className="z-[900] h-full bg-neutral-800 fixed right-0 top-0 text-gray-50 shadow-lg"
     >
-      <div
-        className={
-          "box-border w-[100vw] md:w-[400px] h-full p-[20px] flex flex-col z-[900]"
-        }
-      >
+      <div className="box-border w-[100vw] md:w-[400px] h-full p-[20px] flex flex-col z-[900]">
         <div className="flex flex-col gap-[40px] md:gap-[40px] mt-[80px] h-full z-[800]">
           <div
             onMouseLeave={() => {}}
-            className={"flex flex-col text-[56px] gap-[18px]"}
+            className="flex flex-col text-[56px] gap-[18px]"
           >
-            {nav_items.map((item, index) => {
-              return (
-                <FlipLink
-                  key={index}
-                  item={item}
-                  isActive={currentNavItem === item.name}
-                  className={""}
-                  fontSize="40px"
-                  secondTextColor="text-gfc-accent"
-                  handleClick={() =>
-                    handleSelect(item.name, item.sectionId, item.route)
-                  }
-                >
-                  {item.content}
-                </FlipLink>
-              );
-            })}
+            {nav_items.map((item, index) => (
+              <FlipLink
+                key={index}
+                item={item}
+                isActive={currentNavItem === item.name}
+                className=""
+                fontSize="40px"
+                secondTextColor="text-gfc-accent"
+                handleClick={() =>
+                  handleSelect(item.name, item.sectionId, item.route)
+                }
+              >
+                {item.content}
+              </FlipLink>
+            ))}
           </div>
           <div className="flex z-[800]">
             <MagnetIcons
-              containerClassName=" gap-[10px]"
+              containerClassName="gap-[10px]"
               iconClassName="h-[30px] w-[30px] hover:fill-[#00c2c6] fill-neutral-400"
             />
           </div>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> a49a46a (chore: create template buttons and modified navigation)
         <ShinyBgButton
           className="py-6 px-8"
           content="Launch"
           navItem={bookButton}
           handleClick={() => navigate(bookButton.route)}
         />
-<<<<<<< HEAD
-=======
-        <Magnetic>
-          <div className="z-[800] w-full bg-gfc-primary hover:bg-neutral-700 rounded-md shadow-md cursor-pointer text-neutral-800 hover:text-neutral-50 items-center text-center text-[18px] font-black uppercase py-[10px]">
-            <Link to="/contact" className="cursor-pointer">
-              Book Appointment
-            </Link>
-          </div>
-        </Magnetic>
->>>>>>> 8917532 (chore: navigation redesign)
-=======
->>>>>>> a49a46a (chore: create template buttons and modified navigation)
         {/* <Footer /> */}
       </div>
       <Curve />
@@ -181,16 +134,14 @@ const Curve = () => {
 
   return (
     <svg
-      className={
-        "absolute top-0 left-[-99px] w-[200px] h-full fill-neutral-800 stroke-none"
-      }
+      className="absolute top-0 left-[-99px] w-[200px] h-full fill-neutral-800 stroke-none"
     >
       <motion.path
         variants={curve}
         initial="initial"
         animate="enter"
         exit="exit"
-      ></motion.path>
+      />
     </svg>
   );
 };

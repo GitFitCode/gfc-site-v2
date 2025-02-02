@@ -13,11 +13,7 @@ export interface ShinyBgButtonProps extends ButtonProps {
 	linkClassName?: string;
 }
 
-<<<<<<< HEAD
 export const ShinyBgButton = ({  navItem, linkClassName, content, handleClick, ...props }: ShinyBgButtonProps) => {
-=======
-export const ShinyBgButton = ({ ...props }: ShinyBgButtonProps) => {
->>>>>>> a49a46a (chore: create template buttons and modified navigation)
   return (
     <Magnetic>
       <Button
@@ -31,7 +27,6 @@ export const ShinyBgButton = ({ ...props }: ShinyBgButtonProps) => {
         )}
       >
         <FlipLink
-<<<<<<< HEAD
           item={navItem}
           isActive={false}
           fontSize="20px"
@@ -40,16 +35,6 @@ export const ShinyBgButton = ({ ...props }: ShinyBgButtonProps) => {
           handleClick={handleClick}
         >
           {content}
-=======
-          item={props.navItem}
-          isActive={false}
-          fontSize="20px"
-          secondTextColor="text-neutral-50"
-          className={props.linkClassName}
-          handleClick={props.handleClick}
-        >
-          {props.content}
->>>>>>> a49a46a (chore: create template buttons and modified navigation)
         </FlipLink>
       </Button>
     </Magnetic>
