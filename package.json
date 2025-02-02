@@ -1,7 +1,7 @@
 {
   "name": "gfc-site-v2",
   "license": "GPL-3.0-only",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "private": true,
   "dependencies": {
     "@gsap/react": "^2.1.2",

@@ -1,3 +1,18 @@
+## 0.3.4 (2025-02-02)
+
+### Fix
+
+- page transitions for subpages
+- page transitions
+- forgot to include images for ServicesSections
+- forgot to include .glb for StatSection
+- PortfolioPage transition
+- HeroSection ui changes
+- preloader ui changes
+- navigation ui changes
+- minor nav code fixes
+- minor nav code fixes
+
 ## 0.3.3 (2025-02-01)
 
 ### Fix
