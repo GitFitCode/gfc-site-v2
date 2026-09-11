@@ -291,9 +291,9 @@ export const TimelineSection = () => {
             className="text-base md:text-lg text-gray-800 dark:text-gray-500 "
           >
             Selected client work and case studies remain part of our portfolio.
-            Alongside them, we are validating a project loop that makes it
-            easier to connect a question, permitted evidence, peer feedback,
-            and the next meaningful action without overstating what is known.
+            Alongside them, we are validating a goal-first project loop: save
+            the brief, prepare future human-reviewed help, and keep the next
+            action and project history grounded in the work.
           </motion.p>
         </div>
       </div>

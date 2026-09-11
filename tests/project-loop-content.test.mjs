@@ -27,12 +27,16 @@ test("project-loop animation respects reduced motion", () => {
   assert.match(page, /reducedMotion/);
 });
 
-test("project-loop overview describes the reviewable learning loop", () => {
+test("project-loop overview describes the goal-first setup loop", () => {
   const page = readFileSync(projectLoopPage, "utf8");
-  assert.match(page, /question, learning goal, or problem/i);
-  assert.match(page, /permitted project evidence/i);
-  assert.match(page, /reviewable update/i);
-  assert.match(page, /peer help/i);
+  assert.match(page, /project name and a required goal/i);
+  assert.match(page, /optionally add sources or services/i);
+  assert.match(page, /title, purpose, and expected content/i);
+  assert.match(page, /review the saved brief/i);
+  assert.match(page, /AI-assisted drafts and routing/i);
+  assert.match(page, /human review/i);
+  assert.match(page, /saved URL is a reference, not an\s+authenticated connection/i);
+  assert.match(page, /not yet\s+deployed/i);
   assert.match(page, /next action/i);
   assert.match(page, /project history/i);
 });

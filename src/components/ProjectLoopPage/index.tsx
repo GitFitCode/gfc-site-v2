@@ -2,11 +2,11 @@ import { Link } from "react-router";
 import { motion, useReducedMotion } from "framer-motion";
 
 const loopSteps = [
-  "Bring a question, learning goal, or problem.",
-  "Add permitted project evidence.",
-  "Turn it into a reviewable update.",
-  "Ask for peer help, then choose a next action.",
-  "Keep the project history and portfolio grounded in the work.",
+  "Start with a project name and a required goal.",
+  "Optionally add sources or services, with a purpose.",
+  "Set a thread destination with a title, purpose, and expected content.",
+  "Review the saved brief and confirm what the project is for.",
+  "Future AI-assisted drafts and routing stay ready for human review, useful help, and the next action.",
 ];
 
 export default function ProjectLoopPage() {
@@ -25,12 +25,11 @@ export default function ProjectLoopPage() {
           Research / pilot overview
         </p>
         <h1 className="text-4xl font-bold leading-tight text-neutral-800 md:text-7xl">
-          A project loop for learning in public, with care.
+          A project loop for learning through shared practice.
         </h1>
         <p className="mt-7 max-w-3xl text-lg leading-relaxed text-neutral-600 md:text-2xl">
-          GitFitCode is implementing and validating a simple way to move from
-          a real question to a useful next step—while keeping evidence
-          reviewable and project history honest.
+          Start with a project name and goal, then save a brief that can guide
+          future drafts, help, next actions, and an honest project history.
         </p>
       </section>
 
@@ -71,10 +70,12 @@ export default function ProjectLoopPage() {
       </section>
 
       <section className="max-w-4xl border-l-4 border-gfc-accent pl-6">
-        <h2 className="text-2xl font-bold text-neutral-800">Research boundary</h2>
+        <h2 className="text-2xl font-bold text-neutral-800">Private-first by design</h2>
         <p className="mt-3 text-lg leading-relaxed text-neutral-600">
-          Research is invite-only. Share permitted project evidence in
-          reviewable updates.
+          Private-first research is invite-only. Share permitted project
+          evidence in reviewable updates. A saved URL is a reference, not an
+          authenticated connection; AI routing and live onboarding are not yet
+          deployed.
         </p>
       </section>
 
