@@ -9,11 +9,9 @@ an honest project history and portfolio. The site includes the internal
 `/project-loop` research/pilot overview for two pilots: the GitFitCode hub and
 the UpAhead MVP.
 
-Both pilots are planned and under validation. Research participation is
-invite-only, and this repository must not publish private research materials,
-participant conversations, unpublished product details, or local development
-URLs. The overview is not a claim of public availability, activity, outcomes,
-or production readiness.
+Both pilots are selected for project tracking, and the tracking loop is under
+implementation and validation. Research participation is invite-only, and only
+permitted project evidence belongs in reviewable updates.
 
 ### What you'll need
 

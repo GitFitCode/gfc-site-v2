@@ -9,7 +9,7 @@ const portfolio = [
   {
     project: "Project Loop pilots",
     description:
-      "GitFitCode hub and UpAhead MVP are planned and under validation. Explore the research/pilot overview.",
+      "GitFitCode hub and UpAhead MVP are selected pilots for project tracking, under implementation and validation.",
     image: null,
     path: "/project-loop",
   },
@@ -77,10 +77,10 @@ export default function PortfolioPage() {
               Our Portfolio {isDesktop && "and Pilot Work"}
             </h1>
             <p className="text-lg md:text-xl mt-2 text-[#757575] font-[400] leading-relaxed">
-              Selected case studies, plus clearly marked work that is still under validation.
+              Selected case studies, plus clearly marked pilot work under implementation and validation.
             </p>
             <p className="font-[300] md:text-lg mt-8 dark:text-neutral-800">
-              Explore established case studies alongside pilot work. Pilot pages describe what is planned or under validation without presenting it as completed, public, or proven.
+              Explore established case studies alongside pilot work. Pilot pages distinguish selected project-tracking work from completed case studies.
             </p>
           </div>
           <div className="flex-1 flex"></div>
