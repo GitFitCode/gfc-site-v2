@@ -4,9 +4,9 @@ import { motion, useReducedMotion } from "framer-motion";
 const loopSteps = [
   "Start with a project name and a required goal.",
   "Optionally add sources or services, with a purpose.",
-  "Set a thread destination with a title, purpose, and expected content.",
+  "Optionally choose a thread destination from a catalog that can be empty, with a title, purpose, and expected content.",
   "Review the saved brief and confirm what the project is for.",
-  "Future AI-assisted drafts and routing stay ready for human review, useful help, and the next action.",
+  "Later, review AI suggestions, ask for help, and choose a next action. This is planned, not running today.",
 ];
 
 export default function ProjectLoopPage() {

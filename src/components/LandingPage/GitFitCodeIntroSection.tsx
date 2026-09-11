@@ -34,9 +34,7 @@ export default function GitFitCodeIntroSection() {
               </div>
             </h2>
             <p className="text-lg md:text-xl lg:text-2xl text-neutral-600 dark:text-neutral-300 font-sans tracking-tight max-w-2xl">
-              Start with a project name and a required goal. Add optional
-              sources and thread destinations, then review a saved brief for
-              future human-reviewed help, next actions, and project history.
+              Begin a project with a name and goal, or follow along. Add optional sources and destinations; future AI drafts will be yours to review before sharing.
             </p>
             <div className="flex flex-col gap-4 md:flex-row w-full">
               <ShinyBgButton
