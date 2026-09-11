@@ -23,20 +23,18 @@ export default function GitFitCodeIntroSection() {
           {/* Text Content */}
           <div className="md:col-span-2 flex flex-col items-start justify-center gap-12 ">
             <h2 className="text-[30px] z-20 md:text-4xl lg:text-7xl font-bold text-neutral-800 dark:text-white font-sans tracking-tight">
-              Designed for Growth.{" "}
+              Build the next step.{" "}
               <div className="relative mx-auto inline-block w-max [filter:drop-shadow(0px_1px_3px_rgba(27,_37,_80,_0.14))]">
                 <div className="absolute left-0 top-[1px] bg-clip-text bg-no-repeat text-transparent bg-gradient-to-r py-0 md:py-4 from-[#00C9CD] via-[#80E3E5] to-[#008A8C] [text-shadow:0_0_rgba(0,0,0,0.1)]">
-                  <span>Engineered to Scale.</span>
+                  <span>Keep the work visible.</span>
                 </div>
                 <div className="relative bg-clip-text text-transparent bg-no-repeat bg-gradient-to-r from-[#00C9CD] via-[#52cacc] to-[#38cbce] py-0 md:py-4">
-                  <span>Engineered to Scale.</span>
+                  <span>Keep the work visible.</span>
                 </div>
               </div>
             </h2>
             <p className="text-lg md:text-xl lg:text-2xl text-neutral-600 dark:text-neutral-300 font-sans tracking-tight max-w-2xl">
-              We build enterprise-grade software solutions that adapt, evolve,
-              and scale seamlessly—powering businesses, ideas, and innovation at
-              any stage.
+              Begin a project with a name and goal, or follow along. Add optional sources and destinations; future AI drafts will be yours to review before sharing.
             </p>
             <div className="flex flex-col gap-4 md:flex-row w-full">
               <ShinyBgButton
@@ -45,6 +43,13 @@ export default function GitFitCodeIntroSection() {
                 navItem={bookButton}
                 handleClick={() => navigate(bookButton.route)}
               />
+              <button
+                type="button"
+                onClick={() => navigate("/project-loop")}
+                className="rounded-lg border-2 border-gfc-accent px-8 py-5 font-bold uppercase tracking-wide text-gfc-accent transition-colors hover:bg-gfc-accent hover:text-white focus:outline-none focus:ring-4 focus:ring-gfc-accent/30"
+              >
+                View pilot overview
+              </button>
               <GoogleCalendarButton
                 className={`py-6 px-8 ${!isTablet ? "w-full" : ""}`}
               />

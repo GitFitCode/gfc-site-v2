@@ -21,6 +21,7 @@ import ModeEarnClub from "./components/PortfolioPage/Cases/ModeEarnClub";
 import ConnectworX from "./components/PortfolioPage/Cases/ConnectworX";
 import NaturaLabs from "./components/PortfolioPage/Cases/NaturaLabs";
 import Preloader from "./components/ui/Preloader";
+import ProjectLoopPage from "./components/ProjectLoopPage";
 
 const App = () => {
   // Use site loading state from the navigation context
@@ -96,6 +97,10 @@ const AnimatedRoutes = () => {
         <Route
           path="/portfolio"
           element={<PageTransition children={<PortfolioPage />} />}
+        />
+        <Route
+          path="/project-loop"
+          element={<PageTransition children={<ProjectLoopPage />} />}
         />
         {/* Portfolio Routes */}
         <Route

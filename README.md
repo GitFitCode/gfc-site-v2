@@ -1,5 +1,20 @@
 ## Setting up the project
 
+## Project Loop pilots
+
+This site describes a goal-first research/pilot direction for GitFitCode: start
+with a project name and required goal, optionally add sources/services and
+thread destinations, then review a saved brief. That brief can guide future
+AI-assisted drafts and routing with human review, useful help, a next action,
+and an honest project history and portfolio. The site includes the internal
+`/project-loop` research/pilot overview for two pilots: the GitFitCode hub and
+the UpAhead MVP.
+
+Both pilots are selected for project tracking, and the tracking loop is under
+implementation and validation. Research is private-first and invite-only; a
+saved URL is not an authenticated connection, and AI routing and live
+onboarding are not yet deployed.
+
 ### What you'll need
 
 - [VSCode](https://code.visualstudio.com/) / [Intellij WebStorm](https://www.jetbrains.com/webstorm/)

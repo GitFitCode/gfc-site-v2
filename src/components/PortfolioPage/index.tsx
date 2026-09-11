@@ -7,6 +7,13 @@ import { useNavigationContext } from "../../contexts/navigation.context";
 
 const portfolio = [
   {
+    project: "Project Loop pilots",
+    description:
+      "GitFitCode hub and UpAhead MVP are selected pilots for goal-first project tracking, under implementation and validation.",
+    image: null,
+    path: "/project-loop",
+  },
+  {
     project: "Mode Earn Club",
     description:
       "Learn how we built a subscription service into an existing product with 40m users.",
@@ -67,13 +74,13 @@ export default function PortfolioPage() {
         <div className="flex flex-col md:flex-row justify-center items-center">
           <div className="flex-1 max-w-7xl relative mx-auto md:py-20 px-4 w-full">
             <h1 className="text-4xl md:text-7xl font-bold text-gray-800 dark:text-white">
-              Our Portfolio {isDesktop && "of Excellence"}
+              Our Portfolio {isDesktop && "and Pilot Work"}
             </h1>
             <p className="text-lg md:text-xl mt-2 text-[#757575] font-[400] leading-relaxed">
-              Check out some of my latest product design case studies.
+              Selected case studies, plus clearly marked goal-first pilot work under implementation and validation.
             </p>
             <p className="font-[300] md:text-lg mt-8 dark:text-neutral-800">
-              We have worked for startups, agencies, corporations, and government and have created products used by millions of people.
+              Explore established case studies alongside pilot work. Pilot pages distinguish selected project-tracking work from completed case studies.
             </p>
           </div>
           <div className="flex-1 flex"></div>
@@ -86,14 +93,18 @@ export default function PortfolioPage() {
               containerClassName="col-span-1 lg:col-span-1 h-full bg-gfc-secondary min-h-[300px] lg:min-h-[300px] max-w-[500px]"
               className=""
             >
-              <img
-                src={item.image}
-                width="100%"
-                height={500}
-                alt={item.project}
-                style={{ alignSelf: "center" }}
-                className="object-contain rounded-xl"
-              />
+              {item.image ? (
+                <img
+                  src={item.image}
+                  width="100%"
+                  height={500}
+                  alt={item.project}
+                  style={{ alignSelf: "center" }}
+                  className="object-contain rounded-xl"
+                />
+              ) : (
+                <div aria-hidden="true" className="h-28 rounded-xl bg-gradient-to-br from-gfc-accent to-neutral-800" />
+              )}
               <h2 className="mt-4 text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
                 {item.project}
               </h2>

@@ -32,11 +32,11 @@ export const nav_items: NavItemType[] = [
     content: "Home",
   },
   {
-    name: "About",
+    name: "Project Loop",
     icon: <UserGroupIcon className="h-6 w-6" />,
-    route: "/",
-    sectionId: "intro-section",
-    content: "About",
+    route: "/project-loop",
+    sectionId: null,
+    content: "Project Loop",
   },
   {
     name: "Services",
