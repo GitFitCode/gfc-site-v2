@@ -1,5 +1,20 @@
 ## Setting up the project
 
+## Project Loop pilots
+
+This site describes a research/pilot direction for GitFitCode: a person brings
+a question, learning goal, or problem; permitted project evidence becomes a
+reviewable update; peers can help identify a next action; and the work can form
+an honest project history and portfolio. The site includes the internal
+`/project-loop` research/pilot overview for two pilots: the GitFitCode hub and
+the UpAhead MVP.
+
+Both pilots are planned and under validation. Research participation is
+invite-only, and this repository must not publish private research materials,
+participant conversations, unpublished product details, or local development
+URLs. The overview is not a claim of public availability, activity, outcomes,
+or production readiness.
+
 ### What you'll need
 
 - [VSCode](https://code.visualstudio.com/) / [Intellij WebStorm](https://www.jetbrains.com/webstorm/)

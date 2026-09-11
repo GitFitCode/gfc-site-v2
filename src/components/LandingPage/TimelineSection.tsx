@@ -280,8 +280,8 @@ export const TimelineSection = () => {
             viewport={{ once: false, amount: 0.1 }}
             className="grid-cols-1 mb-8 text-[35px]/[1.1] font-[700] md:text-5xl/[1.2] md:mb-10 "
           >
-            <span className="text-gfc-accent">Smart Solutions</span> for an
-            Evolving World
+            <span className="text-gfc-accent">Project history</span> with
+            evidence you can review
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 50 }}
@@ -290,10 +290,10 @@ export const TimelineSection = () => {
             viewport={{ once: false, amount: 0.1 }}
             className="text-base md:text-lg text-gray-800 dark:text-gray-500 "
           >
-            A glimpse into our cutting-edge solutions for forward-thinking
-            businesses. Each project showcases our expertise in seamless user
-            experiences, strategic problem-solving, and measurable impact. See
-            how we turn challenges into opportunities—one success at a time.
+            Selected client work and case studies remain part of our portfolio.
+            Alongside them, we are validating a project loop that makes it
+            easier to connect a question, permitted evidence, peer feedback,
+            and the next meaningful action without overstating what is known.
           </motion.p>
         </div>
       </div>

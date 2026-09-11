@@ -90,6 +90,11 @@ export default function FooterSection() {
                 </Link>
               </Magnetic>
               <Magnetic>
+                <Link to="/project-loop" className="cursor-pointer link-style">
+                  Project Loop pilots
+                </Link>
+              </Magnetic>
+              <Magnetic>
                 <Link to="/portfolio" className="cursor-pointer link-style">
                   Portfolio
                 </Link>
